@@ -2,8 +2,6 @@
 
 A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](http://brackets.io/) editor.
 
-![Screenshot](https://github.com/acbarbosa1964/acb-sample-gifs/blob/master/images/acb-bootstrap-snippets.gif?raw=true)
-
 ## Install
 
 #### Git Clone

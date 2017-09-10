@@ -27,7 +27,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Bootstrap 4 - Minimum Template
 
 	bs4
-    bs4template
+	bs4template
 	bs4html 
 
 ### Alerts
@@ -95,45 +95,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Carousel
 
 	bs4carousel
-    
-    // Sample Images 
-    //
-    // http://www.publicdomainpictures.net/
 
 ### CDN
 
-    bs4cdn
-    bs4cdnanimatecss
-    bs4cdnanimationscss
-    bs4cdnanimationsjs
-    bs4cdnappearjs
-    bs4cdnbackbonejs
-    bs4cdncss
-    bs4cdncsvimportjs
-    bs4cdndatatablecss
-    bs4cdndatatablejs
-    bs4cdneasingjs
-    bs4cdnfancyboxcss
-    bs4cdnfancyboxjs
-    bs4cdnfontawesomecss
-    bs4cdnfoodcart
-    bs4cdnioniconscss
-    bs4cdnisotopejs
-    bs4cdnjasnycss
-    bs4cdnjasnyjs
-    bs4cdnjs
-    bs4cdnmodernizr
-    bs4cdnpagecurlcss
-    bs4cdnsmoothscrolljs
-    bs4cdnstylebluecss
-    bs4cdnstylegreencss
-    bs4cdnstyleredcss
-    bs4cdnstylesolidblackcss
-    bs4cdnstylesolidredcss
-    bs4cdnstyleyellowcss
-    bs4cdnvegascss
-    bs4cdnvegasjs
-    bs4cdnwowjs
+	bs4cdn
+	bs4cdncss
+	bs4cdnjs
 
 ### Clearfix
 
@@ -305,10 +272,9 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Local
 
 	bs4local
-    bs4localcss
-    bs4localjs
+	bs4localcss
+	bs4localjs
     
-
 ### Media
 
 	bs4mediaobject
@@ -320,7 +286,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Navigation
     
-    snippets.bs4navbarbasic
+	snippets.bs4navbarbasic
 	snippets.bs4navbarbrand
 	snippets.bs4navbarfixedbottom
 	snippets.bs4navbarfixedtop
@@ -335,7 +301,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Page Header
     
-    snippets.bs4pageheader
+	snippets.bs4pageheader
     
 ### Pagination
     
@@ -359,15 +325,15 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
 ### Table 
     
-    snippets.bs4table
-    snippets.bs4tablehover
+	snippets.bs4table
+	snippets.bs4tablehover
 	snippets.bs4tablebordered
 	snippets.bs4tableborderedhover
 	snippets.bs4tablecondensed
 	snippets.bs4tablecondensedhover
 	snippets.bs4tableresponsive
 	snippets.bs4tableresponsivehover
-    snippets.bs4tablestriped
+	snippets.bs4tablestriped
 	snippets.bs4tablestripedhover
 	snippets.bs4tablecontextual
     
@@ -376,20 +342,15 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     snippets.bs4tabs
     snippets.tabhover
     
-### HTML5 Tamplate
+### HTML5 Template
     
     snippets.html5template
     
 ### Wells
 
-    snippets.bs4welllg
+	snippets.bs4welllg
 	snippets.bs4wellsm
 	snippets.bs4well
-
-### Wireframe theme for Bootstrap 3 Support
-    
-    snippets.bs4sketchcss
-    snippets.bs4sketchjs
 
 ### Animated Portfolio Sample    
 
@@ -406,28 +367,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4portfoliocontact
 	bs4portfoliosignupform
 	bs4portfoliocopyright
-    
-### Bootswatch Template Support
 
-    bs4bootswatchcerulean
-    bs4bootswatchcosmo
-    bs4bootswatchcustom
-    bs4bootswatchcyborg
-    bs4bootswatchdarkly
-    bs4bootswatchflatly
-    bs4bootswatchjournal
-    bs4bootswatchlumen
-    bs4bootswatchpaper
-    bs4bootswatchreadble
-    bs4bootswatchsandstone
-    bs4bootswatchsimplex
-    bs4bootswatchslate
-    bs4bootswatchspacelab
-    bs4bootswatchsuperhero
-    bs4bootswatchunited
-    bs4bootswatchyeti
-
-### Bootstrap 3 Media Queries - Mobile First Method
+### Bootstrap 4 Media Queries - Mobile First Method
 
     bs4mqfmdesktops
     bs4mqfmextrasmalldevices
@@ -439,7 +380,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4mqfmtablets
     bs4mqfmwidescreen
     
-### Bootstrap 3 Media Queries - Non-Mobile First Method
+### Bootstrap 4 Media Queries - Non-Mobile First Method
 
     bs4mqdesktops
     bs4mqextrasmalldevices
@@ -450,134 +391,21 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4mqsmalldevices
     bs4mqtablets
     bs4mqwidescreens
-    
-# Jasny Bootstrap
----
-Bring Bootstrap's components to life with over a dozen custom jQuery plugins. Easily include them all, or one by one.
-    
-    Author: Arnold Daniels - arnold@jasny.net 
-    URL: http://www.jasny.net/
-    Project: https://github.com/jasny/bootstrap
-### Jasny CDN 
-    bs4jsncdncss
-    bs4jsncdnjs
-
-### Bootstrap Minimum Jasny Templates
-    bs4jsnhtml
-    bs4jsnhtmlnavbar
-    bs4jsnhtmlnavbaroffcanvas
-
-### Container
-Added .container-smooth a container to use the same max-width for all viewport sizes. This means that the container size won't jump at media query breakpoints.
-    bs4jsncontainer
-
-### Buttons 
-Standard button with label
-
-    bs4jsnbtnleft
-
-Standard button with label on the right side
-
-    bs4jsnbtnright
-
-Success button with label
-
-    bs4jsnbtnsuccess
-
-Danger button with label
-
-    bs4jsnbtndanger
-
-### Navmenu
-Body padding required!! 
-The fixed navmenu will overlay your other content, unless you add padding to the left or right of the <body>. Try out your own values or use our snippet below. Tip: By default, the navmenu is 300px wide.
-
-     @media (min-width: 992px) {
-       body {
-         padding-left: 300px;
-      }
-     }
-### Navmenu bs4 commands
-
-#### Media Query 
-    
-    bs4jsnnavmenumediaquery
-
-#### Navmenu
-
-    bs4jsnnavmenu
-
-### Navmenu - Fixed to left or right
-Add either .navmenu-fixed-left or .navmenu-fixed-right.
-
-    bs4jsnnavmenufixedleft
-    bs4jsnnavmenufixedright
-    bs4jsnnavmenuoffcanvasreveal
-    bs4jsnnavmenuoffcanvaspush
-
-### Alerts
-Fixed to top / bottom. Add .alert-fixed-top top stick the alert on top of your page. Use .alert-fixed-bottom for the bottom.
-    bs4jsnalerttop
-    bs4jsnalertbottom
-
-    bs4jsnalertdangertop
-    bs4jsnalertdangerbottom
-    
-    bs4jsnalertwarningtop
-    bs4jsnalertwarningbottom
-    
-    bs4jsnalertinfotop
-    bs4jsnalertinfobottom
-    
-    bs4jsnalertsuccesstop
-    bs4jsnalertsuccessbottom
-
-### Table - ROWLINK
-
-    bs4jsntablerowlink
-
-### Data Entry Mask
-
-    bs4jsninputmask
-    bs4jsnfileselect
-    bs4jsnbtnfileselect
-    bs4jsnuploadimag
-    
----
-
-To get supplementary files and assets for Animated Portfolio Sample check [Bootstrap Portfolio Project](https://github.com/acbarbosa1964/light-wave-bootstrap-portfolio-sample)
-
-### Notes
-
-** v0.0.14 - Now with 601 bs4 commands and Bootstrap 3 including media query default sizes and Jasny!!! (More info check bs-func.txt and snippet.js files)
 
 ### Credits
 ---
 
 - Bootstrap Framework - http://getboostrap.com
 - jQuery JavaScript Library v1.11.1 - jQuery Foundation, Inc. and other contributors
-- Portfolio Snippets based on http://www.designbootstrap.com themes.
-- Snippets based on Bootstrap 3 Sublime Plugin - Thanks Jason Morton - Twitter @JasonMortonNZ 
-- Images provided by http://www.publicdomainpictures.net
-- Animate.css - http://daneden.me/animate
-- Animations v2.1, Copyright 2014, Joe Mottershaw, https://github.com/joemottershaw/
-- Font Awesome 4.3.0 by @davegandy - http://fontawesome.io
-- Ionicons, v2.0.0 - Created by Ben Sperry - http://ionicons.com/
-- jQuery.appear - Michael Hixson and Alexander Brovikov - https://github.com/bas2k/jquery.appear/
-- jQuery Easing v1.3 - Robert Penner- http://gsgd.co.uk/sandbox/jquery/easing/
-- Isotope v1.5.25 - David DeSandro / Metafizzy - http://isotope.metafizzy.co
-- WOW - v1.1.2 - Matthieu Aussaguel - http://mynameismatthieu.com/WOW/
+- Snippets based on ACB Bootstrap Snippets Plugin - Thanks to Carlos Barbosa
 - Source-code editor used in this project - Brackets - http://www.brackets.io
-- Bootsketch - https://github.com/Yago/Bootsketch
-- Bootswatch - Copyright 2014 Thomas Park - http://bootswatch.com/
-- Jasny Bootstrap - Arnold Daniels - arnold@jasny.net - https://github.com/jasny/bootstrap
 
-Thank you all!!!
+Thank you all!
 
 ### License
 ---
 
-[MIT](https://raw.githubusercontent.com/acbarbosa1964/acb-bootstrap-snippets/master/LICENSE) for this project.
+[MIT](https://github.com/rjrodriguez/RCH-Bootstrap-4-Snippets/blob/master/LICENSE) for this project.
 
-Copyright (c) 2015 Antonio Carlos Barbosa
+Copyright (c) 2017 Ricardo Javier Rodriguez
 Released under the MIT license

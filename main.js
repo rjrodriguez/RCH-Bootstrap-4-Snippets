@@ -40,10 +40,10 @@ define(function (require, exports, module) {
         snippets = require('snippet'),
         bsfuncHint = require('text!bs-func.txt'),
         enabled = false,
-        prefs = PreferencesManager.getExtensionPrefs('acb-bootstrap-snippets'),
+        prefs = PreferencesManager.getExtensionPrefs('rch-bootstrap-4-snippets'),
 
-        COMMAND_NAME = 'Enable ACB Bootstrap Snippets',
-        COMMAND_ID = 'acbapbox.toggleBootstrapSnippets',
+        COMMAND_NAME = 'Enable RCH Bootstrap Snippets',
+        COMMAND_ID = 'rchapbox.toggleBootstrap4Snippets',
         handleToggleSnippets = function () {
             enabled = !enabled;
             prefs.set('enabled', enabled);

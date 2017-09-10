@@ -1,10 +1,10 @@
 {
-    "name": "acb-bootstrap-snippets",
-    "title": "ACB Bootstrap Snippets",
-    "description": "A collection of Bootstrap snippets for Brackets (Now with 601 bs3 commands including media query default sizes and Jasny Bootstrap!!!)",
-    "homepage": "https://github.com/acbarbosa1964/acb-bootstrap-snippets",
-    "version": "0.0.14",
-    "author": "Antonio Carlos Barbosa <acbarbosa@gmail.com> (http://www.goodlearn.org)",
+    "name": "rch-bootstrap-4-snippets",
+    "title": "RCH Bootstrap 4 Snippets",
+    "description": "A collection of Bootstrap snippets for Brackets",
+    "homepage": "https://github.com/rjrodriguez/RCH-Bootstrap-4-Snippets",
+    "version": "0.0.1",
+    "author": "Ricardo J Rodriguez <rich.rjr@gmail.com> (http://www.ricardojrodriguez.com.ar)",
     "license": "MIT",
     "categories": "editing",
     "keywords": [

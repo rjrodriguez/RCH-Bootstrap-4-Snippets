@@ -71,13 +71,7 @@ define(function (require, exports, module) {
         cdncss +
         '\n' +
         '    <!-- Link to your CSS file -->\n' +
-        '    <link rel="stylesheet" href="">\n\n' +
-        '    <!-- This is necesary for de fixed navbar used in this template, you should move it to your CSS file -->\n' + 
-        '    <style>\n' +
-        '        body {\n' +
-        '            padding-top: 50px;\n' +
-        '        }\n' +
-        '    </style>\n' +
+        '    <link rel="stylesheet" href="">\n' +
         '</head>\n' +
         '\n' +
         '<body>\n' +
@@ -91,7 +85,10 @@ define(function (require, exports, module) {
         '</body>\n' +
         '</html>\n';
 
+    // HTML5 Template
+    
     snippets.bs4template = snippets.bs4html;
+    snippets.bs4html5template = snippets.bs4html; 
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
@@ -1776,9 +1773,6 @@ define(function (require, exports, module) {
         '    </div>    \n' +
         '    <!-- Move this line to the last line of js declaration area -->\n' +
         '    <script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
-    
-    // HTML5 Tamplate
-    snippets.bs4html5template = snippets.bs4html; 
 
     // Wells
     // Reemplazados por Cards

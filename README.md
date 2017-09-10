@@ -1,4 +1,4 @@
-# [Bootstrap 4 Snippets for Brackets](https://github.com/acbarbosa1964/acb-bootstrap-snippets)
+# [Bootstrap 4 Snippets for Brackets](https://github.com/rjrodriguez/RCH-Bootstrap-4-Snippets)
 
 A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](http://brackets.io/) editor.
 

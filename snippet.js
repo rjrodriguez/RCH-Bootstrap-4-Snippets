@@ -29,20 +29,20 @@ define(function (require, exports, module) {
     'use strict';
 
     var snippets = {};
-    var cdncss = '     <!-- Bootstrap CSS -->\n' +
-        '       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">\n';
+    var cdncss = '    <!-- Bootstrap CSS -->\n' +
+        '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">\n';
     var cdnjs = '    <!-- Optional JavaScript -->\n' +
-    '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
-    '    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n' +     
-    '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
+        '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
+        '    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n' +
+        '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
 
     // Bootstrap 4 - Minimum Template
 
-    snippets.bs4html = '<!DOCTYPE html>\n' +
+    snippets.bs4 = '<!DOCTYPE html>\n' +
         '<html lang="en">\n' +
         '<head>\n' +
-        '    <!-- Required meta tags -->\n' + 
+        '    <!-- Required meta tags -->\n' +
         '    <meta charset="utf-8">\n' +
         '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n' +
         '    <title>Bootstrap 4 Minimal Template</title>\n' +
@@ -51,15 +51,14 @@ define(function (require, exports, module) {
         '</head>\n' +
         '\n' +
         '<body>\n' +
-        '   <h1>Hello, world!</h1>\n' +
+        '    <h1>Hello, world!</h1>\n' +
         '\n' +
         cdnjs +
         '</body>\n' +
         '</html>\n';
 
-    snippets.bs4 = '<!DOCTYPE html>\n' +
+    snippets.bs4html = '<!DOCTYPE html>\n' +
         '<html lang="">\n' +
-        '\n' +
         '<head>\n' +
         '    <meta charset="utf-8">\n' +
         '    <title>Bootstrap 4 Template</title>\n' +
@@ -68,6 +67,7 @@ define(function (require, exports, module) {
         '    <meta name="author" content="">\n' +
         '\n' +
         '    <link rel="apple-touch-icon" href="">\n' +
+        '\n' +
         cdncss +
         '\n' +
         '    <!-- Link to your CSS file -->\n' +
@@ -87,59 +87,80 @@ define(function (require, exports, module) {
 
     // HTML5 Template
     
-    snippets.bs4template = snippets.bs4html;
-    snippets.bs4html5template = snippets.bs4html; 
+    snippets.bs4template = snippets.bs4;
+    snippets.bs4html5template = snippets.bs4html;
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
+    
+    snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Primary alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
+    
+    snippets.bs4alertsecondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Secondary alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
 
-    snippets.bs4alertdanger = '<div class="alert alert-danger">\n' +
-        '	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;\n' +
-        '</button>\n' +
-        '	<strong>INSERT TITLE HERE</strong>INSERT BODY HERE\n' +
-        '</div>\n';
+    snippets.bs4alertdanger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Danger alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
 
-    snippets.bs4alertinfo = '<div class="alert alert-info">\n' +
-        '	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;\n' +
-        '</button>\n' +
-        '	<strong>INSERT TITLE HERE</strong> INSERT BODY HERE\n' +
-        '</div>\n';
+    snippets.bs4alertinfo = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Info alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
 
-    snippets.bs4alertsuccess = '<div class="alert alert-success">\n' +
-        '	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;\n' +
-        '</button>\n' +
-        '<strong>INSERT TITLE HERE</strong> INSERT BODY HERE\n' +
-        '</div>\n';
+    snippets.bs4alertsuccess = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Success alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
 
-    snippets.bs4alertwarning = '<div class="alert alert-warning">\n' +
-        '	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;\n' +
-        '</button>\n' +
-        '<strong>INSERT TITLE HERE</strong> INSERT BODY HERE\n' +
-        '</div>\n';
+    snippets.bs4alertwarning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Warning alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
 
-    snippets.bs4alert = '<div class="alert">\n' +
-        '	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;\n' +
-        '</button>\n' +
-        '<strong>INSERT TITLE HERE</strong> INSERT BODY HERE\n' +
-        '</div>\n';
+    snippets.bs4alertlight = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Light alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
+    
+    snippets.bs4alertdark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' +
+        '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '		<strong>Dark alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
+        '	</div>\n';
+
 
     // Badge
     // https://getbootstrap.com/docs/4.0/components/badge/
 
-    snippets.bs4badge = '<span class="badge">INSERT BADGE HERE</span>';
+    snippets.bs4badge = '<span class="badge badge-primary">Primary</span>';
+    snippets.bs4badgesecondary = '<span class="badge badge-secondary">Secondary</span>';
+    snippets.bs4badgesuccess = '<span class="badge badge-success">Success</span>';
+    snippets.bs4badgedanger = '<span class="badge badge-danger">Danger</span>';
+    snippets.bs4badgewarning = '<span class="badge badge-warning">Warning</span>';
+    snippets.bs4badgeinfo = '<span class="badge badge-info">Info</span>';
+    snippets.bs4badgelight = '<span class="badge badge-light">Light</span>';
+    snippets.bs4badgedark = '<span class="badge badge-dark">Dark</span>';
 
     // Breadcrumbs
     // https://getbootstrap.com/docs/4.0/components/breadcrumb/
 
-    snippets.bs4breadcrumbs = '<ol class="breadcrumb">\n' +
-        '<li>\n' +
-        '   <a href="#">[Home]</a>\n' +
-        '</li>\n' +
-        '<li>\n' +
-        '   <a href="#">[About]</a>\n' +
-        '</li>}\n' +
-        '<li class="active">[Contact]</li>\n' +
-        '</ol>\n';
+    snippets.bs4breadcrumbs = '<nav class="breadcrumb">\n' +
+        '		<a class="breadcrumb-item" href="#">1st level</a>\n' +
+        '		<a class="breadcrumb-item" href="#">2nd level</a>\n' +
+        '		<a class="breadcrumb-item" href="#">3rd level</a>\n' +
+        '		<span class="breadcrumb-item active">item</span>\n' +
+        '	</nav>';
+    
+    snippets.bs4breadcrumbslist = '<ol class="breadcrumb">\n' +
+        '		<li class="breadcrumb-item"><a href="#">1st level</a></li>\n' +
+        '		<li class="breadcrumb-item"><a href="#">2nd level</a></li>\n' +
+        '		<li class="breadcrumb-item active">3rd level</li>\n' +
+        '	</ol>';
     
     // Buttons
     // https://getbootstrap.com/docs/4.0/components/buttons/
@@ -206,37 +227,130 @@ define(function (require, exports, module) {
 
     // Cards
     // https://getbootstrap.com/docs/4.0/components/card/
+    // TODO
     
     // Carousel
     // https://getbootstrap.com/docs/4.0/components/carousel/
 
-    // Sample Images
-    //
-    // https://pixabay.com/static/uploads/photo/2015/06/15/06/17/flowers-809927_640.jpg
-    // https://pixabay.com/static/uploads/photo/2014/02/10/16/07/tulips-263513_640.jpg
-    // https://pixabay.com/static/uploads/photo/2014/04/10/10/00/tulip-320774_640.jpg
-    //
-
-    snippets.bs4carousel = '    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">\n' +
-        '        <ol class="carousel-indicators">\n' +
-        '            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"> </li>\n' +
-        '            <li data-target="#carousel-example-generic" data-slide-to="1"> </li>\n' +
-        '            <li data-target="#carousel-example-generic" data-slide-to="2"> </li>\n' +
-        '        </ol>\n' +
-        '        <div class="carousel-inner">\n' +
-        '            <div class="item active">\n' +
-        '                <img src="[INSERT IMAGE HERE]" alt="First slide"/>\n' +
-        '            </div>\n' +
-        '            <div class="item">\n' +
-        '                <img src="[INSERT IMAGE HERE]" alt="Second slide"/>\n' +
-        '            </div>\n' +
-        '            <div class="item">\n' +
-        '                <img src="[INSERT IMAGE HERE]" alt="Third slide"/>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>\n' +
-        '        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>\n' +
-        '    </div>\n';
+    snippets.bs4carousel = '<div id="carouselBasic" class="carousel slide" data-ride="carousel">\n' +
+        '		<div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4carouselwcontrols = '<div id="carouselControls" class="carousel slide" data-ride="carousel">\n' +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">\n' +
+        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
+        '          <span class="sr-only">Previous</span>\n' +
+        '       </a>\n' +
+        '       <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">\n' +
+        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
+        '           <span class="sr-only">Next</span>\n' +
+        '       </a>\n' +
+        '   </div>';
+    
+    snippets.bs4carouselwindicators = '<div id="carouselIndicators" class="carousel slide" data-ride="carousel">\n' +
+        '       <ol class="carousel-indicators">\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="1"></li>\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
+        '       </ol>\n' +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4carouselwcaptions = '<div id="carouselCaptions" class="carousel slide" data-ride="carousel">\n' +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>First slide</h3>\n' +
+        '                   <p>First caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Second slide</h3>\n' +
+        '                   <p>Second caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Third slide</h3>\n' +
+        '                   <p>Third caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4carouselfull = '<div id="carouselFull" class="carousel slide" data-ride="carousel">\n' +
+        '       <ol class="carousel-indicators">\n' +
+        '           <li data-target="#carouselFull" data-slide-to="0" class="active"></li>\n' +
+        '           <li data-target="#carouselFull" data-slide-to="1"></li>\n' +
+        '           <li data-target="#carouselFull" data-slide-to="2"></li>\n' +
+        '       </ol>\n' +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>First slide</h3>\n' +
+        '                   <p>First caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Second slide</h3>\n' +
+        '                   <p>Second caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Third slide</h3>\n' +
+        '                   <p>Third caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
+        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
+        '          <span class="sr-only">Previous</span>\n' +
+        '       </a>\n' +
+        '       <a class="carousel-control-next" href="#carouselFull" role="button" data-slide="next">\n' +
+        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
+        '           <span class="sr-only">Next</span>\n' +
+        '       </a>\n' +
+        '   </div>';
 
     // CDN
 
@@ -250,6 +364,7 @@ define(function (require, exports, module) {
         '</div>\n';
 
     // Forms
+    // https://getbootstrap.com/docs/4.0/components/forms/
 
     snippets.bs4formhorizontal = '<form action="" method="POST" class="form-horizontal" role="form">\n' +
         '		<div class="form-group">\n' +
@@ -468,41 +583,6 @@ define(function (require, exports, module) {
     snippets.bs4textarea = '<textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>\n';
 
     // Grid System
-
-    snippets.bs4col1 = '<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">\n\n</div>\n';
-
-    snippets.bs4col10 = '<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">\n\n</div>\n';
-
-    snippets.bs4col11 = '<div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">\n\n</div>\n';
-
-    snippets.bs4col12 = '<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n\n</div>\n';
-
-    snippets.bs4col2 = '<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">\n\n</div>\n';
-
-    snippets.bs4col3 = '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">\n\n</div>\n';
-
-    snippets.bs4col4 = '<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">\n\n</div>\n';
-
-    snippets.bs4col5 = '<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">\n\n</div>\n';
-
-    snippets.bs4col6 = '<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">\n\n</div>\n';
-
-    snippets.bs4col7 = '<div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">\n\n</div>\n';
-
-    snippets.bs4col8 = '<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">\n\n</div>\n';
-
-    snippets.bs4col9 = '<div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">\n\n<div>\n';
-
-    snippets.bs4container = '<div class="container">\n</div>\n';
-
-    snippets.bs4rowcol = '<div class="row">\n' +
-        '	<div class="col-xs- col-sm- col-md- col-lg-">\n' +
-        '		\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4row = '<div class="row">\n\n</div>\n';
-
     // Work with columns
 
     snippets.bs4col3equal = ' <div class="row">\n' +
@@ -588,77 +668,11 @@ define(function (require, exports, module) {
 
     snippets.bs4image = '<img src="#" class="img-responsive" alt="Image">\n';
 
-    // Thumbnails fue descartado 
-    // https://getbootstrap.com/docs/4.0/migration/#panels-thumbnails-and-wells
-    
-    snippets.bs4thumbnailcontent = '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">\n' +
-        '	<div class="thumbnail">\n' +
-        '		<img data-src="#" alt="">\n' +
-        '		<div class="caption">\n' +
-        '			<h3>Title</h3>\n' +
-        '			<p>\n' +
-        '				...\n' +
-        '			</p>\n' +
-        '			<p>\n' +
-        '				<a href="#" class="btn btn-primary">Action</a>\n' +
-        '				<a href="#" class="btn btn-default">Action</a>\n' +
-        '			</p>\n' +
-        '		</div>\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4thumbnail = '<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">\n' +
-        '	<a href="#" class="thumbnail">\n' +
-        '		<img data-src="#" alt="">\n' +
-        '	</a>\n' +
-        '</div>\n';
-
     snippets.bs4imagerounded = '<img src="[ENTER IMAGE HERE]" class="img-rounded" alt="Cinque Terre" width="304" height="236">\n';
 
     snippets.bs4imagecircle = '<img src="[ENTER IMAGE HERE]" class="img-circle" alt="Cinque Terre" width="304" height="236">\n';
 
-    snippets.bs4imagethumbnail = '<img src="[ENTER IMAGE HERE]" class="img-thumbnail" alt="Cinque Terre" width="304" height="236">\n';
-
     snippets.bs4imageresponsive = '<img class="img-responsive" src="[ENTER IMAGE HERE]" alt="Chania">\n';
-
-    snippets.bs4thumbnailgallerysample = '<!--\n' +
-        '<!DOCTYPE html>\n' +
-        '<html lang="en">\n' +
-        '<head>\n' +
-        '  <title>Bootstrap Image Gallery Sample</title>\n' +
-        '  <meta charset="utf-8">\n' +
-        '  <meta name="viewport" content="width=device-width, initial-scale=1">\n' +
-        cdncss + cdnjs +
-        '</head>\n' +
-        '<body>\n' +
-        '\n' +
-        '<div class="container">\n' +
-        '  <h2>Image Gallery using Thumbnail Class</h2>\n' +
-        '\n' +
-        '  <div class="row">\n' +
-        '    <div class="col-md-4">\n' +
-        '      <a href="[ENTER IMAGE HERE]" class="thumbnail">\n' +
-        '        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s</p>    \n' +
-        '        <img src="[ENTER IMAGE HERE]" alt="" style="width:150px;height:150px">\n' +
-        '      </a>\n' +
-        '    </div>\n' +
-        '    <div class="col-md-4">\n' +
-        '      <a href="[ENTER IMAGE HERE]" class="thumbnail">\n' +
-        '        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>\n' +
-        '        <img src="[ENTER IMAGE HERE]" alt="" style="width:150px;height:150px">\n' +
-        '      </a>\n' +
-        '    </div>\n' +
-        '    <div class="col-md-4">\n' +
-        '      <a href="[ENTER IMAGE HERE]" class="thumbnail">\n' +
-        '        <p>Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using</p>      \n' +
-        '        <img src="[ENTER IMAGE HERE]" alt="" style="width:150px;height:150px">\n' +
-        '      </a>\n' +
-        '    </div>\n' +
-        '  </div>\n' +
-        '</div>\n' +
-        '</body>\n' +
-        '</html>\n' +
-        '-->\n';
 
     snippets.bs4responsiveembed16by9 = '  <div class="embed-responsive embed-responsive-16by9">\n' +
         '    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/[YOUTUBE VIDEO ID]"></iframe>\n' +
@@ -1094,108 +1108,6 @@ define(function (require, exports, module) {
         '	<li><a href="#">&raquo;</a></li>\n' +
         '</ul>\n';
 
-    // Panels
-    // descartados 
-    // https://getbootstrap.com/docs/4.0/migration/#panels-thumbnails-and-wells
-
-    snippets.bs4paneldanger = '<div class="panel panel-danger">\n' +
-        '	  <div class="panel-heading">\n' +
-        '			<h3 class="panel-title">Panel title</h3>\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '</div>\n';
-
-    snippets.bs4panelfooter = '<div class="panel panel-default">\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-footer">\n' +
-        '			Panel footer\n' +
-        '		</div>\n' +
-        '</div>\n';
-
-    snippets.bs4panelheading = '<div class="panel panel-default">\n' +
-        '	  <div class="panel-heading">\n' +
-        '			<h3 class="panel-title">Panel title</h3>\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '</div>\n';
-
-    snippets.bs4panelinfo = '<div class="panel panel-info">\n' +
-        '	  <div class="panel-heading">\n' +
-        '			<h3 class="panel-title">Panel title</h3>\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '</div>\n';
-
-    snippets.bs4panelprimary = '<div class="panel panel-primary">\n' +
-        '	  <div class="panel-heading">\n' +
-        '			<h3 class="panel-title">Panel title</h3>\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '</div>\n';
-
-    snippets.bs4panelsuccess = '<div class="panel panel-success">\n' +
-        '	  <div class="panel-heading">\n' +
-        '			<h3 class="panel-title">Panel title</h3>\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '</div>\n';
-
-    snippets.bs4paneltable = '<div class="panel panel-default">\n' +
-        '	<!-- Default panel contents -->\n' +
-        '	<div class="panel-heading">Panel heading</div>\n' +
-        '		<div class="panel-body">\n' +
-        '			<p>Text goes here...</p>\n' +
-        '		</div>\n' +
-        '\n' +
-        '		<!-- Table -->\n' +
-        '		<table class="table">\n' +
-        '			<thead>\n' +
-        '				<tr>\n' +
-        '					<th>Heading 1</th>\n' +
-        '				</tr>\n' +
-        '				<tr>\n' +
-        '					<th>Heading 2</th>\n' +
-        '				</tr>\n' +
-        '			</thead>\n' +
-        '			<tbody>\n' +
-        '				<tr>\n' +
-        '					<td>Content 1</td>\n' +
-        '				</tr>\n' +
-        '				<tr>\n' +
-        '					<td>Content 2</td>\n' +
-        '				</tr>\n' +
-        '			</tbody>\n' +
-        '		</table>\n' +
-        '</div>\n';
-
-    snippets.bs4panelwarning = '<div class="panel panel-warning">\n' +
-        '	  <div class="panel-heading">\n' +
-        '			<h3 class="panel-title">Panel title</h3>\n' +
-        '	  </div>\n' +
-        '	  <div class="panel-body">\n' +
-        '			Panel content\n' +
-        '	  </div>\n' +
-        '</div>\n';
-
-    snippets.bs4panel = '<div class="panel panel-default">\n' +
-        '	<div class="panel-body">\n' +
-        '	   Basic panel example\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-
     // Table
 
     snippets.bs4table = '<table class="table">\n' +
@@ -1305,112 +1217,6 @@ define(function (require, exports, module) {
         '        .table-bordered > tfoot > tr > td {\n' +
         '            border: 2.5px solid red;\n' +
         '        }\n';
-
-
-    snippets.bs4addroundpanelsolid = '<div class="panel panel-default addroundsolid">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addroundsolid = '        .addroundsolid {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 2px solid #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpaneldashed = '<div class="panel panel-default addrounddashed">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addrounddashed = '        .addrounddashed {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 2px dashed #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpaneldotted = '<div class="panel panel-default addrounddotted">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addrounddotted = '        .addrounddotted {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 2px dotted #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpaneldouble = '<div class="panel panel-default addrounddouble">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addrounddouble = '        .addrounddouble {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 5px double #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpanelgroove = '<div class="panel panel-default addroundgroove">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addroundgroove = '        .addroundgroove {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 5px groove #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpanelridge = '<div class="panel panel-default addroundridge">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addroundridge = '        .addroundridge {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 5px ridge #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpanelinset = '<div class="panel panel-default addroundinset">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addroundinset = '        .addroundinset {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 5px inset #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpaneloutset = '<div class="panel panel-default addroundoutset">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addroundoutset = '        .addroundoutset {\n' +
-        '            -webkit-border-radius: 16px;\n' +
-        '            -khtml-border-radius: 16px;\n' +
-        '            -moz-border-radius: 16px;\n' +
-        '            border-radius: 16px;\n' +
-        '            border: 5px outset #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
-    snippets.bs4addroundpanelhidden = '<div class="panel panel-default addroundhidden">\n\n' +
-        '</div>\n';
-
-    snippets.bs4addroundhidden = '        .addroundhidden {\n' +
-        '            border: 0px hidden #acb;\n' +
-        '            margin: 5px;\n' +
-        '        }\n';
-
 
     snippets.bs4tableborderedhcolor = '        .table-bordered > thead > tr > th,\n' +
         '        .table-bordered > tbody > tr > th,\n' +
@@ -1773,19 +1579,6 @@ define(function (require, exports, module) {
         '    </div>    \n' +
         '    <!-- Move this line to the last line of js declaration area -->\n' +
         '    <script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
-
-    // Wells
-    // Reemplazados por Cards
-    // https://getbootstrap.com/docs/4.0/migration/#panels-thumbnails-and-wells
-
-    snippets.bs4welllg = '<div class="well well-lg">\n\n' +
-        '</div>\n';
-
-    snippets.bs4wellsm = '<div class="well well-sm">\n\n' +
-        '</div>\n';
-
-    snippets.bs4well = '<div class="well">\n\n' +
-        '</div>\n';
 
     // Portfolio Sample
 
@@ -3434,7 +3227,7 @@ define(function (require, exports, module) {
     snippets.bs4jsnbtnfileselect += "<\/div>\n";
 
     snippets.bs4jsnuploadimage = "<div class=\"fileinput fileinput-new\" data-provides=\"fileinput\">\n";
-    snippets.bs4jsnuploadimage += "  <div class=\"fileinput-preview thumbnail\" data-trigger=\"fileinput\" style=\"width: 200px; height: 150px;\"><\/div>\n";
+    snippets.bs4jsnuploadimage += "  <div class=\"fileinput-preview\" data-trigger=\"fileinput\" style=\"width: 200px; height: 150px;\"><\/div>\n";
     snippets.bs4jsnuploadimage += "  <div>\n";
     snippets.bs4jsnuploadimage += "    <span class=\"btn btn-default btn-file\"><span class=\"fileinput-new\">Select image<\/span><span class=\"fileinput-exists\">Change<\/span><input type=\"file\" name=\"...\"><\/span>\n";
     snippets.bs4jsnuploadimage += "    <a href=\"#\" class=\"btn btn-default fileinput-exists\" data-dismiss=\"fileinput\">Remove<\/a>\n";

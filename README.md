@@ -20,32 +20,43 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 1. **Enable RCH Bootstrap Snippets**<br/>
    Under main menu select **Edit > Enable RCH Bootstrap Snippets**
 2. Starting typing "bs4" you'll see the snippets list (code hint provider), just pick a snippet and press ENTER, or   
-3. Enter a snippet and hit the **Tab** key (Alternatively you can also hit the key **DOWN**).
+3. Enter a snippet and hit the **Tab** key (alternatively you can also hit the key **DOWN**).
 
 ## Snippets list
 
-### Bootstrap 4 - Minimum Template
+### Bootstrap 4 - HTML5 Templates
 
 	bs4
     bs4template
 	bs4html    
-    snippets.html5template
+    bs4html5template
 
 ### Alerts
 
+	bs4alert (primary style)
 	bs4alertdanger
+	bs4alertdark
 	bs4alertinfo 
+	bs4alertlight 
+	bs4alertsecondary
 	bs4alertsuccess
 	bs4alertwarning
-	bs4alert
 	
 ### Badge
 
-	bs4badge
+	bs4badge (primary style)
+    bs4badgedanger
+    bs4badgedark
+    bs4badgeinfo
+    bs4badgelight
+    bs4badgesecondary
+    bs4badgesuccess
+    bs4badgewarning
 	
 ### Breadcrumbs
 
-	bs4breadcrumbs
+	bs4breadcrumbs (unlisted markup)
+    bs4breadcrumbslist
 	
 ### Buttons
 
@@ -96,6 +107,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Carousel
 
 	bs4carousel
+    bs4carouselfull
+    bs4carouselwcaptions
+    bs4carouselwcontrols
+    bs4carouselwindicators
 
 ### CDN
 
@@ -153,24 +168,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4select
 	bs4textareah
 	bs4textarea
-
-### Grid System
-
-	bs4col1
-	bs4col10
-	bs4col11
-	bs4col12
-	bs4col2
-	bs4col3
-	bs4col4
-	bs4col5
-	bs4col6
-	bs4col7
-	bs4col8
-	bs4col9
-	bs4container
-	bs4rowcol
-	bs4row
 	
 ### Work with columns
 
@@ -187,13 +184,9 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Images
 
 	bs4image
-	bs4thumbnailcontent
-	bs4thumbnail
 	bs4imagerounded
 	bs4imagecircle
-	bs4imagethumbnail
 	bs4imageresponsive
-	bs4thumbnailgallerysample
 	bs4responsiveembed16by9
 	bs4responsiveembed4by3
 
@@ -287,67 +280,49 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Navigation
     
-    snippets.bs4navbarbasic
-	snippets.bs4navbarbrand
-	snippets.bs4navbarfixedbottom
-	snippets.bs4navbarfixedtop
-	snippets.bs4navbarform
-	snippets.bs4navbarinverse
-	snippets.bs4navbarlink
-	snippets.bs4navbarlinks
-	snippets.bs4navbarresponsive
-	snippets.bs4navbarstatictop
-	snippets.bs4navbartext
-	snippets.bs4navbar
+    bs4navbarbasic
+	bs4navbarbrand
+	bs4navbarfixedbottom
+	bs4navbarfixedtop
+	bs4navbarform
+	bs4navbarinverse
+	bs4navbarlink
+	bs4navbarlinks
+	bs4navbarresponsive
+	bs4navbarstatictop
+	bs4navbartext
+	bs4navbar
 
 ### Page Header
     
-    snippets.bs4pageheader
+    bs4pageheader
     
 ### Pagination
     
-	snippets.bs4pageraligned
-	snippets.bs4pager
-	snippets.bs4paginationlarge
-	snippets.bs4paginationsmall
-	snippets.bs4pagination
-    
-### Panels
-    
-	snippets.bs4paneldanger
-	snippets.bs4panelfooter
-	snippets.bs4panelheading
-	snippets.bs4panelinfo
-	snippets.bs4panelprimary
-	snippets.bs4panelsuccess
-	snippets.bs4paneltable
-	snippets.bs4panelwarning
-	snippets.bs4panel
+	bs4pageraligned
+	bs4pager
+	bs4paginationlarge
+	bs4paginationsmall
+	bs4pagination
     
 ### Table 
     
-    snippets.bs4table
-    snippets.bs4tablehover
-	snippets.bs4tablebordered
-	snippets.bs4tableborderedhover
-	snippets.bs4tablecondensed
-	snippets.bs4tablecondensedhover
-	snippets.bs4tableresponsive
-	snippets.bs4tableresponsivehover
-    snippets.bs4tablestriped
-	snippets.bs4tablestripedhover
-	snippets.bs4tablecontextual
+    bs4table
+    bs4tablehover
+	bs4tablebordered
+	bs4tableborderedhover
+	bs4tablecondensed
+	bs4tablecondensedhover
+	bs4tableresponsive
+	bs4tableresponsivehover
+    bs4tablestriped
+	bs4tablestripedhover
+	bs4tablecontextual
     
 ### Tabs
     
-    snippets.bs4tabs
-    snippets.tabhover
-    
-### Wells
-
-    snippets.bs4welllg
-	snippets.bs4wellsm
-	snippets.bs4well
+    bs4tabs
+    tabhover
 
 ### Animated Portfolio Sample    
 

@@ -392,11 +392,11 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Credits
 ---
 
-- Bootstrap Framework - http://getboostrap.com
+- Bootstrap Framework - https://getbootstrap.com
 - jQuery JavaScript Library v3.2.1 - jQuery Foundation, Inc. and other contributors
 - Snippets based on Bootstrap 3 Sublime Plugin - Thanks Jason Morton - Twitter @JasonMortonNZ 
 - Snippets based on ACB Bootstrap Snippets Plugin - Thanks Carlos Barbosa
-- Source-code editor used in this project - Brackets - http://www.brackets.io
+- Source-code editor used in this project - Brackets - https://www.brackets.io
 
 Thank you all!
 

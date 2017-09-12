@@ -168,27 +168,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4select
 	bs4textareah
 	bs4textarea
-	
-### Work with columns
-
-	bs4col3equal
-	bs4col3unequal
-	bs4col2equal
-	bs4col2nested
-	bs4colmobdesk
-	bs4colmobtabdesk
-	bs4clearfloats
-	bs4offsettingcol
-	bs4pushandpullcol
-	
+		
 ### Images
 
 	bs4image
 	bs4imagerounded
 	bs4imagecircle
-	bs4imageresponsive
-	bs4responsiveembed16by9
-	bs4responsiveembed4by3
 
 ### Input Groups
 
@@ -201,15 +186,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Jumbotron
 
 	bs4jumbotron
-	
-### Labels
-
-	bs4labeldanger
-	bs4labeldefault
-	bs4labelinfo
-	bs4labelsuccess
-	bs4labelwarning
-	bs4label
+    bs4jumbotronfluid
 
 ### Link Buttons
 
@@ -293,10 +270,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4navbartext
 	bs4navbar
 
-### Page Header
-    
-    bs4pageheader
-    
 ### Pagination
     
 	bs4pageraligned
@@ -339,30 +312,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4portfoliocontact
 	bs4portfoliosignupform
 	bs4portfoliocopyright
-
-### Bootstrap 4 Media Queries - Mobile First Method
-
-    bs4mqfmdesktops
-    bs4mqfmextrasmalldevices
-    bs4mqfmiphoneretina
-    bs4mqfmlargedevices
-    bs4mqfmmediumdevices
-    bs4mqfmphones
-    bs4mqfmsmalldevices
-    bs4mqfmtablets
-    bs4mqfmwidescreen
-    
-### Bootstrap 4 Media Queries - Non-Mobile First Method
-
-    bs4mqdesktops
-    bs4mqextrasmalldevices
-    bs4mqiphoneretina
-    bs4mqlargedevices
-    bs4mqmediumdevices
-    bs4mqphones
-    bs4mqsmalldevices
-    bs4mqtablets
-    bs4mqwidescreens
     
 ### Credits
 ---

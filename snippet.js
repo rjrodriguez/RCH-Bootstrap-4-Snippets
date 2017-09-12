@@ -37,7 +37,7 @@ define(function (require, exports, module) {
         '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
 
-    // Bootstrap 4 - Minimum Template
+    // Bootstrap 4 - HTML5 Templates and Minimum Template
 
     snippets.bs4 = '<!DOCTYPE html>\n' +
         '<html lang="en">\n' +
@@ -85,8 +85,6 @@ define(function (require, exports, module) {
         '</body>\n' +
         '</html>\n';
 
-    // HTML5 Template
-    
     snippets.bs4template = snippets.bs4;
     snippets.bs4html5template = snippets.bs4html;
 
@@ -133,7 +131,6 @@ define(function (require, exports, module) {
         '		<strong>Dark alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
         '	</div>\n';
 
-
     // Badge
     // https://getbootstrap.com/docs/4.0/components/badge/
 
@@ -162,7 +159,7 @@ define(function (require, exports, module) {
         '		<li class="breadcrumb-item active">3rd level</li>\n' +
         '	</ol>';
     
-    // Buttons
+    // Buttons (TODO)
     // https://getbootstrap.com/docs/4.0/components/buttons/
 
     snippets.bs4blockbuttondanger = '<button type="button" class="btn btn-large btn-block btn-danger">[button]</button>\n';
@@ -177,7 +174,7 @@ define(function (require, exports, module) {
     snippets.bs4buttondefault = '<button type="button" class="btn btn-default">[button]</button>\n';
     snippets.bs4buttondisabled = '<button type="button" class="btn btn-primary disabled">[button]</button>\n';
     
-    // Button Groups
+    // Button Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/button-group/
     
     snippets.bs4buttongroupvertical = '<div class="btn-group-vertical">\n' +
@@ -360,10 +357,15 @@ define(function (require, exports, module) {
 
     // Clearfix
 
-    snippets.bs4clearfix = '<div class="clearfix">\n\n' +
-        '</div>\n';
+    snippets.bs4clearfix = '<div class="clearfix">\n\n</div>';
+    
+    // Images
 
-    // Forms
+    snippets.bs4image = '<img src="#" class="img-fluid" alt="">\n';
+    snippets.bs4imagerounded = '<img src="" class="rounded" alt="">\n';
+    snippets.bs4imagecircle = '<img src="" class="rounded-circle" alt="">\n';
+
+    // Forms (TODO)
     // https://getbootstrap.com/docs/4.0/components/forms/
 
     snippets.bs4formhorizontal = '<form action="" method="POST" class="form-horizontal" role="form">\n' +
@@ -582,103 +584,6 @@ define(function (require, exports, module) {
 
     snippets.bs4textarea = '<textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>\n';
 
-    // Grid System
-    // Work with columns
-
-    snippets.bs4col3equal = ' <div class="row">\n' +
-        '  <div class="col-sm-4">.col-sm-4</div>\n' +
-        '  <div class="col-sm-4">.col-sm-4</div>\n' +
-        '  <div class="col-sm-4">.col-sm-4</div>\n' +
-        '</div>\n';
-
-    snippets.bs4col3unequal = ' <div class="row">\n' +
-        '  <div class="col-sm-3">.col-md-3</div>\n' +
-        '  <div class="col-sm-6">.col-md-6</div>\n' +
-        '  <div class="col-sm-3">.col-md-3</div>\n' +
-        '</div>\n';
-
-    snippets.bs4col2equal = '<div class="row">\n' +
-        '  <div class="col-sm-4">.col-sm-4</div>\n' +
-        '  <div class="col-sm-8">.col-sm-8</div>\n' +
-        '</div>\n';
-
-    snippets.bs4col2nested = '<div class="row">\n' +
-        '  <div class="col-sm-8">' +
-        '    .col-sm-8' +
-        '    <div class="row">' +
-        '      <div class="col-sm-6">.col-sm-6</div>' +
-        '      <div class="col-sm-6">.col-sm-6</div>' +
-        '    </div>' +
-        '  </div>' +
-        '  <div class="col-sm-4">.col-sm-4</div>' +
-        '</div>\n';
-
-    snippets.bs4colmobdesk = '<div class="row">\n' +
-        '  <div class="col-xs-12 col-md-8">.col-xs-12 .col-md-8</div>\n' +
-        '  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>\n' +
-        '</div>\n' +
-        '<div class="row">\n' +
-        '  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>\n' +
-        '  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>\n' +
-        '  <div class="col-xs-6 col-md-4">.col-xs-6 .col-md-4</div>\n' +
-        '</div>\n' +
-        '<div class="row">\n' +
-        '  <div class="col-xs-6">.col-xs-6</div>\n' +
-        '  <div class="col-xs-6">.col-xs-6</div>\n' +
-        '</div>\n';
-
-    snippets.bs4colmobtabdesk = ' <div class="row">\n' +
-        '  <div class="col-xs-12 col-sm-6 col-lg-8">.col-xs-12 .col-sm-6 .col-lg-8</div>\n' +
-        '  <div class="col-xs-6 col-lg-4">.col-xs-6 .col-lg-4</div>\n' +
-        '</div>\n' +
-        '<div class="row">\n' +
-        '  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>\n' +
-        '  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>\n' +
-        '  <div class="col-xs-6 col-sm-4">.col-xs-6 .col-sm-4</div>\n' +
-        '</div>\n';
-
-    snippets.bs4clearfloats = ' <div class="row">\n' +
-        '  <div class="col-xs-6 col-sm-3">\n' +
-        '    Column 1\n' +
-        '    <br>\n' +
-        '    Resize the browser window to see the effect.\n' +
-        '  </div>\n' +
-        '  <div class="col-xs-6 col-sm-3">Column 2</div>\n' +
-        '  <!-- Add clearfix for only the required viewport -->\n' +
-        '  <div class="clearfix visible-xs"></div>\n' +
-        '  <div class="col-xs-6 col-sm-3">Column 3</div>\n' +
-        '  <div class="col-xs-6 col-sm-3">Column 4</div>\n' +
-        '</div>\n';
-
-    snippets.bs4offsettingcol = ' <div class="row">\n' +
-        '  <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>\n' +
-        '  <div class="col-sm-5 col-sm-offset-2 col-md-6 col-md-offset-0">\n' +
-        '  .col-sm-5 .col-sm-offset-2 .col-md-6 .col-md-offset-0</div>\n' +
-        '</div>\n';
-
-    snippets.bs4pushandpullcol = ' <div class="row">\n' +
-        '  <div class="col-sm-4 col-sm-push-8">.col-sm-4 .col-sm-push-8</div>\n' +
-        '  <div class="col-sm-8 col-sm-pull-4">.col-sm-8 .col-sm-pull-4</div>\n' +
-        '</div>\n';
-    
-    // Images
-
-    snippets.bs4image = '<img src="#" class="img-responsive" alt="Image">\n';
-
-    snippets.bs4imagerounded = '<img src="[ENTER IMAGE HERE]" class="img-rounded" alt="Cinque Terre" width="304" height="236">\n';
-
-    snippets.bs4imagecircle = '<img src="[ENTER IMAGE HERE]" class="img-circle" alt="Cinque Terre" width="304" height="236">\n';
-
-    snippets.bs4imageresponsive = '<img class="img-responsive" src="[ENTER IMAGE HERE]" alt="Chania">\n';
-
-    snippets.bs4responsiveembed16by9 = '  <div class="embed-responsive embed-responsive-16by9">\n' +
-        '    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/[YOUTUBE VIDEO ID]"></iframe>\n' +
-        '  </div>\n';
-
-    snippets.bs4responsiveembed4by3 = '  <div class="embed-responsive embed-responsive-16by9">\n' +
-        '    <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/[YOUTUBE VIDEO ID]"></iframe>\n' +
-        '  </div>\n';
-
     // Input Groups
 
     snippets.bs4inputgroupaddontext = '<div class="input-group">\n' +
@@ -705,26 +610,29 @@ define(function (require, exports, module) {
     // https://getbootstrap.com/docs/4.0/components/jumbotron/
 
     snippets.bs4jumbotron = '<div class="jumbotron">\n' +
-        '	<div class="container">\n' +
-        '		<h1>[PUT TITLE HERE]</h1>\n' +
-        '		<p>[INSERT CONTENT HERE ...]</p>\n' +
-        '		<p>\n' +
-        '			<a class="btn btn-primary btn-lg">Learn more</a>\n' +
-        '		</p>\n' +
-        '	</div>\n' +
-        '</div>\n';
+        '       <h1 class="display-3">Hello, world!</h1>\n' +
+        '       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n' +
+        '       <hr class="my-4">\n' +
+        '       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\n' +
+        '       <p class="lead">\n' +
+        '           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n' +
+        '       </p>\n' +
+        '   </div>';
+    
+    snippets.bs4jumbotronfluid = '<div class="jumbotron jumbotron-fluid">\n' +
+        '       <div class="container">\n' +
+        '           <h1 class="display-3">Hello, world!</h1>\n' +
+        '           <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n' +
+        '           <hr class="my-4">\n' +
+        '           <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\n' +
+        '           <p class="lead">\n' +
+        '               <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n' +
+        '           </p>\n' +
+        '       </div>\n' +
+        '   </div>';
 
-    // Labels
-    // ??
 
-    snippets.bs4labeldanger = '<span class="label label-danger">[Label]</span>\n';
-    snippets.bs4labeldefault = '<span class="label label-default">[Label]</span>\n';
-    snippets.bs4labelinfo = '<span class="label label-info">[Label]</span>\n';
-    snippets.bs4labelsuccess = '<span class="label label-success">[Label]</span>\n';
-    snippets.bs4labelwarning = '<span class="label label-warning">[Label]</span>\n';
-    snippets.bs4label = '<span class="label label-[ENTER NAME HERE]">[Label]</span>\n';
-
-    // Link Buttons
+    // Link Buttons (TODO)
 
     snippets.bs4blocklinkbuttondanger = '<a class="btn btn-large btn-block btn-danger" href="#" role="button">button</a>\n';
 
@@ -818,7 +726,7 @@ define(function (require, exports, module) {
 
     snippets.bs4smlinkbutton = '<a class="btn btn-sm btn-default" href="#" role="button">button</a>\n';
 
-    // List Groups
+    // List Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/list-group/
 
     snippets.bs4listgroupbadges = '<ul class="list-group">\n' +
@@ -856,7 +764,7 @@ define(function (require, exports, module) {
         '</ul>\n';
 
 
-    // Local
+    // Local (TODO)
 
     snippets.bs4local = '<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">\n' +
         '<script src="js/jquery.js"></script>\n' +
@@ -868,7 +776,7 @@ define(function (require, exports, module) {
         '<script src="js/bootstrap.min.js"></script>\n';
 
 
-    // Media
+    // Media (TODO)
     // https://getbootstrap.com/docs/4.0/layout/media-object/
     
     snippets.bs4mediaobject = '<div class="media">\n' +
@@ -881,7 +789,7 @@ define(function (require, exports, module) {
         '	</div>\n' +
         '</div>\n';
 
-    // Modal
+    // Modal (TODO)
     // https://getbootstrap.com/docs/4.0/components/modal/
 
     snippets.bs4modal = '<!-- Local bootstrap CSS & JS -->\n' +
@@ -894,7 +802,7 @@ define(function (require, exports, module) {
         '<script src="./js/jquery.js"></script>' +
         '<script src="./js/bootstrap.min.js"></script>\n';
 
-    // Navigation
+    // Navigation (TODO)
     // https://getbootstrap.com/docs/4.0/components/navbar/
 
     snippets.bs4navbarbasic = '<div class="navbar">\n' +
@@ -1057,13 +965,7 @@ define(function (require, exports, module) {
         '	</div><!-- /.navbar-collapse -->\n' +
         '</nav>\n';
 
-    // Page Header
-
-    snippets.bs4pageheader = '<div class="page-header">\n' +
-        '  <h1>title<small>subtext</small></h1>\n' +
-        '</div>\n';
-
-    // Pagination
+    // Pagination (TODO)
 
     snippets.bs4pageraligned = '<ul class="pager">\n' +
         '	<li class="previous"><a href="#">&larr; Older</a></li>\n' +
@@ -1105,7 +1007,7 @@ define(function (require, exports, module) {
         '	<li><a href="#">&raquo;</a></li>\n' +
         '</ul>\n';
 
-    // Table
+    // Table (TODO)
 
     snippets.bs4table = '<table class="table">\n' +
         '        <thead>\n' +
@@ -1200,7 +1102,7 @@ define(function (require, exports, module) {
         '        </tbody>\n' +
         '    </table>\n';
 
-    // Revisar CSS
+    // Revisar CSS (TODO)
     
     snippets.bs4tableborderedcolor = '        .table {\n' +
         '            border: 2.5px solid red;\n' +
@@ -1536,7 +1438,7 @@ define(function (require, exports, module) {
         snippets.bs4tablecontextualtdcolorwarning +
         snippets.bs4tablecontextualtdcolorinfo;
 
-    // Tabs
+    // Tabs (TODO)
 
     snippets.bs4tabs = '<div role="tabpanel">\n' +
         '    <!-- Nav tabs -->\n' +
@@ -1577,10 +1479,10 @@ define(function (require, exports, module) {
         '    <!-- Move this line to the last line of js declaration area -->\n' +
         '    <script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
 
-    // Portfolio Sample
+    // Portfolio Sample (TODO)
 
     //
-    // Site Blocks
+    // Site Blocks (TODO)
     //
 
     snippets.bs4portfoliocss = '<!-- External Styles -->\n' +
@@ -1915,7 +1817,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 iphone">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/1.jpg">\n' +
-        '                <img src="assets/img/work/1.jpg" class="img-responsive img-rounded 1" alt=""/>\n' +
+        '                <img src="assets/img/work/1.jpg" class="img-fluid img-rounded 1" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Lorem ipsum dolor sit amet</h4>\n' +
         '        </div>\n' +
@@ -1923,7 +1825,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hotsite website">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/2.jpg">\n' +
-        '                <img src="assets/img/work/2.jpg" class="img-responsive img-rounded" alt=""/>\n' +
+        '                <img src="assets/img/work/2.jpg" class="img-fluid img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Integer blandit odio congue leo tristique tempus</h4>\n' +
         '        </div>\n' +
@@ -1931,7 +1833,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 iphone">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/3.jpg">\n' +
-        '                <img src="assets/img/work/3.jpg" class="img-responsive img-rounded" alt=""/>\n' +
+        '                <img src="assets/img/work/3.jpg" class="img-fluid img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Morbi mollis lectus et ipsum</h4>\n' +
         '        </div>\n' +
@@ -1939,7 +1841,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hotsite">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/4.jpg">\n' +
-        '                <img src="assets/img/work/4.jpg" class="img-responsive img-rounded" alt=""/>\n' +
+        '                <img src="assets/img/work/4.jpg" class="img-fluid img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Ut tincidunt tortor sit amet sagittis sagittis</h4>\n' +
         '        </div>\n' +
@@ -1947,7 +1849,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 website">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/5.jpg">\n' +
-        '                <img src="assets/img/work/5.jpg" class="img-responsive img-rounded" alt=""/>\n' +
+        '                <img src="assets/img/work/5.jpg" class="img-fluid img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Aliquam sit amet libero eget nibh varius ultricies</h4>\n' +
         '        </div>\n' +
@@ -1955,7 +1857,7 @@ define(function (require, exports, module) {
         '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 android">\n' +
         '        <div class="work-wrapper">\n' +
         '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/6.jpg">\n' +
-        '                <img src="assets/img/work/6.jpg" class="img-responsive img-rounded" alt=""/>\n' +
+        '                <img src="assets/img/work/6.jpg" class="img-fluid img-rounded" alt=""/>\n' +
         '            </a>\n' +
         '            <h4>Nunc eget ipsum eget odio ultrices molestie</h4>\n' +
         '        </div>\n' +
@@ -2706,32 +2608,6 @@ define(function (require, exports, module) {
         '            </span>\n' +
         '            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>\n' +
         '        </div>        \n';
-
-    // Bootstrap 4 Media Queries
-
-    /*==========  Mobile First Method  ==========*/
-
-    snippets.bs4mqfmdesktops = '@media only screen and (min-width : 992px) {\n\n}\n';
-    snippets.bs4mqfmextrasmalldevices = '@media only screen and (min-width : 480px) {\n\n}';
-    snippets.bs4mqfmiphoneretina = '@media only screen and (min-width : 320px) {\n\n}\n';
-    snippets.bs4mqfmlargedevices = '@media only screen and (min-width : 1200px) {\n\n}\n';
-    snippets.bs4mqfmmediumdevices = '@media only screen and (min-width : 992px) {\n\n}\n';
-    snippets.bs4mqfmphones = '@media only screen and (min-width : 480px) {\n\n}';
-    snippets.bs4mqfmsmalldevices = '@media only screen and (min-width : 768px) {\n\n}\n';
-    snippets.bs4mqfmtablets = '@media only screen and (min-width : 768px) {\n\n}\n';
-    snippets.bs4mqfmwidescreen = '@media only screen and (min-width : 1200px) {\n\n}\n';
-
-    /*==========  Non-Mobile First Method  ==========*/
-
-    snippets.bs4mqdesktops = '@media only screen and (max-width : 992px) {\n\n}\n';
-    snippets.bs4mqextrasmalldevices = '@media only screen and (max-width : 480px) {\n\n}\n';
-    snippets.bs4mqiphoneretina = '@media only screen and (max-width : 320px) {\n\n}\n';
-    snippets.bs4mqlargedevices = '@media only screen and (max-width : 1200px) {\n\n}\n';
-    snippets.bs4mqmediumdevices = '@media only screen and (max-width : 992px) {\n\n}\n';
-    snippets.bs4mqphones = '@media only screen and (max-width : 480px) {\n\n}\n';
-    snippets.bs4mqsmalldevices = '@media only screen and (max-width : 768px) {\n\n}\n';
-    snippets.bs4mqtablets = '@media only screen and (max-width : 768px) {\n\n}\n';
-    snippets.bs4mqwidescreens = '@media only screen and (max-width : 1200px) {\n\n}\n';
 
     module.exports = snippets;
 });

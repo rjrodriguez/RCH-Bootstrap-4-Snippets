@@ -52,7 +52,6 @@ bs4carouselwindicators
 bs4cdn
 bs4cdncss
 bs4cdnjs
-bs4clearfix
 bs4csvimportjs
 bs4datatableinit
 bs4datatablesampledata

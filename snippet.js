@@ -354,10 +354,6 @@ define(function (require, exports, module) {
     snippets.bs4cdn = cdncss + cdnjs;
     snippets.bs4cdnjs = cdnjs;
     snippets.bs4cdncss = cdncss;
-
-    // Clearfix
-
-    snippets.bs4clearfix = '<div class="clearfix">\n\n</div>';
     
     // Images
 

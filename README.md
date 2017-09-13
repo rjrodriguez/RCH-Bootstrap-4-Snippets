@@ -117,10 +117,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4cdn
     bs4cdncss
     bs4cdnjs
-    
-### Clearfix
-
-	bs4clearfix
 	
 ### Forms
 

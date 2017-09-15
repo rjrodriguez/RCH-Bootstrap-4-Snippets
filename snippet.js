@@ -801,165 +801,213 @@ define(function (require, exports, module) {
     // Navigation (TODO)
     // https://getbootstrap.com/docs/4.0/components/navbar/
 
-    snippets.bs4navbarbasic = '<div class="navbar">\n' +
-        '	<a class="navbar-brand" href="#">Title</a>\n' +
-        '	<ul class="nav navbar-nav">\n' +
-        '		<li class="active">\n' +
-        '			<a href="#">Home</a>\n' +
-        '		</li>\n' +
-        '		<li>\n' +
-        '			<a href="#">Link</a>\n' +
-        '		</li>\n' +
-        '	</ul>\n' +
-        '</div>\n';
-
-    snippets.bs4navbarbrand = '<a class="navbar-brand" href="/">Title</a>\n';
-
-    snippets.bs4navbarfixedbottom = '<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">\n' +
-        '	<a class="navbar-brand" href="#">Title</a>\n' +
-        '	<ul class="nav navbar-nav">\n' +
-        '		<li class="active">\n' +
-        '			<a href="#">Home</a>\n' +
-        '		</li>\n' +
-        '		<li>\n' +
-        '			<a href="#">Link</a>\n' +
-        '		</li>\n' +
-        '	</ul>\n' +
-        '</nav>\n';
-
-    snippets.bs4navbarfixedtop = '<nav class="navbar navbar-default navbar-fixed-top" role="navigation">\n' +
-        '	<a class="navbar-brand" href="#">Title</a>\n' +
-        '	<ul class="nav navbar-nav">\n' +
-        '		<li class="active">\n' +
-        '			<a href="#">Home</a>\n' +
-        '		</li>\n' +
-        '		<li>\n' +
-        '			<a href="#">Link</a>\n' +
-        '		</li>\n' +
-        '	</ul>\n' +
-        '</nav>\n';
-
-    snippets.bs4navbarform = '<form class="navbar-form pull-right">\n' +
-        '	<input type="text" style="width: 200px;">\n' +
-        '	<button type="submit" class="btn btn-default">Submit</button>\n' +
-        '</form>\n';
-
-    snippets.bs4navbarinverse = '<nav class="navbar navbar-inverse">\n' +
-        '	<a class="navbar-brand" href="#">Title</a>\n' +
-        '	<ul class="nav navbar-nav">\n' +
-        '		<li class="active">\n' +
-        '			<a href="#">Home</a>\n' +
-        '		</li>\n' +
-        '		<li>\n' +
-        '			<a href="#">Link</a>\n' +
-        '		</li>\n' +
-        '	</ul>\n' +
-        '</nav>\n';
-
-    snippets.bs4navbarlink = '<p class="navbar-text pull-right">\n' +
-        '	<a href="#" class="navbar-link">Links</a>\n' +
-        '</p>\n';
-
-    snippets.bs4navbarlinks = '<ul class="nav navbar-nav">\n' +
-        '	<li class="active">\n' +
-        '		<a href="#">Home</a>\n' +
-        '	</li>\n' +
-        '	<li>\n' +
-        '		<a href="#">Link</a>\n' +
-        '	</li>\n' +
-        '</ul>\n';
-
-    snippets.bs4navbarresponsive = '<nav class="navbar navbar-default" role="navigation">\n' +
-        '	<!-- Brand and toggle get grouped for better mobile display -->\n' +
-        '	<div class="navbar-header">\n' +
-        '		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">\n' +
-        '			<span class="sr-only">Toggle navigation</span>\n' +
-        '			<span class="icon-bar"></span>\n' +
-        '			<span class="icon-bar"></span>\n' +
-        '			<span class="icon-bar"></span>\n' +
-        '		</button>\n' +
-        '		<a class="navbar-brand" href="#">Title</a>\n' +
-        '	</div>\n' +
-        '\n' +
-        '	<!-- Collect the nav links, forms, and other content for toggling -->\n' +
-        '	<div class="collapse navbar-collapse navbar-ex1-collapse">\n' +
-        '		<ul class="nav navbar-nav">\n' +
-        '			<li class="active"><a href="#">Link</a></li>\n' +
-        '			<li><a href="#">Link</a></li>\n' +
-        '		</ul>\n' +
-        '		<form class="navbar-form navbar-left" role="search">\n' +
-        '			<div class="form-group">\n' +
-        '				<input type="text" class="form-control" placeholder="Search">\n' +
-        '			</div>\n' +
-        '			<button type="submit" class="btn btn-default">Submit</button>\n' +
-        '		</form>\n' +
-        '		<ul class="nav navbar-nav navbar-right">\n' +
-        '			<li><a href="#">Link</a></li>\n' +
-        '			<li class="dropdown">\n' +
-        '				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>\n' +
-        '				<ul class="dropdown-menu">\n' +
-        '					<li><a href="#">Action</a></li>\n' +
-        '					<li><a href="#">Another action</a></li>\n' +
-        '					<li><a href="#">Something else here</a></li>\n' +
-        '					<li><a href="#">Separated link</a></li>\n' +
-        '				</ul>\n' +
-        '			</li>\n' +
-        '		</ul>\n' +
-        '	</div><!-- /.navbar-collapse -->\n' +
-        '</nav>\n';
-
-    snippets.bs4navbarstatictop = '<nav class="navbar navbar-default navbar-static-top" role="navigation">\n' +
-        '	<a class="navbar-brand" href="#">Title</a>\n' +
-        '	<ul class="nav navbar-nav">\n' +
-        '		<li class="active">\n' +
-        '			<a href="#">Home</a>\n' +
-        '		</li>\n' +
-        '		<li>\n' +
-        '			<a href="#">Link</a>\n' +
-        '		</li>\n' +
-        '	</ul>\n' +
-        '</nav>\n';
-
-    snippets.bs4navbartext = '<p class="navbar-text">[Navbar text]</p>\n';
-
-    snippets.bs4navbar = '<nav class="navbar navbar-default" role="navigation">\n' +
-        '	<!-- Brand and toggle get grouped for better mobile display -->\n' +
-        '	<div class="navbar-header">\n' +
-        '		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">\n' +
-        '			<span class="sr-only">Toggle navigation</span>\n' +
-        '			<span class="icon-bar"></span>\n' +
-        '			<span class="icon-bar"></span>\n' +
-        '			<span class="icon-bar"></span>\n' +
-        '		</button>\n' +
-        '		<a class="navbar-brand" href="#">Title</a>\n' +
-        '	</div>\n' +
-        '\n' +
-        '	<!-- Collect the nav links, forms, and other content for toggling -->\n' +
-        '	<div class="collapse navbar-collapse navbar-ex1-collapse">\n' +
-        '		<ul class="nav navbar-nav">\n' +
-        '			<li class="active"><a href="#">Link</a></li>\n' +
-        '			<li><a href="#">Link</a></li>\n' +
-        '		</ul>\n' +
-        '		<form class="navbar-form navbar-left" role="search">\n' +
-        '			<div class="form-group">\n' +
-        '				<input type="text" class="form-control" placeholder="Search">\n' +
-        '			</div>\n' +
-        '			<button type="submit" class="btn btn-default">Submit</button>\n' +
-        '		</form>\n' +
-        '		<ul class="nav navbar-nav navbar-right">\n' +
-        '			<li><a href="#">Link</a></li>\n' +
-        '			<li class="dropdown">\n' +
-        '				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>\n' +
-        '				<ul class="dropdown-menu">\n' +
-        '					<li><a href="#">Action</a></li>\n' +
-        '					<li><a href="#">Another action</a></li>\n' +
-        '					<li><a href="#">Something else here</a></li>\n' +
-        '					<li><a href="#">Separated link</a></li>\n' +
-        '				</ul>\n' +
-        '			</li>\n' +
-        '		</ul>\n' +
-        '	</div><!-- /.navbar-collapse -->\n' +
-        '</nav>\n';
+    snippets.bs4navbar = '<nav class="navbar navbar-dark bg-dark">\n' +
+        '       <a class="navbar-brand" href="#">Never expand</a>\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav mr-auto">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item dropdown">\n' +
+        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
+        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
+        '                       <a class="dropdown-item" href="#">Action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
+        '                   </div>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '           <form class="form-inline my-2 my-md-0">\n' +
+        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
+        '           </form>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    snippets.bs4navbarbasic = '<nav class="navbar navbar-expand navbar-dark bg-dark">\n' +
+        '       <a class="navbar-brand" href="#">Basic</a>\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav mr-auto">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link 1</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link 2</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link 3</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link 4</a>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    
+    snippets.bs4navbarsm = '<nav class="navbar navbar-expand-sm navbar-dark bg-dark">\n' +
+        '       <a class="navbar-brand" href="#">SMALL</a>\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav mr-auto">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item dropdown">\n' +
+        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
+        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
+        '                       <a class="dropdown-item" href="#">Action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
+        '                   </div>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '           <form class="form-inline my-2 my-md-0">\n' +
+        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
+        '           </form>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    
+    snippets.bs4navbarmd = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
+        '       <a class="navbar-brand" href="#">Medium</a>\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav mr-auto">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item dropdown">\n' +
+        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
+        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
+        '                       <a class="dropdown-item" href="#">Action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
+        '                   </div>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '           <form class="form-inline my-2 my-md-0">\n' +
+        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
+        '           </form>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    
+    snippets.bs4navbarlg = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">\n' +
+        '       <a class="navbar-brand" href="#">Large</a>\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav mr-auto">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item dropdown">\n' +
+        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
+        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
+        '                       <a class="dropdown-item" href="#">Action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
+        '                   </div>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '           <form class="form-inline my-2 my-md-0">\n' +
+        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
+        '           </form>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    
+    snippets.bs4navbarxl = '<nav class="navbar navbar-expand-xl navbar-dark bg-dark">\n' +
+        '       <a class="navbar-brand" href="#">Xlarge</a>\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav mr-auto">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item dropdown">\n' +
+        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
+        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
+        '                       <a class="dropdown-item" href="#">Action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
+        '                   </div>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '           <form class="form-inline my-2 my-md-0">\n' +
+        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
+        '           </form>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    
+    snippets.bs4navbarcentered = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
+        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '           <span class="navbar-toggler-icon"></span>\n' +
+        '       </button>\n' +
+        '       <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample01">\n' +
+        '           <ul class="navbar-nav">\n' +
+        '               <li class="nav-item active">\n' +
+        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item">\n' +
+        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '               </li>\n' +
+        '               <li class="nav-item dropdown">\n' +
+        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
+        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
+        '                       <a class="dropdown-item" href="#">Action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
+        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
+        '                   </div>\n' +
+        '               </li>\n' +
+        '           </ul>\n' +
+        '       </div>\n' +
+        '   </nav>';
+    
 
     // Pagination (TODO)
 

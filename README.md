@@ -253,18 +253,13 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Navigation
     
+    bs4navbar (full)
     bs4navbarbasic
-	bs4navbarbrand
-	bs4navbarfixedbottom
-	bs4navbarfixedtop
-	bs4navbarform
-	bs4navbarinverse
-	bs4navbarlink
-	bs4navbarlinks
-	bs4navbarresponsive
-	bs4navbarstatictop
-	bs4navbartext
-	bs4navbar
+    bs4navbarcentered
+    bs4navbarlg
+    bs4navbarmd
+    bs4navbarsm
+    bs4navbarxl
 
 ### Pagination
     

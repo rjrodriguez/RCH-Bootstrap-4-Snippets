@@ -31,8 +31,7 @@ define(function (require, exports, module) {
     var snippets = {};
     var cdncss = '    <!-- Bootstrap CSS -->\n' +
         '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">\n';
-    var cdnjs = '    <!-- Optional JavaScript -->\n' +
-        '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
+    var cdnjs = '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
         '    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n' +
         '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
@@ -48,14 +47,11 @@ define(function (require, exports, module) {
         '    <title>Bootstrap 4 Minimal Template</title>\n' +
         cdncss +
         '\n' +
-        '</head>\n' +
-        '\n' +
+        '</head>\n\n' +
         '<body>\n' +
-        '    <h1>Hello, world!</h1>\n' +
-        '\n' +
+        '    <h1>Hello, world!</h1>\n\n' +
         cdnjs +
-        '</body>\n' +
-        '</html>\n';
+        '</body>\n</html>';
 
     snippets.bs4html = '<!DOCTYPE html>\n' +
         '<html lang="">\n' +
@@ -64,29 +60,20 @@ define(function (require, exports, module) {
         '    <title>Bootstrap 4 Template</title>\n' +
         '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n' +
         '    <meta name="description" content="">\n' +
-        '    <meta name="author" content="">\n' +
-        '\n' +
-        '    <link rel="apple-touch-icon" href="">\n' +
-        '\n' +
+        '    <meta name="author" content="">\n\n' +
+        '    <link rel="apple-touch-icon" href="">\n\n' +
         cdncss +
         '\n' +
         '    <!-- Link to your CSS file -->\n' +
         '    <link rel="stylesheet" href="">\n' +
-        '</head>\n' +
-        '\n' +
-        '<body>\n' +
-        '\n' +
-        '    <!-- Start coding here -->\n' +
-        '\n' +
-        '\n' +
-        '    <!-- Coding End -->\n' +
-        '\n' +
+        '</head>\n\n' +
+        '<body>\n\n' +
+        '    <!-- Start coding here -->\n\n\n' +
+        '    <!-- Coding End -->\n\n' +
         cdnjs +
-        '</body>\n' +
-        '</html>\n';
+        '</body>\n</html>\n';
 
-    snippets.bs4template = snippets.bs4;
-    snippets.bs4html5template = snippets.bs4html;
+    snippets.bs4template = snippets.bs4html;
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
@@ -228,8 +215,22 @@ define(function (require, exports, module) {
     
     // Carousel
     // https://getbootstrap.com/docs/4.0/components/carousel/
-
-    snippets.bs4carousel = '<div id="carouselBasic" class="carousel slide" data-ride="carousel">\n' +
+    
+    var carouselcontrols = '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
+        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
+        '           <span class="sr-only">Previous</span>\n' +
+        '       </a>\n' +
+        '       <a class="carousel-control-next" href="#carouselFull" role="button" data-slide="next">\n' +
+        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
+        '           <span class="sr-only">Next</span>\n' +
+        '       </a>\n';
+    var carouselindicators = '       <ol class="carousel-indicators">\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="1"></li>\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
+        '       </ol>\n';
+    
+    snippets.bs4carousel = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '		<div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
         '               <img class="d-block w-100" src="" alt="First slide">\n' +
@@ -243,7 +244,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
     
-    snippets.bs4carouselwcontrols = '<div id="carouselControls" class="carousel slide" data-ride="carousel">\n' +
+    snippets.bs4carouselwcontrols = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
         '               <img class="d-block w-100" src="" alt="First slide">\n' +
@@ -255,22 +256,11 @@ define(function (require, exports, module) {
         '               <img class="d-block w-100" src="" alt="Third slide">\n' +
         '           </div>\n' +
         '       </div>\n' +
-        '       <a class="carousel-control-prev" href="#carouselControls" role="button" data-slide="prev">\n' +
-        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
-        '          <span class="sr-only">Previous</span>\n' +
-        '       </a>\n' +
-        '       <a class="carousel-control-next" href="#carouselControls" role="button" data-slide="next">\n' +
-        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
-        '           <span class="sr-only">Next</span>\n' +
-        '       </a>\n' +
+        carouselcontrols +
         '   </div>';
     
-    snippets.bs4carouselwindicators = '<div id="carouselIndicators" class="carousel slide" data-ride="carousel">\n' +
-        '       <ol class="carousel-indicators">\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="1"></li>\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
-        '       </ol>\n' +
+    snippets.bs4carouselwindicators = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
+        carouselindicators +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
         '               <img class="d-block w-100" src="" alt="First slide">\n' +
@@ -284,7 +274,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
     
-    snippets.bs4carouselwcaptions = '<div id="carouselCaptions" class="carousel slide" data-ride="carousel">\n' +
+    snippets.bs4carouselwcaptions = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
         '               <img class="d-block w-100" src="" alt="First slide">\n' +
@@ -311,11 +301,7 @@ define(function (require, exports, module) {
         '   </div>';
     
     snippets.bs4carouselfull = '<div id="carouselFull" class="carousel slide" data-ride="carousel">\n' +
-        '       <ol class="carousel-indicators">\n' +
-        '           <li data-target="#carouselFull" data-slide-to="0" class="active"></li>\n' +
-        '           <li data-target="#carouselFull" data-slide-to="1"></li>\n' +
-        '           <li data-target="#carouselFull" data-slide-to="2"></li>\n' +
-        '       </ol>\n' +
+        carouselindicators +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
         '               <img class="d-block w-100" src="" alt="First slide">\n' +
@@ -339,14 +325,7 @@ define(function (require, exports, module) {
         '               </div>\n' +
         '           </div>\n' +
         '       </div>\n' +
-        '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
-        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
-        '          <span class="sr-only">Previous</span>\n' +
-        '       </a>\n' +
-        '       <a class="carousel-control-next" href="#carouselFull" role="button" data-slide="next">\n' +
-        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
-        '           <span class="sr-only">Next</span>\n' +
-        '       </a>\n' +
+        carouselcontrols +
         '   </div>';
 
     // CDN
@@ -355,11 +334,12 @@ define(function (require, exports, module) {
     snippets.bs4cdnjs = cdnjs;
     snippets.bs4cdncss = cdncss;
     
-    // Images
-
-    snippets.bs4image = '<img src="#" class="img-fluid" alt="">\n';
-    snippets.bs4imagerounded = '<img src="" class="rounded" alt="">\n';
-    snippets.bs4imagecircle = '<img src="" class="rounded-circle" alt="">\n';
+    // Figures
+    
+    snippets.bs4figure = '<figure class="figure">\n' +
+        '       <img src="" class="figure-img img-fluid rounded" alt="A generic image with.">\n' +
+        '       <figcaption class="figure-caption">A caption for the above image.</figcaption>\n' +
+        '   </figure>\n';
 
     // Forms (TODO)
     // https://getbootstrap.com/docs/4.0/components/forms/
@@ -393,7 +373,15 @@ define(function (require, exports, module) {
         '	</div>\n\n\n\n' +
         '	<button type="submit" class="btn btn-primary">Submit</button>\n' +
         '</form>\n';
+    
+    // Images
 
+    snippets.bs4image = '<img src="#" class="img-fluid" alt="">\n';
+    snippets.bs4imagerounded = '<img src="" class="rounded" alt="">\n';
+    snippets.bs4imagecircle = '<img src="" class="rounded-circle" alt="">\n';
+
+    // Inputs (TODO)
+    
     snippets.bs4inputcheckbox = '<div class="checkbox">\n' +
         '	<label>\n' +
         '		<input type="checkbox" value="">\n' +
@@ -762,10 +750,6 @@ define(function (require, exports, module) {
 
     // Local (TODO)
 
-    snippets.bs4local = '<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">\n' +
-        '<script src="js/jquery.js"></script>\n' +
-        '<script src="js/bootstrap.min.js"></script>\n';
-
     snippets.bs4localcss = '<link rel="stylesheet" media="screen" href="css/bootstrap.min.css">\n';
 
     snippets.bs4localjs = '<script src="js/jquery.js"></script>\n' +
@@ -831,154 +815,33 @@ define(function (require, exports, module) {
         '           </form>\n' +
         '       </div>\n' +
         '   </nav>';
-    snippets.bs4navbarbasic = '<nav class="navbar navbar-expand navbar-dark bg-dark">\n' +
-        '       <a class="navbar-brand" href="#">Basic</a>\n' +
-        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
-        '           <span class="navbar-toggler-icon"></span>\n' +
-        '       </button>\n' +
-        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
-        '           <ul class="navbar-nav mr-auto">\n' +
-        '               <li class="nav-item active">\n' +
-        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link 1</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link 2</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link 3</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link 4</a>\n' +
-        '               </li>\n' +
-        '           </ul>\n' +
-        '       </div>\n' +
-        '   </nav>';
     
-    snippets.bs4navbarsm = '<nav class="navbar navbar-expand-sm navbar-dark bg-dark">\n' +
-        '       <a class="navbar-brand" href="#">SMALL</a>\n' +
-        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
-        '           <span class="navbar-toggler-icon"></span>\n' +
-        '       </button>\n' +
-        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
-        '           <ul class="navbar-nav mr-auto">\n' +
+    snippets.bs4navbarbasic = '<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">\n' +
+        '      <div class="container">\n' +
+        '         <a class="navbar-brand" href="#">Basic</a>\n' +
+        '         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">\n' +
+        '            <span class="navbar-toggler-icon"></span>\n' +
+        '         </button>\n' +
+        '         <div class="collapse navbar-collapse" id="navbarResponsive">\n' +
+        '            <ul class="navbar-nav ml-auto">\n' +
         '               <li class="nav-item active">\n' +
-        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '                  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>\n' +
         '               </li>\n' +
         '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '                  <a class="nav-link" href="#">About</a>\n' +
         '               </li>\n' +
         '               <li class="nav-item">\n' +
-        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item dropdown">\n' +
-        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
-        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
-        '                       <a class="dropdown-item" href="#">Action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
-        '                   </div>\n' +
-        '               </li>\n' +
-        '           </ul>\n' +
-        '           <form class="form-inline my-2 my-md-0">\n' +
-        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
-        '           </form>\n' +
-        '       </div>\n' +
-        '   </nav>';
-    
-    snippets.bs4navbarmd = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
-        '       <a class="navbar-brand" href="#">Medium</a>\n' +
-        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
-        '           <span class="navbar-toggler-icon"></span>\n' +
-        '       </button>\n' +
-        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
-        '           <ul class="navbar-nav mr-auto">\n' +
-        '               <li class="nav-item active">\n' +
-        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
+        '                  <a class="nav-link" href="#">Services</a>\n' +
         '               </li>\n' +
         '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link</a>\n' +
+        '                  <a class="nav-link" href="#">Portfolio</a>\n' +
         '               </li>\n' +
         '               <li class="nav-item">\n' +
-        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '                  <a class="nav-link" href="#">Contact</a>\n' +
         '               </li>\n' +
-        '               <li class="nav-item dropdown">\n' +
-        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
-        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
-        '                       <a class="dropdown-item" href="#">Action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
-        '                   </div>\n' +
-        '               </li>\n' +
-        '           </ul>\n' +
-        '           <form class="form-inline my-2 my-md-0">\n' +
-        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
-        '           </form>\n' +
-        '       </div>\n' +
-        '   </nav>';
-    
-    snippets.bs4navbarlg = '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">\n' +
-        '       <a class="navbar-brand" href="#">Large</a>\n' +
-        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
-        '           <span class="navbar-toggler-icon"></span>\n' +
-        '       </button>\n' +
-        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
-        '           <ul class="navbar-nav mr-auto">\n' +
-        '               <li class="nav-item active">\n' +
-        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item dropdown">\n' +
-        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
-        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
-        '                       <a class="dropdown-item" href="#">Action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
-        '                   </div>\n' +
-        '               </li>\n' +
-        '           </ul>\n' +
-        '           <form class="form-inline my-2 my-md-0">\n' +
-        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
-        '           </form>\n' +
-        '       </div>\n' +
-        '   </nav>';
-    
-    snippets.bs4navbarxl = '<nav class="navbar navbar-expand-xl navbar-dark bg-dark">\n' +
-        '       <a class="navbar-brand" href="#">Xlarge</a>\n' +
-        '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
-        '           <span class="navbar-toggler-icon"></span>\n' +
-        '       </button>\n' +
-        '       <div class="collapse navbar-collapse" id="navbarsExample01">\n' +
-        '           <ul class="navbar-nav mr-auto">\n' +
-        '               <li class="nav-item active">\n' +
-        '                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link" href="#">Link</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item">\n' +
-        '                   <a class="nav-link disabled" href="#">Disabled</a>\n' +
-        '               </li>\n' +
-        '               <li class="nav-item dropdown">\n' +
-        '                   <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>\n' +
-        '                   <div class="dropdown-menu" aria-labelledby="dropdown01">\n' +
-        '                       <a class="dropdown-item" href="#">Action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Another action</a>\n' +
-        '                       <a class="dropdown-item" href="#">Something else here</a>\n' +
-        '                   </div>\n' +
-        '               </li>\n' +
-        '           </ul>\n' +
-        '           <form class="form-inline my-2 my-md-0">\n' +
-        '               <input class="form-control" type="text" placeholder="Search" aria-label="Search">\n' +
-        '           </form>\n' +
-        '       </div>\n' +
+        '            </ul>\n' +
+        '         </div>\n' +
+        '      </div>\n' +
         '   </nav>';
     
     snippets.bs4navbarcentered = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
@@ -1054,433 +917,233 @@ define(function (require, exports, module) {
     // Table (TODO)
 
     snippets.bs4table = '<table class="table">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>First Name</th>\n' +
+        '               <th>Last Name</th>\n' +
+        '               <th>Username</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>';
+
+    snippets.bs4tableinverse = '<table class="table table-inverse">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>First Name</th>\n' +
+        '               <th>Last Name</th>\n' +
+        '               <th>Username</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>';
+    
+    snippets.bs4tablestriped = '<table class="table table-striped">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>First Name</th>\n' +
+        '               <th>Last Name</th>\n' +
+        '               <th>Username</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>';
+    
+    snippets.bs4tablebordered = '<table class="table table-bordered">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>First Name</th>\n' +
+        '               <th>Last Name</th>\n' +
+        '               <th>Username</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>';
 
     snippets.bs4tablehover = '<table class="table table-hover">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tablehovercolor = '        .table-hover tbody tr:hover td,\n' +
-        '        .table-hover tbody tr:hover th {\n' +
-        '            background-color: #acb;\n' +
-        '        }\n';
-
-
-    snippets.bs4tablebordered = '    <table class="table table-bordered">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    // Revisar CSS (TODO)
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>First Name</th>\n' +
+        '               <th>Last Name</th>\n' +
+        '               <th>Username</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>';
     
-    snippets.bs4tableborderedcolor = '        .table {\n' +
-        '            border: 2.5px solid red;\n' +
-        '        }\n' +
-        '        \n' +
-        '        .table-bordered > thead > tr > th,\n' +
-        '        .table-bordered > tbody > tr > th,\n' +
-        '        .table-bordered > tfoot > tr > th,\n' +
-        '        .table-bordered > thead > tr > td,\n' +
-        '        .table-bordered > tbody > tr > td,\n' +
-        '        .table-bordered > tfoot > tr > td {\n' +
-        '            border: 2.5px solid red;\n' +
-        '        }\n';
+    snippets.bs4tablesmall = '<table class="table table-sm">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>First Name</th>\n' +
+        '               <th>Last Name</th>\n' +
+        '               <th>Username</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>';
 
-    snippets.bs4tableborderedhcolor = '        .table-bordered > thead > tr > th,\n' +
-        '        .table-bordered > tbody > tr > th,\n' +
-        '        .table-bordered > tfoot > tr > th,\n' +
-        '        .table-bordered > thead > tr > td,\n' +
-        '        .table-bordered > tbody > tr > td,\n' +
-        '        .table-bordered > tfoot > tr > td {\n' +
-        '            border: 1px solid red;\n' +
-        '            border-right-width: 0px;\n' +
-        '            border-left-width: 0px;\n' +
-        '        }\n';
-
-    snippets.bs4tableborderedhover = '<table class="table table-bordered table-hover">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tablecondensed = '<table class="table table-condensed">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tablecondensedhover = '<table class="table table-condensed table-hover">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-
-    snippets.bs4tableresponsive = '<div class="table-responsive">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tableresponsivehover = '<div class="table-responsive">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tablestriped = '<table class="table table-striped">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tablestripedbgcolor = '        .table-striped > tbody > tr:nth-child(2n+1) > td,\n' +
-        '        .table-striped > tbody > tr:nth-child(2n+1) > th {\n' +
-        '            background-color: #acbedc;\n' +
-        '        }\n';
-
-    snippets.bs4tablestripedcolumnodd = '        .table-striped-column > tbody > tr td:nth-of-type(odd) {\n' +
-        '            background-color: #dceacb;\n' +
-        '        }\n';
-
-    snippets.bs4tablestripedcolumneven = '   .table-striped-column-odd > tbody > tr td:nth-of-type(even) {\n' +
-        '       background-color: #dceacb;\n' +
-        '   }\n';
-
-
-    snippets.bs4tablestripedhover = '<table class="table table-striped table-hover">\n' +
-        '        <thead>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>\n' +
-        '        </thead>\n' +
-        '        <tfoot>\n' +
-        '            <tr>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '                <th>[Title]</th>\n' +
-        '            </tr>        \n' +
-        '        </tfoot>\n' +
-        '        <tbody>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '            <tr>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '                <td>[data]</td>\n' +
-        '            </tr>\n' +
-        '        </tbody>\n' +
-        '    </table>\n';
-
-    snippets.bs4tablecontextual = '<table class="table">\n' +
-        '    <thead>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </thead>\n' +
-        '    <tfoot>\n' +
-        '      <tr>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '        <th>[Title]</th>\n' +
-        '      </tr>\n' +
-        '    </foot>\n' +
-        '    <tbody>\n' +
-        '      <tr class="active">\n' +
-        '        <td>[active data]</td>\n' +
-        '        <td>[active data]</td>\n' +
-        '        <td>[active data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr class="success">\n' +
-        '        <td>[success data]</td>\n' +
-        '        <td>[success data]</td>\n' +
-        '        <td>[success data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr class="info">\n' +
-        '        <td>[info data]</td>\n' +
-        '        <td>[info data]</td>\n' +
-        '        <td>[info data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr class="warning">\n' +
-        '        <td>[warning data]</td>\n' +
-        '        <td>[warning data]</td>\n' +
-        '        <td>[warning data]</td>\n' +
-        '      </tr>\n' +
-        '      <tr class="danger">\n' +
-        '        <td>[danger data]</td>\n' +
-        '        <td>[danger data]</td>\n' +
-        '        <td>[danger data]</td>\n' +
-        '      </tr>\n' +
-        '    </tbody>\n' +
-        '  </table>\n';
-
-
-    snippets.bs4tablecontextualtdcoloractive = '        .table tbody tr > td.active {\n' +
-        '            background-color: #ced0cd !important;\n' +
-        '        }\n' +
-        '\n' +
-        '        .table-hover tbody tr:hover > td.active {\n' +
-        '            background-color: #a5a7a5 !important;\n' +
-        '        }\n' +
-        '\n';
-
-    snippets.bs4tablecontextualtdcolorsuccess = '        .table tbody tr > td.success {\n' +
-        '            background-color: #dff0d8 !important;\n' +
-        '        }\n' +
-        '\n' +
-        '        .table-hover tbody tr:hover > td.success {\n' +
-        '            background-color: #d0e9c6 !important;\n' +
-        '        }\n' +
-        '        \n';
-
-    snippets.bs4tablecontextualtdcolordanger = '        .table tbody tr > td.danger {\n' +
-        '            background-color: #f2dede !important;\n' +
-        '        }\n' +
-        '        .table-hover tbody tr:hover > td.danger {\n' +
-        '            background-color: #ebcccc !important;\n' +
-        '        }\n' +
-        '        \n';
-
-    snippets.bs4tablecontextualtdcolorwarning = '        .table tbody tr > td.warning {\n' +
-        '            background-color: #fcf8e3 !important;\n' +
-        '        }\n' +
-        '        .table-hover tbody tr:hover > td.warning {\n' +
-        '            background-color: #faf2cc !important;\n' +
-        '        }\n' +
-        '        \n';
-
-    snippets.bs4tablecontextualtdcolorinfo = '        .table tbody tr > td.info {\n' +
-        '            background-color: #d9edf7 !important;\n' +
-        '        }\n' +
-        '        .table-hover tbody tr:hover > td.info {\n' +
-        '            background-color: #c4e3f3 !important;\n' +
-        '        }\n';
-
-    snippets.bs4tablecontextualtdcolorall = snippets.bs4tablecontextualtdcoloractive +
-        snippets.bs4tablecontextualtdcolorsuccess +
-        snippets.bs4tablecontextualtdcolordanger +
-        snippets.bs4tablecontextualtdcolorwarning +
-        snippets.bs4tablecontextualtdcolorinfo;
+    snippets.tableresponsive = '<table class="table table-responsive">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th>#</th>\n' +
+        '               <th>Table heading</th>\n' +
+        '               <th>Table heading</th>\n' +
+        '               <th>Table heading</th>\n' +
+        '               <th>Table heading</th>\n' +
+        '               <th>Table heading</th>\n' +
+        '               <th>Table heading</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '               <td>Table cell</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>\n';
 
     // Tabs (TODO)
 

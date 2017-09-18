@@ -4,12 +4,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ## Install
 
-#### Git Clone
+### Git Clone
 
 1. Under main menu select **Help > Show Extensions Folder**
 2. Git clone this repository inside the folder user.
 
-#### Extension Manager
+### Extension Manager
 
 1. Under main menu select **File > Extension Manager...**
 2. Search for "RCH Bootstrap snippets"
@@ -19,17 +19,16 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 1. **Enable RCH Bootstrap Snippets**<br/>
    Under main menu select **Edit > Enable RCH Bootstrap Snippets**
-2. Starting typing "bs4" you'll see the snippets list (code hint provider), just pick a snippet and press ENTER, or   
+2. Start typing "bs4" and you'll see the snippets list (code hint provider), just pick a snippet and press ENTER, or   
 3. Enter a snippet and hit the **Tab** key (alternatively you can also hit the key **DOWN**).
 
 ## Snippets list
 
-### Bootstrap 4 - HTML5 Templates
+### Bootstrap 4 - HTML5 blank Templates
 
 	bs4
-    bs4template
 	bs4html    
-    bs4html5template
+    bs4template
 
 ### Alerts
 
@@ -58,7 +57,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4breadcrumbs (unlisted markup)
     bs4breadcrumbslist
 	
-### Buttons
+### Buttons (TODO)
 
 	bs4blockbuttondanger
 	bs4blockbuttondefault
@@ -106,7 +105,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Carousel
 
-	bs4carousel
+	bs4carousel (basic slider)
     bs4carouselfull
     bs4carouselwcaptions
     bs4carouselwcontrols
@@ -117,8 +116,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4cdn
     bs4cdncss
     bs4cdnjs
+    
+### Figures 
+
+    bs4figure
 	
-### Forms
+### Forms (TODO)
 
 	bs4formhorizontal
 	bs4forminline
@@ -171,7 +174,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4imagerounded
 	bs4imagecircle
 
-### Input Groups
+### Input Groups (TODO)
 
 	bs4inputgroupaddontext
 	bs4inputgroupaddon
@@ -184,7 +187,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4jumbotron
     bs4jumbotronfluid
 
-### Link Buttons
+### Link Buttons (TODO)
 
 	bs4blocklinkbuttondanger
 	bs4blocklinkbuttondefault
@@ -229,7 +232,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4smlinkbuttonwarning
 	bs4smlinkbutton
 
-### List Groups
+### List Groups (TODO)
 
 	bs4listgroupbadges
 	bs4listgroupcontent
@@ -238,15 +241,14 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Local
 
-	bs4local
     bs4localcss
     bs4localjs
     
-### Media
+### Media (TODO)
 
 	bs4mediaobject
 
-### Modal
+### Modal (TODO)
 
 	bs4modal
 	bs4modalstruct
@@ -256,12 +258,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4navbar (full)
     bs4navbarbasic
     bs4navbarcentered
-    bs4navbarlg
-    bs4navbarmd
-    bs4navbarsm
-    bs4navbarxl
 
-### Pagination
+### Pagination (TODO)
     
 	bs4pageraligned
 	bs4pager
@@ -269,21 +267,17 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4paginationsmall
 	bs4pagination
     
-### Table 
+### Table  (TODO)
     
     bs4table
-    bs4tablehover
 	bs4tablebordered
-	bs4tableborderedhover
-	bs4tablecondensed
-	bs4tablecondensedhover
-	bs4tableresponsive
-	bs4tableresponsivehover
+    bs4tablehover
+    bs4tableinverse
+    bs4tableresponsive
+	bs4tablesmall
     bs4tablestriped
-	bs4tablestripedhover
-	bs4tablecontextual
     
-### Tabs
+### Tabs (TODO)
     
     bs4tabs
     tabhover

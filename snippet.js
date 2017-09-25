@@ -78,6 +78,11 @@ define(function (require, exports, module) {
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
     
+    
+    snippets.bs4alertlink = '<a href="#" class="alert-link">an example link</a>';
+    
+    snippets.bs4alertdismiss = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+    
     snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' +
         '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
         '		<strong>Primary alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
@@ -117,6 +122,94 @@ define(function (require, exports, module) {
         '		<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
         '		<strong>Dark alert!</strong> You should check <a href="#" class="alert-link">this link</a>.\n' +
         '	</div>\n';
+    
+    snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' +
+        '       This is a primary alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasicsecondary = '<div class="alert alert-secondary" role="alert">\n' +
+        '       This is a secondary alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasicdanger = '<div class="alert alert-danger" role="alert">\n' +
+        '       This is a danger alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasicinfo = '<div class="alert alert-info" role="alert">\n' +
+        '       This is a info alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasicsuccess = '<div class="alert alert-success" role="alert">\n' +
+        '       This is a success alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasicwarning = '<div class="alert alert-warning" role="alert">\n' +
+        '       This is a warning alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasicdark = '<div class="alert alert-dark" role="alert">\n' +
+        '       This is a dark alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbasiclight = '<div class="alert alert-light" role="alert">\n' +
+        '       This is a light alert—check it out!\n' +
+        '   </div>';
+    
+    snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxsecondary = '<div class="alert alert-secondary" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxdanger = '<div class="alert alert-danger" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxinfo = '<div class="alert alert-info" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxsuccess = '<div class="alert alert-success" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxwarning = '<div class="alert alert-warning" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxdark = '<div class="alert alert-dark" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
+    
+    snippets.bs4alertboxlight = '<div class="alert alert-light" role="alert">\n' +
+        '       <h4 class="alert-heading">Well done!</h4>\n' +
+        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
+        '       <hr>\n' +
+        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
+        '   </div>';
 
     // Badge
     // https://getbootstrap.com/docs/4.0/components/badge/
@@ -129,6 +222,22 @@ define(function (require, exports, module) {
     snippets.bs4badgeinfo = '<span class="badge badge-info">Info</span>';
     snippets.bs4badgelight = '<span class="badge badge-light">Light</span>';
     snippets.bs4badgedark = '<span class="badge badge-dark">Dark</span>';
+    snippets.bs4badgepill = '<span class="badge badge-pill badge-primary">Primary</span>';
+    snippets.bs4badgepillsecondary = '<span class="badge badge-pill badge-secondary">Pill Secondary</span>';
+    snippets.bs4badgepillsuccess = '<span class="badge badge-pill badge-success">Pill Success</span>';
+    snippets.bs4badgepilldanger = '<span class="badge badge-pill badge-danger">Pill Danger</span>';
+    snippets.bs4badgepillwarning = '<span class="badge badge-pill badge-warning">Pill Warning</span>';
+    snippets.bs4badgepillinfo = '<span class="badge badge-pill badge-info">Pill Info</span>';
+    snippets.bs4badgepilllight = '<span class="badge badge-pill badge-light">Pill Light</span>';
+    snippets.bs4badgepilldark = '<span class="badge badge-pill badge-dark">Pill Dark</span>';
+    snippets.bs4badgelink = '<a href="#" class="badge badge-primary">Badge link Primary</a>';
+    snippets.bs4badgelinksecondary = '<a href="#" class="badge badge-secondary">Badge link Secondary</a>';
+    snippets.bs4badgelinksuccess = '<a href="#" class="badge badge-success">Badge link Success</a>';
+    snippets.bs4badgelinkdanger = '<a href="#" class="badge badge-danger">Badge link Danger</a>';
+    snippets.bs4badgelinkwarning = '<a href="#" class="badge badge-warning">Badge link Warning</a>';
+    snippets.bs4badgelinkinfo = '<a href="#" class="badge badge-info">Badge link Info</a>';
+    snippets.bs4badgelinklight = '<a href="#" class="badge badge-light">Badge link Light</a>';
+    snippets.bs4badgelinkdark = '<a href="#" class="badge badge-dark">Badge link Dark</a>';
 
     // Breadcrumbs
     // https://getbootstrap.com/docs/4.0/components/breadcrumb/
@@ -769,18 +878,28 @@ define(function (require, exports, module) {
         '	</div>\n' +
         '</div>\n';
 
-    // Modal (TODO)
+    // Modal
     // https://getbootstrap.com/docs/4.0/components/modal/
 
-    snippets.bs4modal = '<!-- Local bootstrap CSS & JS -->\n' +
-        '<link rel="stylesheet" media="screen" href="bootstrap.min.css">' +
-        '<script src="jquery.js"></script>' +
-        '<script src="bootstrap.min.js"></script>\n';
+    snippets.bs4modalbtn = '<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Launch demo modal</button>';
 
-    snippets.bs4modalstruct = '<!-- Local bootstrap CSS & JS -->\n' +
-        '<link rel="stylesheet" media="screen" href="./css/bootstrap.min.css">' +
-        '<script src="./js/jquery.js"></script>' +
-        '<script src="./js/bootstrap.min.js"></script>\n';
+    snippets.bs4modal = '<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">\n' +
+        '       <div class="modal-dialog" role="document">\n' +
+        '         <div class="modal-content">\n' +
+        '            <div class="modal-header">\n' +
+        '               <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>\n' +
+        '               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
+        '            </div>\n' +
+        '            <div class="modal-body">\n' +
+        '               ...\n' +
+        '            </div>\n' +
+        '            <div class="modal-footer">\n' +
+        '               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>\n' +
+        '               <button type="button" class="btn btn-primary">Save changes</button>\n' +
+        '            </div>\n' +
+        '         </div>\n' +
+        '      </div>\n' +
+        '   </div>';
 
     // Navigation (TODO)
     // https://getbootstrap.com/docs/4.0/components/navbar/
@@ -874,45 +993,57 @@ define(function (require, exports, module) {
 
     // Pagination (TODO)
 
-    snippets.bs4pageraligned = '<ul class="pager">\n' +
-        '	<li class="previous"><a href="#">&larr; Older</a></li>\n' +
-        '	<li class="next"><a href="#">Newer &rarr;</a></li>\n' +
-        '</ul>\n';
+    snippets.bs4pagination = '<nav aria-label="Page navigation example">\n' +
+        '       <ul class="pagination">\n' +
+        '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">1</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">2</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">3</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">Next</a></li>\n' +
+        '       </ul>\n' +
+        '   </nav>';
+    
+    snippets.bs4paginationicons = '<nav aria-label="Page navigation example">\n' +
+        '       <ul class="pagination">\n' +
+        '           <li class="page-item">\n' +
+        '               <a class="page-link" href="#" aria-label="Previous">\n' +
+        '                   <span aria-hidden="true">&laquo;</span>\n' +
+        '                   <span class="sr-only">Previous</span>\n' +
+        '               </a>\n' +
+        '           </li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">1</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">2</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">3</a></li>\n' +
+        '           <li class="page-item">\n' +
+        '               <a class="page-link" href="#" aria-label="Next">\n' +
+        '                   <span aria-hidden="true">&raquo;</span>\n' +
+        '                   <span class="sr-only">Next</span>\n' +
+        '               </a>\n' +
+        '           </li>\n' +
+        '       </ul>\n' +
+        '   </nav>';
+    
+    snippets.bs4paginationcentered = '<nav aria-label="Page navigation example">\n' +
+        '       <ul class="pagination  justify-content-center">\n' +
+        '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">1</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">2</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">3</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">Next</a></li>\n' +
+        '       </ul>\n' +
+        '   </nav>';
+    
+    snippets.bs4paginationright = '<nav aria-label="Page navigation example">\n' +
+        '       <ul class="pagination  justify-content-end">\n' +
+        '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">1</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">2</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">3</a></li>\n' +
+        '           <li class="page-item"><a class="page-link" href="#">Next</a></li>\n' +
+        '       </ul>\n' +
+        '   </nav>';
 
-    snippets.bs4pager = '<ul class="pager">\n' +
-        '	<li><a href="#">Previous</a></li>\n' +
-        '	<li><a href="#">Next</a></li>\n' +
-        '</ul>\n';
-
-    snippets.bs4paginationlarge = '<ul class="pagination pagination-lg">\n' +
-        '	<li><a href="#">&laquo;</a></li>\n' +
-        '	<li><a href="#">1</a></li>\n' +
-        '	<li><a href="#">2</a></li>\n' +
-        '	<li><a href="#">3</a></li>\n' +
-        '	<li><a href="#">4</a></li>\n' +
-        '	<li><a href="#">5</a></li>\n' +
-        '	<li><a href="#">&raquo;</a></li>\n' +
-        '</ul>\n';
-
-    snippets.bs4paginationsmall = '<ul class="pagination pagination-sm">\n' +
-        '	<li><a href="#">&laquo;</a></li>\n' +
-        '	<li><a href="#">1</a></li>\n' +
-        '	<li><a href="#">2</a></li>\n' +
-        '	<li><a href="#">3</a></li>\n' +
-        '	<li><a href="#">4</a></li>\n' +
-        '	<li><a href="#">5</a></li>\n' +
-        '	<li><a href="#">&raquo;</a></li>\n' +
-        '</ul>\n';
-
-    snippets.bs4pagination = '<ul class="pagination">\n' +
-        '	<li><a href="#">&laquo;</a></li>\n' +
-        '	<li><a href="#">1</a></li>\n' +
-        '	<li><a href="#">2</a></li>\n' +
-        '	<li><a href="#">3</a></li>\n' +
-        '	<li><a href="#">4</a></li>\n' +
-        '	<li><a href="#">5</a></li>\n' +
-        '	<li><a href="#">&raquo;</a></li>\n' +
-        '</ul>\n';
+   
 
     // Table (TODO)
 
@@ -1186,590 +1317,6 @@ define(function (require, exports, module) {
         '    <!-- Move this line to the last line of js declaration area -->\n' +
         '    <script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
 
-    // Portfolio Sample (TODO)
-
-    //
-    // Site Blocks (TODO)
-    //
-
-    snippets.bs4portfoliocss = '<!-- External Styles -->\n' +
-        '<link href="assets/css/ionicons.css" rel="stylesheet"/>\n' +
-        '<link href="assets/css/font-awesome.css" rel="stylesheet"/>\n' +
-        '<link href="assets/js/source/jquery.fancybox.css" rel="stylesheet"/>\n' +
-        '<link href="assets/js/animate.min.css" rel="stylesheet"/>\n' +
-        '<link href="assets/css/animations.min.css" rel="stylesheet"/>\n' +
-        '<link href="assets/css/style-blue.css" rel="stylesheet"/>\n' +
-        '<link href="assets/js/vegas/jquery.vegas.min.css" rel="stylesheet"/>\n' +
-        '<!-- End External Styles -->\n';
-
-    snippets.bs4portfoliolibs = '<!-- External Libs -->\n' +
-        '<script src="assets/js/vegas/jquery.vegas.min.js"></script>\n' +
-        '<script src="assets/js/jquery.easing.min.jsj"></script>\n' +
-        '<script src="assets/js/source/jquery.fancybox.js"></script>\n' +
-        '<script src="assets/js/jquery.isotope.js"></script>\n' +
-        '<script src="assets/js/appear.min.js"></script>\n' +
-        '<script src="js/wow.min.js"></script>\n' +
-        '<script src="assets/js/animations.min.js"></script>\n' +
-        '<!-- End External Libs -->\n';
-
-    snippets.bs4portfoliojs = '<!-- jQuery Functions inside tag <script> -->\n' +
-        '$(document).ready(function () {\n' +
-        '    // IMAGE BACKGROUND SLIDE SHOW\n' +
-        '    $.vegas(\'slideshow\', {\n' +
-        '        backgrounds: [\n' +
-        '            {\n' +
-        '                src: \'assets/img/background/1.jpg\',\n' +
-        '                fade: 1000,\n' +
-        '                delay: 12000\n' +
-        '                },\n' +
-        '            {\n' +
-        '                src: \'assets/img/background/2.jpg\',\n' +
-        '                fade: 1000,\n' +
-        '                delay: 12000\n' +
-        '                },\n' +
-        '            {\n' +
-        '                src: \'assets/img/background/3.jpg\',\n' +
-        '                fade: 1000,\n' +
-        '                delay: 12000\n' +
-        '                }\n' +
-        '            ]\n' +
-        '    })(\'overlay\', {\n' +
-        '        /** SLIDESHOW OVERLAY IMAGE **/\n' +
-        '        src: \'assets/js/vegas/overlays/11.png\'\n' +
-        '    });\n' +
-        '    // OUR WORK - IMAGE EFFECTS\n' +
-        '    $(\'.fancybox-media\').fancybox({\n' +
-        '        openEffect: \'elastic\',\n' +
-        '        closeEffect: \'elastic\',\n' +
-        '        helpers: {\n' +
-        '            title: {\n' +
-        '                type: \'inside\'\n' +
-        '            }\n' +
-        '        }\n' +
-        '    });\n' +
-        '    $(window).load(function () {\n' +
-        '        var $container = $(\'#work-div\');\n' +
-        '        $container.isotope({\n' +
-        '            filter: \'*\',\n' +
-        '            animationOptions: {\n' +
-        '                duration: 750,\n' +
-        '                easing: \'linear\',\n' +
-        '                queue: false\n' +
-        '            }\n' +
-        '        });\n' +
-        '        $(\'.caegories a\').click(function () {\n' +
-        '            $(\'.caegories .active\').removeClass(\'active\');\n' +
-        '            $(this).addClass(\'active\');\n' +
-        '            var selector = $(this).attr(\'data-filter\');\n' +
-        '            $container.isotope({\n' +
-        '                filter: selector,\n' +
-        '                animationOptions: {\n' +
-        '                    duration: 750,\n' +
-        '                    easing: \'linear\',\n' +
-        '                    queue: false\n' +
-        '                }\n' +
-        '            });\n' +
-        '            return false;\n' +
-        '        });\n' +
-        '    });\n' +
-        '}); \n' +
-        'new WOW().init();\n' +
-        '<!-- jQuery Function </script> -->\n';
-
-    snippets.bs4portfoliomenu = '<!-- Replace or adapt body tag as follow     \n' +
-        '    <body data-spy="scroll" data-target="#menu-section">\n' +
-        '-->\n' +
-        '\n' +
-        '<!--MENU SECTION START-->\n' +
-        '<div class="navbar navbar-inverse navbar-fixed-top scroll-me" id="menu-section">\n' +
-        '    <div class="container">\n' +
-        '        <div class="navbar-header">\n' +
-        '            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">\n' +
-        '                <span class="icon-bar"></span>\n' +
-        '                <span class="icon-bar"></span>\n' +
-        '                <span class="icon-bar"></span>\n' +
-        '            </button>\n' +
-        '            <a class="navbar-brand" href="#">YOUR BRAND</a>\n' +
-        '        </div>\n' +
-        '        <div class="navbar-collapse collapse">\n' +
-        '            <ul class="nav navbar-nav navbar-right">\n' +
-        '                <li><a href="#home">HOME</a>\n' +
-        '                </li>\n' +
-        '                <li><a href="#services">SERVICES</a>\n' +
-        '                </li>\n' +
-        '                <li><a href="#pricing">PRICING</a>\n' +
-        '                </li>\n' +
-        '                <li><a href="#work">WORK</a>\n' +
-        '                </li>\n' +
-        '                <li><a href="#team">TEAM</a>\n' +
-        '                </li>\n' +
-        '                <li><a href="#contact">CONTACT</a>\n' +
-        '                </li>\n' +
-        '                <li><a href="#signup">SIGN UP</a>\n' +
-        '                </li>\n' +
-        '            </ul>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!--MENU SECTION END-->\n';
-
-
-    snippets.bs4portfoliocarouseltext = '<!-- Text Corousel -->\n' +
-        '<div class="row">\n' +
-        '    <div class="col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 ">\n' +
-        '        <div id="carousel-slider" data-ride="carousel" class="carousel slide  animate-in" data-anim-type="fade-in-up">\n' +
-        '            <div class="carousel-inner">\n' +
-        '                <div class="item active">\n' +
-        '                    <h3>Mussum ipsum cacilds</h3>\n' +
-        '                    <p>ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo.Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim.Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis. </p>\n' +
-        '                </div>\n' +
-        '                <div class="item">\n' +
-        '                    <h3>Suco de cevadiss</h3>\n' +
-        '                    <p>Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. Interagi no mé, cursus quis, vehicula ac nisi. Aenean vel dui. Nullam leo erat, aliquet quis tempus a, posuere ut mi. </p>\n' +
-        '                </div>\n' +
-        '                <!-- Add more Items as you want ... -->\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!-- End Text Carousel -->\n';
-
-    snippets.bs4portfoliosocialbuttons = '<!-- Social Buttons -->\n' +
-        '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-8 col-lg-offset-2 scroll-me">\n' +
-        '        <p>[INSERT A FIXED TEXT HERE]</p>\n' +
-        '        <div class="social">\n' +
-        '            <a href="#" class="btn button-custom btn-custom-one"><i class="fa fa-facebook "></i></a>\n' +
-        '            <a href="#" class="btn button-custom btn-custom-one"><i class="fa fa-twitter"></i></a>\n' +
-        '            <a href="#" class="btn button-custom btn-custom-one"><i class="fa fa-google-plus "></i></a>\n' +
-        '            <a href="#" class="btn button-custom btn-custom-one"><i class="fa fa-linkedin "></i></a>\n' +
-        '            <a href="#" class="btn button-custom btn-custom-one"><i class="fa fa-pinterest "></i></a>\n' +
-        '            <a href="#" class="btn button-custom btn-custom-one"><i class="fa fa-github "></i></a>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!-- End Social Buttons -->\n';
-
-    snippets.bs4portfolioservices = '<!-- SERVICE SECTION START -->\n' +
-        '<div class="row text-center header">\n' +
-        '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 animate-in" data-anim-type="fade-in-up">\n' +
-        '        <h3>Our Services</h3>\n' +
-        '        <hr/>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-iphone"></i>\n' +
-        '            <h3>iPhone Applications</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consecteturtellus nec,  porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-wrench"></i>\n' +
-        '            <h3>Tools Development</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consecteturtellus nec,  porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-cloud"></i>\n' +
-        '            <h3>Cloud Support</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellusnec, porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-android-chat"></i>\n' +
-        '            <h3>Chat Applications</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellus nec,  porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-social-wordpress"></i>\n' +
-        '            <h3>Word Press Portal</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellus nec,  porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-android-call"></i>\n' +
-        '            <h3>VOIP Systems</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellusnec, porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-university"></i>\n' +
-        '            <h3>e-Learning Portals</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellus nec,  porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-map"></i>\n' +
-        '            <h3>Geo-processing Systems</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellus nec,  porttitor nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="services-wrapper">\n' +
-        '            <i class="ion-cash"></i>\n' +
-        '            <h3>Financial Apps</h3> Morbi mollis lectus et ipsum sollicitudin varius. Aliquam tempus ante placerat, consectetur tellus nec, porttitor  nulla.\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!--SERVICE SECTION END-->\n';
-
-    snippets.bs4portfoliopricetable = '<!-- PRICING SECTION START -->\n' +
-        '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
-        '        <h3>Pricing Options</h3>\n' +
-        '        <hr/>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<div class="row pad-bottom animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-10 col-lg-offset-1">\n' +
-        '        <div class="row db-padding-btm db-attached">\n' +
-        '            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '                <div class="light-pricing">\n' +
-        '                    <div class="price">\n' +
-        '                        <sup>$</sup>199\n' +
-        '                        <small>per month</small>\n' +
-        '                    </div>\n' +
-        '                    <div class="type">STARTER</div>\n' +
-        '                    <ul>\n' +
-        '                        <li><i class="glyphicon glyphicon-user"></i>30 Users </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-folder-open"></i>150 Projects </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-tower"></i>Lead Required</li>\n' +
-        '                        <li><i class="glyphicon glyphicon-time"></i>3 year minimum</li>\n' +
-        '                    </ul>\n' +
-        '                    <div class="pricing-footer">\n' +
-        '                        <a href="#" class="btn button-custom btn-custom-one">ORDER</a>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '                <div class="light-pricing popular">\n' +
-        '                    <div class="price">\n' +
-        '                        <sup>$</sup>499\n' +
-        '                        <small>per month</small>\n' +
-        '                    </div>\n' +
-        '                    <div class="type">PROFESSIONAL</div>\n' +
-        '                    <ul>\n' +
-        '                        <li><i class="glyphicon glyphicon-user"></i>50 Users </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-folder-open"></i>300 Projects </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-tower"></i>Lead Required</li>\n' +
-        '                        <li><i class="glyphicon glyphicon-time"></i>2 year minimum</li>\n' +
-        '                    </ul>\n' +
-        '                    <div class="pricing-footer">\n' +
-        '                        <a href="#" class="btn button-custom btn-custom-one">ORDER</a>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '                <div class="light-pricing">\n' +
-        '                    <div class="price">\n' +
-        '                        <sup>$</sup>1.999\n' +
-        '                        <small>per year</small>\n' +
-        '                    </div>\n' +
-        '                    <div class="type">EXPERT</div>\n' +
-        '                    <ul>\n' +
-        '                        <li><i class="glyphicon glyphicon-user"></i>250 Users </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-folder-open"></i>500 Projects </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-tower"></i>Lead Required</li>\n' +
-        '                        <li><i class="glyphicon glyphicon-time"></i>1 year minimum</li>\n' +
-        '                    </ul>\n' +
-        '                    <div class="pricing-footer">\n' +
-        '                        <a href="#" class="btn button-custom btn-custom-one">ORDER</a>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '                <div class="light-pricing">\n' +
-        '                    <div class="price">\n' +
-        '                        <sup>$</sup>12,599\n' +
-        '                        <small>one time</small>\n' +
-        '                    </div>\n' +
-        '                    <div class="type">CORPORATE</div>\n' +
-        '                    <ul>\n' +
-        '                        <li><i class="glyphicon glyphicon-user"></i>Unlimited Users </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-folder-open"></i>Unlimited Projects </li>\n' +
-        '                        <li><i class="glyphicon glyphicon-tower"></i>Lead not Required</li>\n' +
-        '                        <li><i class="glyphicon glyphicon-time"></i>No Obligation</li>\n' +
-        '                    </ul>\n' +
-        '                    <div class="pricing-footer">\n' +
-        '                        <a href="#" class="btn button-custom btn-custom-one">ORDER</a>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!-- PRICING SECTION END -->\n';
-
-    snippets.bs4portfoliowork = '<!-- WORK SECTION START -->\n' +
-        '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
-        '        <h3>Our Works</h3>\n' +
-        '        <hr/>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<div class="row text-center animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pad-bottom">\n' +
-        '        <div class="caegories">\n' +
-        '            <a href="#" data-filter="*" class="active btn btn-custom btn-custom-two btn-sm">All</a>\n' +
-        '            <a href="#" data-filter=".hotsite" class="btn btn-custom btn-custom-two btn-sm">Hotsite</a>\n' +
-        '            <a href="#" data-filter=".website" class="btn btn-custom btn-custom-two btn-sm">Website</a>\n' +
-        '            <a href="#" data-filter=".iphone" class="btn btn-custom btn-custom-two btn-sm">iPhone</a>\n' +
-        '            <a href="#" data-filter=".android" class="btn btn-custom btn-custom-two btn-sm">Android</a>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<div class="row text-center animate-in" data-anim-type="fade-in-up" id="work-div">\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 iphone">\n' +
-        '        <div class="work-wrapper">\n' +
-        '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/1.jpg">\n' +
-        '                <img src="assets/img/work/1.jpg" class="img-fluid img-rounded 1" alt=""/>\n' +
-        '            </a>\n' +
-        '            <h4>Lorem ipsum dolor sit amet</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hotsite website">\n' +
-        '        <div class="work-wrapper">\n' +
-        '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/2.jpg">\n' +
-        '                <img src="assets/img/work/2.jpg" class="img-fluid img-rounded" alt=""/>\n' +
-        '            </a>\n' +
-        '            <h4>Integer blandit odio congue leo tristique tempus</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 iphone">\n' +
-        '        <div class="work-wrapper">\n' +
-        '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/3.jpg">\n' +
-        '                <img src="assets/img/work/3.jpg" class="img-fluid img-rounded" alt=""/>\n' +
-        '            </a>\n' +
-        '            <h4>Morbi mollis lectus et ipsum</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 hotsite">\n' +
-        '        <div class="work-wrapper">\n' +
-        '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/4.jpg">\n' +
-        '                <img src="assets/img/work/4.jpg" class="img-fluid img-rounded" alt=""/>\n' +
-        '            </a>\n' +
-        '            <h4>Ut tincidunt tortor sit amet sagittis sagittis</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 website">\n' +
-        '        <div class="work-wrapper">\n' +
-        '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/5.jpg">\n' +
-        '                <img src="assets/img/work/5.jpg" class="img-fluid img-rounded" alt=""/>\n' +
-        '            </a>\n' +
-        '            <h4>Aliquam sit amet libero eget nibh varius ultricies</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 android">\n' +
-        '        <div class="work-wrapper">\n' +
-        '            <a class="fancybox-media" title="Image Title Goes Here" href="assets/img/work/6.jpg">\n' +
-        '                <img src="assets/img/work/6.jpg" class="img-fluid img-rounded" alt=""/>\n' +
-        '            </a>\n' +
-        '            <h4>Nunc eget ipsum eget odio ultrices molestie</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!-- WORK SECTION END -->\n';
-
-    snippets.bs4portfolioteam = '<!-- TEAM SECTION START -->\n' +
-        '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
-        '        <h3>Our Team</h3>\n' +
-        '        <hr/>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '        <div class="team-wrapper">\n' +
-        '            <div class="team-inner" style="background-image: url(\'assets/img/team/1.jpg\')">\n' +
-        '                <a href="#" target="_blank"> <i class="ion-star"></i>\n' +
-        '                </a>\n' +
-        '            </div>\n' +
-        '            <div class="description">\n' +
-        '                <h3> Larissa Carpenter</h3>\n' +
-        '                <h5> <strong> Chief Executive Officer </strong></h5>\n' +
-        '                <p>Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. </p>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '        <div class="team-wrapper">\n' +
-        '            <div class="team-inner" style="background-image: url(\'assets/img/team/2.jpg\')">\n' +
-        '                <a href="#" target="_blank"> <i class="ion-monitor"></i>\n' +
-        '                </a>\n' +
-        '            </div>\n' +
-        '            <div class="description">\n' +
-        '                <h3> John Doe</h3>\n' +
-        '                <h5> <strong> Desktop Developer & Designer </strong></h5>\n' +
-        '                <p>Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim.</p>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '        <div class="team-wrapper">\n' +
-        '            <div class="team-inner" style="background-image: url(\'assets/img/team/3.jpg\')">\n' +
-        '                <a href="#" target="_blank"> <i class="ion-iphone"></i>\n' +
-        '                </a>\n' +
-        '            </div>\n' +
-        '            <div class="description">\n' +
-        '                <h3> Michael Lordman</h3>\n' +
-        '                <h5> <strong> Mobile Developer & Designer </strong></h5>\n' +
-        '                <p>Pharetra in mattis molestie, volutpat elementum justo.</p>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">\n' +
-        '        <div class="team-wrapper">\n' +
-        '            <div class="team-inner" style="background-image: url(\'assets/img/team/4.jpg\')">\n' +
-        '                <a href="#" target="_blank"> <i class="ion-briefcase"></i>\n' +
-        '                </a>\n' +
-        '            </div>\n' +
-        '            <div class="description">\n' +
-        '                <h3> James Shang</h3>\n' +
-        '                <h5> <strong> Sales Representative </strong></h5>\n' +
-        '                <p>Cevadis im ampola pa arma uma pindureta. Nam varius eleifend, sed viverra nisl condimentum ut.</p>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!-- TEAM SECTION END -->\n';
-
-    snippets.bs4portfoliocontact = '<!-- CONTACT SECTION START -->\n' +
-        '<div class="row text-center header animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">\n' +
-        '        <h3>Contact Details </h3>\n' +
-        '        <hr/>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<div class="row animate-in" data-anim-type="fade-in-up">\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="contact-wrapper">\n' +
-        '            <h3>We Are Social</h3>\n' +
-        '            <p>\n' +
-        '                Aliquam tempus ante placerat, consectetur tellus nec, porttitor nulla.\n' +
-        '            </p>\n' +
-        '            <div class="social-below">\n' +
-        '                <a href="#" class="btn button-custom btn-custom-two"> Facebook</a>\n' +
-        '                <a href="#" class="btn button-custom btn-custom-two"> Twitter</a>\n' +
-        '                <a href="#" class="btn button-custom btn-custom-two"> Google +</a>\n' +
-        '            </div>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="contact-wrapper">\n' +
-        '            <h3>Quick Contact</h3>\n' +
-        '            <h4><strong>Email : </strong> info@yuordomain.com </h4>\n' +
-        '            <h4><strong>Call : </strong> +55-15-2102-6500 </h4>\n' +
-        '            <h4><strong>Skype : </strong> YourSkypeHere </h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">\n' +
-        '        <div class="contact-wrapper">\n' +
-        '            <h3>Address : </h3>\n' +
-        '            <h4>Rua Fernando Silva, 190</h4>\n' +
-        '            <h4>Brazil</h4>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!--CONTACT SECTION END-->\n';
-
-    snippets.bs4portfoliosignupform = '<!-- SECTION SIGN UP START -->\n' +
-        '<!--\n' +
-        '    Must use follow <style>\n' +
-        '\n' +
-        '        .contact-page {\n' +
-        '            padding-top: 20px;\n' +
-        '            background: #a02d12;\n' +
-        '            margin-top: -10px;\n' +
-        '        }\n' +
-        '        .center {\n' +
-        '            font-size: 12px;\n' +
-        '            margin-top: 0;\n' +
-        '            margin-bottom: 10px;\n' +
-        '            text-align: center;\n' +
-        '            color: #fff;\n' +
-        '            text-transform: uppercase;\n' +
-        '        }\n' +
-        '-->\n' +
-        '<div class="contact-page">\n' +
-        '    <div class="container">\n' +
-        '        <div class="center">\n' +
-        '            <h2>Sign up to be notified</h2>\n' +
-        '        </div>\n' +
-        '        <div class="row contact-wrap">\n' +
-        '            <div class="status alert alert-success" style="display: none"></div>\n' +
-        '            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="[change.php]">\n' +
-        '                <div class="wow fadeInDown">\n' +
-        '                    <div class="col-sm-5 col-sm-offset-1">\n' +
-        '                        <div class="form-group">\n' +
-        '                            <label>Name *</label>\n' +
-        '                            <input type="text" name="name" class="form-control" required="required">\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group">\n' +
-        '                            <label>Email *</label>\n' +
-        '                            <input type="email" name="email" class="form-control" required="required">\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group">\n' +
-        '                            <label>Phone *</label> \n' +
-        '                            <input type="tel" class="form-control" value="" required="required">\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group">\n' +
-        '                            <label>Company Name</label>\n' +
-        '                            <input type="text" class="form-control">\n' +
-        '                        </div>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '                <div class="wow fadeInRight">\n' +
-        '                    <div class="col-sm-5">\n' +
-        '                        <div class="form-group">\n' +
-        '                            <label>Subject *</label>\n' +
-        '                            <input type="text" name="subject" class="form-control" required="required">\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group">\n' +
-        '                            <label>Message *</label>\n' +
-        '                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>\n' +
-        '                        </div>\n' +
-        '                        <div class="form-group">\n' +
-        '                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>\n' +
-        '                        </div>\n' +
-        '                    </div>\n' +
-        '                </div>\n' +
-        '            </form>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</div>\n' +
-        '<!-- SECTION SIGN UP END -->\n';
-
-    snippets.bs4portfoliocopyright = '<section id="copyright">\n' +
-        '    <div class="container">\n' +
-        '        <div class="footer-div center">\n' +
-        '            &copy; 2015 YourDomain | <a href="http://www.YourDomain.com/" target="_blank">by Your Company Here</a>\n' +
-        '        </div>\n' +
-        '    </div>\n' +
-        '</section>    \n';
-
-    snippets.bs4portfoliosignupcss = '        .contact-page {\n' +
-        '            padding-top: 20px;\n' +
-        '            background: #a02d12;\n' +
-        '            margin-top: -10px;\n' +
-        '        }\n' +
-        '        \n' +
-        '        .center {\n' +
-        '            font-size: 12px;\n' +
-        '            margin-top: 0;\n' +
-        '            margin-bottom: 10px;\n' +
-        '            text-align: center;\n' +
-        '            color: #fff;\n' +
-        '            text-transform: uppercase;\n' +
-        '        }\n';
-
-    
-    // Data Table and Table Smples- datatable.net
-
-    snippets.bs4datatableinit = '$(document).ready(function() {\n' +
-        '$(\'#example \').DataTable();\n' +
-        '} );\n';
 
     snippets.bs4tablesampleheader = '            <thead>\n' +
         '                <tr>\n' +
@@ -2255,66 +1802,6 @@ define(function (require, exports, module) {
         snippets.bs4tablesamplerows50 +
         '        </tbody>\n' +
         '    </table>\n';
-
-    snippets.bs4csvimportjs = '       $(document).ready(function() {\n' +
-        '\n' +
-        '            if (isAPIAvailable()) {\n' +
-        '                $(\'#files\').bind(\'change\', handleFileSelect);\n' +
-        '            }\n' +
-        '\n' +
-        '        });\n' +
-        '\n' +
-        '        function isAPIAvailable() {\n' +
-        '            if (window.File && window.FileReader && window.FileList && window.Blob) {\n' +
-        '                return true;\n' +
-        '            } else {\n' +
-        '                document.writeln(\'The HTML5 APIs used in this form are only available in the following browsers:<br />\');\n' +
-        '                document.writeln(\' - Google Chrome: 13.0 or later<br />\');\n' +
-        '                document.writeln(\' - Mozilla Firefox: 6.0 or later<br />\');\n' +
-        '                document.writeln(\' - Internet Explorer: Not supported (partial support expected in 10.0)<br />\');\n' +
-        '                document.writeln(\' - Safari: Not supported<br />\');\n' +
-        '                document.writeln(\' - Opera: Not supported\');\n' +
-        '                return false;\n' +
-        '            }\n' +
-        '        }\n' +
-        '\n' +
-        '        function handleFileSelect(evt) {\n' +
-        '            var files = evt.target.files;\n' +
-        '            var file = files[0];\n' +
-        '            var reader = new FileReader();\n' +
-        '            reader.readAsText(file);\n' +
-        '            reader.onload = function(event) {\n' +
-        '                var csv = event.target.result;\n' +
-        '                var data = $.csv.toArrays(csv);\n' +
-        '                var html = \'<thead>\';\n' +
-        '                var thend = \'</thead>\';\n' +
-        '                var rowtag = \'th\';\n' +
-        '\n' +
-        '                for (var row in data) {\n' +
-        '                    html += \'<tr>\';\n' +
-        '                    for (var item in data[row]) {\n' +
-        '                        html += \'<\' + rowtag + \'>\' + data[row][item] + \'</\' + rowtag + \'>\';\n' +
-        '                    }\n' +
-        '                    html += \'</tr>\';\n' +
-        '                    html += thend;\n' +
-        '                    thend = \'\';\n' +
-        '                    rowtag = \'td\';\n' +
-        '                }\n' +
-        '                $(\'#contents\').html(html);\n' +
-        '                $(\'#contents\').DataTable();\n' +
-        '            };\n' +
-        '            reader.onerror = function() {\n' +
-        '                alert(\'Unable to read \' + file.fileName);\n' +
-        '            };\n' +
-        '        }\n';
-
-    snippets.bs4fileupload = '        <div class="fileinput fileinput-new input-group" data-provides="fileinput">\n' +
-        '            <div class="form-control" data-trigger="fileinput"><i class="glyphicon glyphicon-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>\n' +
-        '            <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span>\n' +
-        '            <input id="files" type="file" class="file" name="files[]">\n' +
-        '            </span>\n' +
-        '            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>\n' +
-        '        </div>        \n';
 
     module.exports = snippets;
 });

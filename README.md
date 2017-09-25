@@ -33,13 +33,29 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Alerts
 
 	bs4alert (primary style)
-	bs4alertdanger
-	bs4alertdark
-	bs4alertinfo 
-	bs4alertlight 
-	bs4alertsecondary
-	bs4alertsuccess
-	bs4alertwarning
+    bs4alertdanger
+    bs4alertdark
+    bs4alertinfo
+    bs4alertlight
+    bs4alertsecondary
+    bs4alertsuccess
+    bs4alertwarning
+    bs4alertbasic (primary style, just text)
+    bs4alertbasicdanger
+    bs4alertbasicdark
+    bs4alertbasicinfo
+    bs4alertbasiclight
+    bs4alertbasicsecondary
+    bs4alertbasicsuccess
+    bs4alertbasicwarning
+    bs4alertbox (primary style, with heading, paragraph and dividers)
+    bs4alertboxdanger
+    bs4alertboxdark
+    bs4alertboxinfo
+    bs4alertboxlight
+    bs4alertboxsecondary
+    bs4alertboxsuccess
+    bs4alertboxwarning
 	
 ### Badge
 
@@ -51,6 +67,22 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4badgesecondary
     bs4badgesuccess
     bs4badgewarning
+    bs4badgepill (primary style in pill)
+    bs4badgepilldanger
+    bs4badgepilldark
+    bs4badgepillinfo
+    bs4badgepilllight
+    bs4badgepillsecondary
+    bs4badgepillsuccess
+    bs4badgepillwarning
+    bs4badgelink (primary style in link)
+    bs4badgelinkdanger
+    bs4badgelinkdark
+    bs4badgelinkinfo
+    bs4badgelinklight
+    bs4badgelinksecondary
+    bs4badgelinksuccess
+    bs4badgelinkwarning
 	
 ### Breadcrumbs
 
@@ -248,10 +280,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 	bs4mediaobject
 
-### Modal (TODO)
+### Modal
 
 	bs4modal
-	bs4modalstruct
+	bs4modalbtn
 
 ### Navigation
     
@@ -259,13 +291,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4navbarbasic
     bs4navbarcentered
 
-### Pagination (TODO)
+### Pagination
     
-	bs4pageraligned
-	bs4pager
-	bs4paginationlarge
-	bs4paginationsmall
-	bs4pagination
+	bs4pagination (basic, left aligned)
+	bs4paginationicons
+	bs4paginationcenterd
+	bs4paginationright
     
 ### Table  (TODO)
     
@@ -281,22 +312,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
     bs4tabs
     tabhover
-
-### Animated Portfolio Sample    
-
-	bs4portfoliocss
-	bs4portfoliolibs
-	bs4portfoliojs
-	bs4portfoliomenu
-	bs4portfoliocarouseltext
-	bs4portfoliosocialbuttons
-	bs4portfolioservices
-	bs4portfoliopricetable
-	bs4portfoliowork
-	bs4portfolioteam
-	bs4portfoliocontact
-	bs4portfoliosignupform
-	bs4portfoliocopyright
     
 ### Credits
 ---

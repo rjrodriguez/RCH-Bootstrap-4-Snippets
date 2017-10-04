@@ -78,7 +78,6 @@ define(function (require, exports, module) {
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
     
-    
     snippets.bs4alertlink = '<a href="#" class="alert-link">an example link</a>';
     
     snippets.bs4alertdismiss = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
@@ -257,7 +256,92 @@ define(function (require, exports, module) {
     
     // Buttons (TODO)
     // https://getbootstrap.com/docs/4.0/components/buttons/
+    
+    // Link buttons
+    snippets.bs4abtn = '<a class="btn btn-primary" href="#" role="button">Link button</a>';
+    snippets.bs4abtnsecondary = '<a class="btn btn-secondary" href="#" role="button">Link button</a>';
+    snippets.bs4abtnsuccess = '<a class="btn btn-success" href="#" role="button">Link button</a>';
+    snippets.bs4abtndanger = '<a class="btn btn-danger" href="#" role="button">Link button</a>';
+    snippets.bs4abtnwarning = '<a class="btn btn-warning" href="#" role="button">Link button</a>';
+    snippets.bs4abtninfo = '<a class="btn btn-info" href="#" role="button">Link button</a>';
+    snippets.bs4abtnlight = '<a class="btn btn-light" href="#" role="button">Link button</a>';
+    snippets.bs4abtndark = '<a class="btn btn-dark" href="#" role="button">Link button</a>';
+    snippets.bs4abtnlink = '<a class="btn btn-link" href="#" role="button">Link button</a>';
+    
+    snippets.bs4abtnsm = '<a class="btn btn-primary btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsecondarysm = '<a class="btn btn-secondary btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsuccesssm = '<a class="btn btn-success btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtndangersm = '<a class="btn btn-danger btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnwarningsm = '<a class="btn btn-warning btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtninfosm = '<a class="btn btn-info btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnlightsm = '<a class="btn btn-light btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtndarksm = '<a class="btn btn-dark btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnlinksm = '<a class="btn btn-link btn-sm" href="#" role="button">Small link button</a>';
+    
+    snippets.bs4abtnlg = '<a class="btn btn-primary btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnsecondarylg = '<a class="btn btn-secondary btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnsuccesslg = '<a class="btn btn-success btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtndangerlg = '<a class="btn btn-danger btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnwarninglg = '<a class="btn btn-warning btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtninfolg = '<a class="btn btn-info btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlightlg = '<a class="btn btn-light btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtndarklg = '<a class="btn btn-dark btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlinklg = '<a class="btn btn-link btn-lg" href="#" role="button">Large link button</a>';
+    
+    snippets.bs4abtnblock = '<a class="btn btn-primary btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnsecondaryblock = '<a class="btn btn-secondary btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnsuccessblock = '<a class="btn btn-success btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtndangerblock = '<a class="btn btn-danger btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnwarningblock = '<a class="btn btn-warning btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtninfoblock = '<a class="btn btn-info btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnlightblock = '<a class="btn btn-light btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtndarkblock = '<a class="btn btn-dark btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnlinkblock = '<a class="btn btn-link btn-block" href="#" role="button">Block link button</a>';
+    
+    // Outlined link buttons
+    snippets.bs4abtnoutline = '<a class="btn btn-outline-primary" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinesecondary = '<a class="btn btn-outline-secondary" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinesuccess = '<a class="btn btn-outline-success" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinedanger = '<a class="btn btn-outline-danger" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinewarning = '<a class="btn btn-outline-warning" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlineinfo = '<a class="btn btn-outline-info" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinelight = '<a class="btn btn-outline-light" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinedark = '<a class="btn btn-outline-dark" href="#" role="button">Link button</a>';
+    snippets.bs4abtnoutlinelink = '<a class="btn btn-outline-link" href="#" role="button">Link button</a>';
+    
+    snippets.bs4abtnoutlinesm = '<a class="btn btn-outline-primary btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinesecondarysm = '<a class="btn btn-outline-secondary btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinesuccesssm = '<a class="btn btn-outline-success btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinedangesmr = '<a class="btn btn-outline-danger btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinewarningsm = '<a class="btn btn-outline-warning btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlineinfsmo = '<a class="btn btn-outline-info btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinelightsm = '<a class="btn btn-outline-light btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinedarksm = '<a class="btn btn-outline-dark btn-sm" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnoutlinelinksm = '<a class="btn btn-outline-link btn-sm" href="#" role="button">Small link button</a>';
+    
+    snippets.bs4abtnoutlinelg = '<a class="btn btn-outline-primary btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinesecondarylg = '<a class="btn btn-outline-secondary btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinesuccesslg = '<a class="btn btn-outline-success btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinedangerlg = '<a class="btn btn-outline-danger btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinewarninglg = '<a class="btn btn-outline-warning btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlineinfolg = '<a class="btn btn-outline-info btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinelightlg = '<a class="btn btn-outline-light btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinedarklg = '<a class="btn btn-outline-dark btn-lg" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnoutlinelinklg = '<a class="btn btn-outline-link btn-lg" href="#" role="button">Large link button</a>';
+    
+    snippets.bs4abtnoutlineblock = '<a class="btn btn-outline-primary btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinesecondaryblock = '<a class="btn btn-outline-secondary btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinesuccessblock = '<a class="btn btn-outline-success btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinedangerblock = '<a class="btn btn-outline-danger btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinewarningblock = '<a class="btn btn-outline-warning btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlineinfoblock = '<a class="btn btn-outline-info btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinelightblock = '<a class="btn btn-outline-light btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinedarkblock = '<a class="btn btn-outline-dark btn-block" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnoutlinelinkblock = '<a class="btn btn-outline-link btn-block" href="#" role="button">Block link button</a>';
+        
 
+    
+    
     snippets.bs4blockbuttondanger = '<button type="button" class="btn btn-large btn-block btn-danger">[button]</button>\n';
     snippets.bs4blockbuttondefault = '<button type="button" class="btn btn-large btn-block btn-default">[button]</button>\n';
     snippets.bs4blockbuttondisabled = '<button type="button" class="btn btn-large btn-block btn-{2:default} disabled">[button]</button>\n';
@@ -273,28 +357,12 @@ define(function (require, exports, module) {
     // Button Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/button-group/
     
-    snippets.bs4buttongroupvertical = '<div class="btn-group-vertical">\n' +
-        '	<button type="button" class="btn btn-default">[Top]</button>\n' +
-        '	<button type="button" class="btn btn-default">[Middle]</button>\n' +
-        '   <button type="button" class="btn btn-default">[Bottom]</button>\n' +
-        '</div>\n';
-    snippets.bs4buttongroup = '<div class="btn-group">\n' +
-        '	<button type="button" class="btn btn-default">[Left]</button>\n' +
-        '	<button type="button" class="btn btn-default">[Middle]</button>\n' +
-        '	<button type="button" class="btn btn-default">[Right]</button>\n' +
-        '</div>';
-    snippets.bs4buttoninfo = '<button type="button" class="btn btn-info">[button]</button>';
-    snippets.bs4buttonprimary = '<button type="button" class="btn btn-primary">[button]</button>';
-    snippets.bs4buttonsuccess = '<button type="button" class="btn btn-success">[button]</button>';
-    snippets.bs4buttontoolbar = '<div class="btn-toolbar">\n' +
-        '	<div class="btn-group"></div>\n' +
-        '	<div class="btn-group"></div>\n' +
-        '	<div class="btn-group"></div>\n' +
-        '</div>';
-    snippets.bs4buttonwarning = '<button type="button" class="btn btn-warning">[button]</button>\n';
-    snippets.bs4button = '<button type="button" class="btn btn-default">[button]</button>\n';
-    snippets.bs4lgbuttondanger = '<button type="button" class="btn btn-danger">[button]</button>\n';
-    snippets.bs4lgbuttondisabled = '<button type="button" class="btn btn-lg btn-default disabled">[button]</button>\n';
+    snippets.bs4buttongroupvertical = '';
+    snippets.bs4buttongroup = '';
+    
+    
+    snippets.bs4lgbuttondanger = '';
+    snippets.bs4lgbuttondisabled = '';
     snippets.bs4lgbuttoninfo = '<a class="btn btn-lg btn-info" href="#" role="button">button</a>\n';
     snippets.bs4lgbuttonprimary = '<button type="button" class="btn btn-lg btn-primary">[button]</button>\n';
     snippets.bs4lgbuttonsuccess = '<button type="button" class="btn btn-lg btn-success">[button]</button>\n';

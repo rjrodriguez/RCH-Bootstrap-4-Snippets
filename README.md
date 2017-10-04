@@ -89,51 +89,92 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4breadcrumbs (unlisted markup)
     bs4breadcrumbslist
 	
-### Buttons (TODO)
+### Buttons
+(TODO: inputs and buttons tags)
 
-	bs4blockbuttondanger
-	bs4blockbuttondefault
-	bs4blockbuttondisabled
-	bs4blockbuttoninfo
-	bs4blockbuttonprimary
-	bs4blockbuttonsuccess
-	bs4blockbuttonwarning
-	bs4blockbutton
-	bs4buttondanger
-	bs4buttondefault
-	bs4buttondisabled
-	bs4buttongroupvertical
- 	bs4buttongroup
- 	bs4buttoninfo
-	bs4buttonprimary
-	bs4buttonsuccess
-	bs4buttontoolbar
- 	bs4buttonwarning
-	bs4button
-	bs4lgbuttondanger
-	bs4lgbuttondisabled
-	bs4lgbuttoninfo
-	bs4lgbuttonprimary
-	bs4lgbuttonsuccess
-	bs4lgbuttonwarning
-	bs4lgbutton
-	bs4lgbuttondefault
-	bs4minibuttondanger
-	bs4minibuttondefault
-	bs4minibuttondisabled
-	bs4minibuttoninfo
-	bs4minibuttonprimary
-	bs4minibuttonsuccess
-	bs4minibuttonwarning
-	bs4minibutton
-	bs4smbuttondanger
-	bs4smbuttondefault
-	bs4smbuttondisabled
-	bs4smbuttoninfo
-	bs4smbuttonprimary
-	bs4smbuttonsuccess
-	bs4smbuttonwarning
-	bs4smbutton
+#### Link buttons
+
+    bs4abtn (primary)
+    bs4abtndanger
+    bs4abtndark
+    bs4abtninfo
+    bs4abtnlight
+    bs4abtnlink
+    bs4abtnsecondary
+    bs4abtnsuccess
+    bs4abtnwarning
+    
+    bs4abtnblock (primary)
+    bs4abtndangerblock
+    bs4abtndarkblock
+    bs4abtninfoblock
+    bs4abtnlightblock
+    bs4abtnlinkblock
+    bs4abtnsecondaryblock
+    bs4abtnsuccesblocks
+    bs4abtnwarningblock
+    
+    bs4abtnlg (primary)
+    bs4abtndangerlg
+    bs4abtndarklg
+    bs4abtninfolg
+    bs4abtnlightlg
+    bs4abtnlinklg
+    bs4abtnsecondarylg
+    bs4abtnsuccesslg
+    bs4abtnwarninglg
+    
+    bs4abtnsm (primary)
+    bs4abtndangersm
+    bs4abtndarksm
+    bs4abtninfosm
+    bs4abtnlightsm
+    bs4abtnlinksm
+    bs4abtnsecondarysm
+    bs4abtnsuccesssm
+    bs4abtnwarningsm
+    
+##### Outlined links buttons
+
+    bs4abtnoutline (primary)
+    bs4abtnoutlinedanger
+    bs4abtnoutlinedark
+    bs4abtnoutlineinfo
+    bs4abtnoutlinelight
+    bs4abtnoutlinelink
+    bs4abtnoutlinesecondary
+    bs4abtnoutlinesuccess
+    bs4abtnoutlinewarning
+    
+    bs4abtnoutlineblock (primary)
+    bs4abtnoutlinedangerblock
+    bs4abtnoutlinedarkblock
+    bs4abtnoutlineinfoblock
+    bs4abtnoutlinelightblock
+    bs4abtnoutlinelinkblock
+    bs4abtnoutlinesecondaryblock
+    bs4abtnoutlinesuccessblock
+    bs4abtnoutlinewarningblock
+    
+    bs4abtnoutlinelg (primary)
+    bs4abtnoutlinedangerlg
+    bs4abtnoutlinedarklg
+    bs4abtnoutlineinfolg
+    bs4abtnoutlinelightlg
+    bs4abtnoutlinelinklg
+    bs4abtnoutlinesecondarylg
+    bs4abtnoutlinesuccesslg
+    bs4abtnoutlinewarninglg
+    
+    bs4abtnoutlinesm (primary)
+    bs4abtnoutlinedangersm
+    bs4abtnoutlinedarksm
+    bs4abtnoutlineinfosm
+    bs4abtnoutlinelightsm
+    bs4abtnoutlinelinksm
+    bs4abtnoutlinesecondarysm
+    bs4abtnoutlinesuccesssm
+    bs4abtnoutlinewarningsm
 
 ### Carousel
 
@@ -153,7 +194,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
     bs4figure
 	
-### Forms (TODO)
+### Forms
+(TODO)
 
 	bs4formhorizontal
 	bs4forminline
@@ -206,7 +248,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4imagerounded
 	bs4imagecircle
 
-### Input Groups (TODO)
+### Input Groups 
+(TODO)
 
 	bs4inputgroupaddontext
 	bs4inputgroupaddon
@@ -219,52 +262,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4jumbotron
     bs4jumbotronfluid
 
-### Link Buttons (TODO)
-
-	bs4blocklinkbuttondanger
-	bs4blocklinkbuttondefault
-	bs4blocklinkbuttondisabled
-	bs4blocklinkbuttoninfo
-	bs4blocklinkbuttonprimary
-	bs4blocklinkbuttonsuccess
-	bs4blocklinkbuttonwarning
-	bs4blocklinkbutton
-	bs4lglinkbuttondanger
-	bs4lglinkbuttondefault
-	bs4lglinkbuttondisabled
-	bs4lglinkbuttoninfo
-	bs4lglinkbuttonprimary
-	bs4lglinkbuttonsuccess
-	bs4lglinkbuttonwarning
-	bs4lglinkbutton
-	bs4linkbuttondanger
-	bs4linkbuttondefault
-	bs4linkbuttondisabled
-	bs4linkbuttongroupvertical
-	bs4linkbuttongroup
-	bs4linkbuttoninfo
-	bs4linkbuttonprimary
-	bs4linkbuttonsuccess
-	bs4linkbuttonwarning
-	bs4linkbutton
-	bs4minilinkbuttondanger
-	bs4minilinkbuttondefault
-	bs4minilinkbuttondisabled
-	bs4minilinkbuttoninfo
-	bs4minilinkbuttonprimary
-	bs4minilinkbuttonsuccess
-	bs4minilinkbuttonwarning
-	bs4minilinkbutton
-	bs4smlinkbuttondanger
-	bs4smlinkbuttondefault
-	bs4smlinkbuttondisabled
-	bs4smlinkbuttoninfo
-	bs4smlinkbuttonprimary
-	bs4smlinkbuttonsuccess
-	bs4smlinkbuttonwarning
-	bs4smlinkbutton
-
-### List Groups (TODO)
+### List Groups 
+(TODO)
 
 	bs4listgroupbadges
 	bs4listgroupcontent
@@ -276,7 +275,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4localcss
     bs4localjs
     
-### Media (TODO)
+### Media 
+(TODO)
 
 	bs4mediaobject
 
@@ -298,7 +298,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4paginationcenterd
 	bs4paginationright
     
-### Table  (TODO)
+### Table 
+(TODO)
     
     bs4table
 	bs4tablebordered
@@ -308,7 +309,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4tablesmall
     bs4tablestriped
     
-### Tabs (TODO)
+### Tabs 
+(TODO)
     
     bs4tabs
     tabhover

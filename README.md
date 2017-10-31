@@ -56,7 +56,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4alertboxsecondary
     bs4alertboxsuccess
     bs4alertboxwarning
-	
+    bs4alertlink
+    bs4alertheading
+    bs4alertdismiss
+    
 ### Badge
 
 	bs4badge (primary style)
@@ -86,9 +89,8 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	
 ### Breadcrumbs
 
-	bs4breadcrumbs (unlisted markup)
-    bs4breadcrumbslist
-	
+	bs4breadcrumbs 
+    
 ### Buttons
 (TODO: inputs and buttons tags)
 
@@ -136,45 +138,45 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
 ##### Outlined links buttons
 
-    bs4abtnoutline (primary)
-    bs4abtnoutlinedanger
-    bs4abtnoutlinedark
-    bs4abtnoutlineinfo
-    bs4abtnoutlinelight
-    bs4abtnoutlinelink
-    bs4abtnoutlinesecondary
-    bs4abtnoutlinesuccess
-    bs4abtnoutlinewarning
+    bs4abtnol (primary)
+    bs4abtnoldanger
+    bs4abtnoldark
+    bs4abtnolinfo
+    bs4abtnollight
+    bs4abtnollink
+    bs4abtnolsecondary
+    bs4abtnolsuccess
+    bs4abtnolwarning
     
-    bs4abtnoutlineblock (primary)
-    bs4abtnoutlinedangerblock
-    bs4abtnoutlinedarkblock
-    bs4abtnoutlineinfoblock
-    bs4abtnoutlinelightblock
-    bs4abtnoutlinelinkblock
-    bs4abtnoutlinesecondaryblock
-    bs4abtnoutlinesuccessblock
-    bs4abtnoutlinewarningblock
+    bs4abtnolblock (primary)
+    bs4abtnoldangerblock
+    bs4abtnoldarkblock
+    bs4abtnolinfoblock
+    bs4abtnollightblock
+    bs4abtnollinkblock
+    bs4abtnolsecondaryblock
+    bs4abtnolsuccessblock
+    bs4abtnolwarningblock
     
-    bs4abtnoutlinelg (primary)
-    bs4abtnoutlinedangerlg
-    bs4abtnoutlinedarklg
-    bs4abtnoutlineinfolg
-    bs4abtnoutlinelightlg
-    bs4abtnoutlinelinklg
-    bs4abtnoutlinesecondarylg
-    bs4abtnoutlinesuccesslg
-    bs4abtnoutlinewarninglg
+    bs4abtnollg (primary)
+    bs4abtnoldangerlg
+    bs4abtnoldarklg
+    bs4abtnolinfolg
+    bs4abtnollightlg
+    bs4abtnollinklg
+    bs4abtnolsecondarylg
+    bs4abtnolsuccesslg
+    bs4abtnolwarninglg
     
-    bs4abtnoutlinesm (primary)
-    bs4abtnoutlinedangersm
-    bs4abtnoutlinedarksm
-    bs4abtnoutlineinfosm
-    bs4abtnoutlinelightsm
-    bs4abtnoutlinelinksm
-    bs4abtnoutlinesecondarysm
-    bs4abtnoutlinesuccesssm
-    bs4abtnoutlinewarningsm
+    bs4abtnolsm (primary)
+    bs4abtnoldangersm
+    bs4abtnoldarksm
+    bs4abtnolinfosm
+    bs4abtnollightsm
+    bs4abtnollinksm
+    bs4abtnolsecondarysm
+    bs4abtnolsuccesssm
+    bs4abtnolwarningsm
 
 ### Carousel
 
@@ -186,7 +188,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### CDN
 
-    bs4cdn
     bs4cdncss
     bs4cdnjs
     

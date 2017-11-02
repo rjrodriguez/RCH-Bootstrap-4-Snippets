@@ -177,6 +177,90 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4abtnolsecondarysm
     bs4abtnolsuccesssm
     bs4abtnolwarningsm
+    
+#### Buttons (button tag)
+
+    bs4btn (primary)
+    bs4btndanger
+    bs4btndark
+    bs4btninfo
+    bs4btnlight
+    bs4btnlink
+    bs4btnsecondary
+    bs4btnsuccess
+    bs4btnwarning
+    
+    bs4btnblock (primary)
+    bs4btndangerblock
+    bs4btndarkblock
+    bs4btninfoblock
+    bs4btnlightblock
+    bs4btnlinkblock
+    bs4btnsecondaryblock
+    bs4btnsuccesblocks
+    bs4btnwarningblock
+    
+    bs4btnlg (primary)
+    bs4btndangerlg
+    bs4btndarklg
+    bs4btninfolg
+    bs4btnlightlg
+    bs4btnlinklg
+    bs4btnsecondarylg
+    bs4btnsuccesslg
+    bs4btnwarninglg
+    
+    bs4btnsm (primary)
+    bs4btndangersm
+    bs4btndarksm
+    bs4btninfosm
+    bs4btnlightsm
+    bs4btnlinksm
+    bs4btnsecondarysm
+    bs4btnsuccesssm
+    bs4btnwarningsm
+    
+##### Outlined buttons (button tag)
+
+    bs4btnol (primary)
+    bs4btnoldanger
+    bs4btnoldark
+    bs4btnolinfo
+    bs4btnollight
+    bs4btnollink
+    bs4btnolsecondary
+    bs4btnolsuccess
+    bs4btnolwarning
+    
+    bs4btnolblock (primary)
+    bs4btnoldangerblock
+    bs4btnoldarkblock
+    bs4btnolinfoblock
+    bs4btnollightblock
+    bs4btnollinkblock
+    bs4btnolsecondaryblock
+    bs4btnolsuccessblock
+    bs4btnolwarningblock
+    
+    bs4btnollg (primary)
+    bs4btnoldangerlg
+    bs4btnoldarklg
+    bs4btnolinfolg
+    bs4btnollightlg
+    bs4btnollinklg
+    bs4btnolsecondarylg
+    bs4btnolsuccesslg
+    bs4btnolwarninglg
+    
+    bs4btnolsm (primary)
+    bs4btnoldangersm
+    bs4btnoldarksm
+    bs4btnolinfosm
+    bs4btnollightsm
+    bs4btnollinksm
+    bs4btnolsecondarysm
+    bs4btnolsuccesssm
+    bs4btnolwarningsm
 
 ### Carousel
 

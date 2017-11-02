@@ -120,14 +120,14 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 #### Link buttons
 
     bs4abtn (primary)
-    bs4abtndanger
-    bs4abtndark
-    bs4abtninfo
-    bs4abtnlight
-    bs4abtnlink
-    bs4abtnsecondary
-    bs4abtnsuccess
-    bs4abtnwarning
+    bs4abtn_danger
+    bs4abtn_dark
+    bs4abtn_info
+    bs4abtn_light
+    bs4abtn_link
+    bs4abtn_secondary
+    bs4abtn_success
+    bs4abtn_warning
     
     bs4abtnblock (primary)
     bs4abtndangerblock
@@ -162,14 +162,14 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ##### Outlined links buttons
 
     bs4abtnol (primary)
-    bs4abtnoldanger
-    bs4abtnoldark
-    bs4abtnolinfo
-    bs4abtnollight
-    bs4abtnollink
-    bs4abtnolsecondary
-    bs4abtnolsuccess
-    bs4abtnolwarning
+    bs4abtnol_danger
+    bs4abtnol_dark
+    bs4abtnol_info
+    bs4abtnol_light
+    bs4abtnol_link
+    bs4abtnol_secondary
+    bs4abtnol_success
+    bs4abtnol_warning
     
     bs4abtnolblock (primary)
     bs4abtnoldangerblock
@@ -204,14 +204,14 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 #### Buttons (button tag)
 
     bs4btn (primary)
-    bs4btndanger
-    bs4btndark
-    bs4btninfo
-    bs4btnlight
-    bs4btnlink
-    bs4btnsecondary
-    bs4btnsuccess
-    bs4btnwarning
+    bs4btn_danger
+    bs4btn_dark
+    bs4btn_info
+    bs4btn_light
+    bs4btn_link
+    bs4btn_secondary
+    bs4btn_success
+    bs4btn_warning
     
     bs4btnblock (primary)
     bs4btndangerblock
@@ -246,14 +246,14 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ##### Outlined buttons (button tag)
 
     bs4btnol (primary)
-    bs4btnoldanger
-    bs4btnoldark
-    bs4btnolinfo
-    bs4btnollight
-    bs4btnollink
-    bs4btnolsecondary
-    bs4btnolsuccess
-    bs4btnolwarning
+    bs4btnol_danger
+    bs4btnol_dark
+    bs4btnol_info
+    bs4btnol_light
+    bs4btnol_link
+    bs4btnol_secondary
+    bs4btnol_success
+    bs4btnol_warning
     
     bs4btnolblock (primary)
     bs4btnoldangerblock

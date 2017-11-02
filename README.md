@@ -33,6 +33,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Alerts
 
 | Dismissible Alert | Basic text Alert | Alert Box |
+| --- | --- | --- |
 | bs4alert (primary style)
 bs4alertdanger
 bs4alertdark

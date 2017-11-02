@@ -26,9 +26,16 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Bootstrap 4 - HTML5 blank Templates
 
-	bs4 or bs4htmllocal (basic html template with local assets links)
-	bs4html or bs4template (basic html tempate with CDNs assets links)
+#### Basic html template with local assets links
 
+	bs4
+    bs4htmllocal
+
+#### Basic html template with CDNs assets links
+
+    bs4html
+    bs4template 
+    
 ### Alerts
 
     bs4alertlink

@@ -32,16 +32,16 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Alerts
 
-| Dismissible Alert | Basic text Alert | Alert Box (with heading, paragraph and dividers) |
-| --- | --- | --- |
-| bs4alert (primary style) | bs4alertbasic (primary style) | bs4alertbox (primary style)
-| bs4alertdanger | bs4alertbasicdanger | bs4alertboxdanger |
-| bs4alertdark | bs4alertbasicdark | bs4alertboxdark |
-| bs4alertinfo | bs4alertbasicinfo | bs4alertboxinfo |
-| bs4alertlight | bs4alertbasiclight | bs4alertboxlight |
-| bs4alertsecondary | bs4alertbasicsecondary | bs4alertboxsecondary |
-| bs4alertsuccess | bs4alertbasicsuccess | bs4alertboxsuccess |
-| bs4alertwarning | bs4alertbasicwarning | bs4alertboxwarning |
+    | Dismissible Alert | Basic text Alert | Alert Box (with heading, paragraph and dividers) |
+    | --- | --- | --- |
+    | bs4alert (primary style) | bs4alertbasic (primary style) | bs4alertbox (primary style)
+    | bs4alertdanger | bs4alertbasicdanger | bs4alertboxdanger |
+    | bs4alertdark | bs4alertbasicdark | bs4alertboxdark |
+    | bs4alertinfo | bs4alertbasicinfo | bs4alertboxinfo |
+    | bs4alertlight | bs4alertbasiclight | bs4alertboxlight |
+    | bs4alertsecondary | bs4alertbasicsecondary | bs4alertboxsecondary |
+    | bs4alertsuccess | bs4alertbasicsuccess | bs4alertboxsuccess |
+    | bs4alertwarning | bs4alertbasicwarning | bs4alertboxwarning |
 
     bs4alertlink
     bs4alertheading

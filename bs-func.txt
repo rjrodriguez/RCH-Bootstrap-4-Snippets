@@ -212,6 +212,7 @@ bs4formhorizontal
 bs4forminline
 bs4formlabel
 bs4html
+bs4htmllocal
 bs4image
 bs4imagecircle
 bs4imagerounded

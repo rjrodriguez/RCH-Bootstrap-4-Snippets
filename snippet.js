@@ -36,6 +36,14 @@ define(function (require, exports, module) {
         '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
 
+    var csslocal = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';
+    
+    var jslocal = '<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
+        '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
+        '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
+        '   <script src="js/popper.min.js"></script>\n' +
+        '   <script src="js/bootstrap.min.js"></script>\n';
+    
     // Bootstrap 4 - HTML5 Templates and Minimum Template
 
     snippets.bs4 = '<!DOCTYPE html>\n' +
@@ -45,12 +53,12 @@ define(function (require, exports, module) {
         '    <meta charset="utf-8">\n' +
         '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n' +
         '    <title>Bootstrap 4 Minimal Template</title>\n' +
-        cdncss +
+        csslocal +
         '\n' +
         '</head>\n\n' +
         '<body>\n' +
         '    <h1>Hello, world!</h1>\n\n' +
-        cdnjs +
+        jslocal +
         '</body>\n</html>';
 
     snippets.bs4html = '<!DOCTYPE html>\n' +
@@ -74,6 +82,7 @@ define(function (require, exports, module) {
         '</body>\n</html>';
 
     snippets.bs4template = snippets.bs4html;
+    snippets.bs4htmllocal = snippets.bs4;
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
@@ -262,7 +271,7 @@ define(function (require, exports, module) {
         '           <li class="breadcrumb-item"><a href="#">1st level</a></li>\n' +
         '           <li class="breadcrumb-item"><a href="#">2nd level</a></li>\n' +
         '           <li class="breadcrumb-item active">3rd level</li>\n' +
-        '       </ol>'
+        '       </ol>' +
         '	</nav>';
         
     // Buttons (TODO)
@@ -1031,14 +1040,8 @@ define(function (require, exports, module) {
 
     // Local
 
-    snippets.bs4localcss = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';
-
-    snippets.bs4localjs = '<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
-        '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
-        '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
-        '   <script src="js/popper.min.js"></script>\n' +
-        '   <script src="js/bootstrap.min.js"></script>\n';
-
+    snippets.bs4localcss = csslocal;
+    snippets.bs4localjs = jslocal;
 
     // Media (TODO)
     // https://getbootstrap.com/docs/4.0/layout/media-object/

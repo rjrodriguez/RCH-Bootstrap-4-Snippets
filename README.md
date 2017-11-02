@@ -42,50 +42,80 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4alertheading
     bs4alertdismiss
 
-| Dismissible Alert | Basic text Alert | Alert Box (with heading, paragraph and dividers) |
-| --- | --- | --- |
-| bs4alert (primary style) | bs4alertbasic (primary style) | bs4alertbox (primary style)
-| bs4alertdanger | bs4alertbasicdanger | bs4alertboxdanger |
-| bs4alertdark | bs4alertbasicdark | bs4alertboxdark |
-| bs4alertinfo | bs4alertbasicinfo | bs4alertboxinfo |
-| bs4alertlight | bs4alertbasiclight | bs4alertboxlight |
-| bs4alertsecondary | bs4alertbasicsecondary | bs4alertboxsecondary |
-| bs4alertsuccess | bs4alertbasicsuccess | bs4alertboxsuccess |
-| bs4alertwarning | bs4alertbasicwarning | bs4alertboxwarning |
+#### Dismissible Alert
+
+    bs4alert (primary style)
+    bs4alert_danger
+    bs4alert_dark
+    bs4alert_info
+    bs4alert_light
+    bs4alert_secondary
+    bs4alert_success
+    bs4alert_warning
     
+#### Basic text Alert
+
+    bs4alertbasic (primary style)
+    bs4alertbasic_danger
+    bs4alertbasic_dark
+    bs4alertbasic_info
+    bs4alertbasic_light
+    bs4alertbasic_secondary
+    bs4alertbasic_success
+    bs4alertbasic_warning
+
+#### Alert Box (with heading, paragraph and divider) |
+
+    bs4alertbox (primary style)
+    bs4alertbox_danger
+    bs4alertbox_dark
+    bs4alertbox_info
+    bs4alertbox_light
+    bs4alertbox_secondary
+    bs4alertbox_success
+    bs4alertbox_warning
+
 ### Badge
 
-	bs4badge (primary style)
-    bs4badgedanger
-    bs4badgedark
-    bs4badgeinfo
-    bs4badgelight
-    bs4badgesecondary
-    bs4badgesuccess
-    bs4badgewarning
+#### Basics
+
+    bs4badge (primary style)
+    bs4badge_danger
+    bs4badge_dark
+    bs4badge_info
+    bs4badge_light
+    bs4badge_secondary
+    bs4badge_success
+    bs4badge_warning
+    
+#### Pills Badges
+
     bs4badgepill (primary style in pill)
-    bs4badgepilldanger
-    bs4badgepilldark
-    bs4badgepillinfo
-    bs4badgepilllight
-    bs4badgepillsecondary
-    bs4badgepillsuccess
-    bs4badgepillwarning
+    bs4badgepill_danger
+    bs4badgepill_dark
+    bs4badgepill_info
+    bs4badgepill_light
+    bs4badgepill_secondary
+    bs4badgepill_success
+    bs4badgepill_warning
+    
+#### Links Badges    
+    
     bs4badgelink (primary style in link)
-    bs4badgelinkdanger
-    bs4badgelinkdark
-    bs4badgelinkinfo
-    bs4badgelinklight
-    bs4badgelinksecondary
-    bs4badgelinksuccess
-    bs4badgelinkwarning
+    bs4badgelink_danger
+    bs4badgelink_dark
+    bs4badgelink_info
+    bs4badgelink_light
+    bs4badgelink_secondary
+    bs4badgelink_success
+    bs4badgelink_warning
 	
 ### Breadcrumbs
 
 	bs4breadcrumbs 
     
 ### Buttons
-(TODO: inputs and buttons tags)
+(TODO: inputs tags)
 
 #### Link buttons
 

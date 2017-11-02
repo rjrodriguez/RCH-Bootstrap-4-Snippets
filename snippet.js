@@ -101,37 +101,37 @@ define(function (require, exports, module) {
         '		<strong>Primary alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
     
-    snippets.bs4alertsecondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Secondary alert!</strong> You should check ' + alertlink + '>.\n' +
         '	</div>\n';
 
-    snippets.bs4alertdanger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_danger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Danger alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
 
-    snippets.bs4alertinfo = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_info = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Info alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
 
-    snippets.bs4alertsuccess = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_success = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Success alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
 
-    snippets.bs4alertwarning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_warning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Warning alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
 
-    snippets.bs4alertlight = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_light = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Light alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
     
-    snippets.bs4alertdark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' +
+    snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Dark alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
@@ -140,31 +140,31 @@ define(function (require, exports, module) {
         '       This is a primary alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasicsecondary = '<div class="alert alert-secondary" role="alert">\n' +
+    snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' +
         '       This is a secondary alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasicdanger = '<div class="alert alert-danger" role="alert">\n' +
+    snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' +
         '       This is a danger alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasicinfo = '<div class="alert alert-info" role="alert">\n' +
+    snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' +
         '       This is a info alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasicsuccess = '<div class="alert alert-success" role="alert">\n' +
+    snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' +
         '       This is a success alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasicwarning = '<div class="alert alert-warning" role="alert">\n' +
+    snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' +
         '       This is a warning alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasicdark = '<div class="alert alert-dark" role="alert">\n' +
+    snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' +
         '       This is a dark alert—check it out!\n' +
         '   </div>';
     
-    snippets.bs4alertbasiclight = '<div class="alert alert-light" role="alert">\n' +
+    snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' +
         '       This is a light alert—check it out!\n' +
         '   </div>';
     
@@ -175,49 +175,49 @@ define(function (require, exports, module) {
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxsecondary = '<div class="alert alert-secondary" role="alert">\n' +
+    snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxdanger = '<div class="alert alert-danger" role="alert">\n' +
+    snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxinfo = '<div class="alert alert-info" role="alert">\n' +
+    snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxsuccess = '<div class="alert alert-success" role="alert">\n' +
+    snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxwarning = '<div class="alert alert-warning" role="alert">\n' +
+    snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxdark = '<div class="alert alert-dark" role="alert">\n' +
+    snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
     
-    snippets.bs4alertboxlight = '<div class="alert alert-light" role="alert">\n' +
+    snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
@@ -239,29 +239,29 @@ define(function (require, exports, module) {
     var pill = ' badge-pill';
 
     snippets.bs4badge = '<span class="' + badge + '">Primary</span>';
-    snippets.bs4badgesecondary = '<span class="' + badgeSecondary + '">Secondary</span>';
-    snippets.bs4badgesuccess = '<span class="' + badgeSuccess + '">Success</span>';
-    snippets.bs4badgedanger = '<span class="' + badgeDanger + '">Danger</span>';
-    snippets.bs4badgewarning = '<span class="' + badgeWarning + '">Warning</span>';
-    snippets.bs4badgeinfo = '<span class="' + badgeInfo + '">Info</span>';
-    snippets.bs4badgelight = '<span class="' + badgeLight + '">Light</span>';
-    snippets.bs4badgedark = '<span class="' + badgeDark + '">Dark</span>';
+    snippets.bs4badge_secondary = '<span class="' + badgeSecondary + '">Secondary</span>';
+    snippets.bs4badge_success = '<span class="' + badgeSuccess + '">Success</span>';
+    snippets.bs4badge_danger = '<span class="' + badgeDanger + '">Danger</span>';
+    snippets.bs4badge_warning = '<span class="' + badgeWarning + '">Warning</span>';
+    snippets.bs4badge_info = '<span class="' + badgeInfo + '">Info</span>';
+    snippets.bs4badge_light = '<span class="' + badgeLight + '">Light</span>';
+    snippets.bs4badge_dark = '<span class="' + badgeDark + '">Dark</span>';
     snippets.bs4badgepill = '<span class="' + badge + ' badge-pill">Primary</span>';
-    snippets.bs4badgepillsecondary = '<span class="' + badgeSecondary + pill + '">Pill Secondary</span>';
-    snippets.bs4badgepillsuccess = '<span class="' + badgeSuccess + pill + '">Pill Success</span>';
-    snippets.bs4badgepilldanger = '<span class="' + badgeDanger + pill + '">Pill Danger</span>';
-    snippets.bs4badgepillwarning = '<span class="' + badgeWarning + pill + '">Pill Warning</span>';
-    snippets.bs4badgepillinfo = '<span class="' + badgeInfo + pill + '">Pill Info</span>';
-    snippets.bs4badgepilllight = '<span class="' + badgeLight + pill + '">Pill Light</span>';
-    snippets.bs4badgepilldark = '<span class="' + badgeDark + pill + '">Pill Dark</span>';
+    snippets.bs4badgepill_secondary = '<span class="' + badgeSecondary + pill + '">Pill Secondary</span>';
+    snippets.bs4badgepill_success = '<span class="' + badgeSuccess + pill + '">Pill Success</span>';
+    snippets.bs4badgepill_danger = '<span class="' + badgeDanger + pill + '">Pill Danger</span>';
+    snippets.bs4badgepill_warning = '<span class="' + badgeWarning + pill + '">Pill Warning</span>';
+    snippets.bs4badgepill_info = '<span class="' + badgeInfo + pill + '">Pill Info</span>';
+    snippets.bs4badgepill_light = '<span class="' + badgeLight + pill + '">Pill Light</span>';
+    snippets.bs4badgepill_dark = '<span class="' + badgeDark + pill + '">Pill Dark</span>';
     snippets.bs4badgelink = '<a href="#" class="' + badge + '">Badge link Primary</a>';
-    snippets.bs4badgelinksecondary = '<a href="#" class="' + badgeSecondary + '">Badge link Secondary</a>';
-    snippets.bs4badgelinksuccess = '<a href="#" class="' + badgeSuccess + '">Badge link Success</a>';
-    snippets.bs4badgelinkdanger = '<a href="#" class="' + badgeDanger + '">Badge link Danger</a>';
-    snippets.bs4badgelinkwarning = '<a href="#" class="' + badgeWarning + '">Badge link Warning</a>';
-    snippets.bs4badgelinkinfo = '<a href="#" class="' + badgeInfo + '">Badge link Info</a>';
-    snippets.bs4badgelinklight = '<a href="#" class="' + badgeLight + '">Badge link Light</a>';
-    snippets.bs4badgelinkdark = '<a href="#" class="' + badgeDark + '">Badge link Dark</a>';
+    snippets.bs4badgelink_secondary = '<a href="#" class="' + badgeSecondary + '">Badge link Secondary</a>';
+    snippets.bs4badgelink_success = '<a href="#" class="' + badgeSuccess + '">Badge link Success</a>';
+    snippets.bs4badgelink_danger = '<a href="#" class="' + badgeDanger + '">Badge link Danger</a>';
+    snippets.bs4badgelink_warning = '<a href="#" class="' + badgeWarning + '">Badge link Warning</a>';
+    snippets.bs4badgelink_info = '<a href="#" class="' + badgeInfo + '">Badge link Info</a>';
+    snippets.bs4badgelink_light = '<a href="#" class="' + badgeLight + '">Badge link Light</a>';
+    snippets.bs4badgelink_dark = '<a href="#" class="' + badgeDark + '">Badge link Dark</a>';
 
     // Breadcrumbs
     // https://getbootstrap.com/docs/4.0/components/breadcrumb/

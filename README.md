@@ -32,15 +32,16 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Alerts
 
-	bs4alert (primary style)
+    | Dismissible Alert | Basic text Alert | Alert Box |
+	| bs4alert (primary style)
     bs4alertdanger
     bs4alertdark
     bs4alertinfo
     bs4alertlight
     bs4alertsecondary
     bs4alertsuccess
-    bs4alertwarning
-    bs4alertbasic (primary style, just text)
+    bs4alertwarning 
+    | bs4alertbasic (primary style, just text)
     bs4alertbasicdanger
     bs4alertbasicdark
     bs4alertbasicinfo
@@ -48,7 +49,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4alertbasicsecondary
     bs4alertbasicsuccess
     bs4alertbasicwarning
-    bs4alertbox (primary style, with heading, paragraph and dividers)
+    | bs4alertbox (primary style, with heading, paragraph and dividers)
     bs4alertboxdanger
     bs4alertboxdark
     bs4alertboxinfo
@@ -58,7 +59,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4alertboxwarning
     bs4alertlink
     bs4alertheading
-    bs4alertdismiss
+    bs4alertdismiss |
     
 ### Badge
 

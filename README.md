@@ -284,6 +284,26 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4btnolsm_secondary
     bs4btnolsm_success
     bs4btnolsm_warning
+    
+### Button Groups
+
+    bs4btngroup
+    bs4btngroup_bar
+    bs4btngroup_nested
+    bs4btngroup_vertical
+    bs4btngrouplg
+    bs4btngroupsm
+    
+### Cards
+(TODO: Color styles, components and layout)
+
+    bs4card
+    bs4cardfeatured
+    bs4cardfull
+    bs4cardimage
+    bs4cardimageoverlay
+    bs4cardpanel
+    bs4cardquote
 
 ### Carousel
 

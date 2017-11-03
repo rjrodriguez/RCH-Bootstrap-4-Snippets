@@ -490,23 +490,143 @@ define(function (require, exports, module) {
     // Button Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/button-group/
     
-    snippets.bs4btngroup = '';
-    snippets.bs4btngroupvertical = '';
-    snippets.bs4linkbuttongroupvertical = '<div class="btn-group-vertical">\n' +
-        '	<a class="btn btn-default" href="#" role="button">Top</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Middle</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Bottom</a>\n' +
-        '</div>\n';
-
-    snippets.bs4linkbuttongroup = '<div class="btn-group">\n' +
-        '	<a class="btn btn-default" href="#" role="button">Left</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Middle</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Right</a>\n' +
-        '</div>\n';
+    snippets.bs4btngroup = '<div class="btn-group" role="group" aria-label="Basic example">\n' +
+        '       <button type="button" class="btn btn-secondary">Left</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Right</button>\n' +
+        '   </div>';
+    
+    snippets.bs4btngrouplg = '<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">\n' +
+        '       <button type="button" class="btn btn-secondary">Left</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Right</button>\n' +
+        '   </div>';
+    
+    snippets.bs4btngroupsm = '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">\n' +
+        '       <button type="button" class="btn btn-secondary">Left</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Right</button>\n' +
+        '   </div>';
+    
+    snippets.bs4btngroup_bar = '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">\n' +
+        '       <div class="btn-group mr-2" role="group" aria-label="First group">\n' +
+        '           <button type="button" class="btn btn-secondary">1</button>\n' +
+        '           <button type="button" class="btn btn-secondary">2</button>\n' +
+        '           <button type="button" class="btn btn-secondary">3</button>\n' +
+        '           <button type="button" class="btn btn-secondary">4</button>\n' +
+        '       </div>\n' +
+        '       <div class="btn-group mr-2" role="group" aria-label="Second group">\n' +
+        '           <button type="button" class="btn btn-secondary">5</button>\n' +
+        '           <button type="button" class="btn btn-secondary">6</button>\n' +
+        '           <button type="button" class="btn btn-secondary">7</button>\n' +
+        '       </div>\n' +
+        '       <div class="btn-group" role="group" aria-label="Third group">\n' +
+        '           <button type="button" class="btn btn-secondary">8</button>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4btngroup_nested = '<div class="btn-group" role="group" aria-label="Button group with nested dropdown">\n' +
+        '       <button type="button" class="btn btn-secondary">1</button>\n' +
+        '       <button type="button" class="btn btn-secondary">2</button>\n' +
+        '       <div class="btn-group" role="group">\n' +
+        '           <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>\n' +
+        '           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">\n' +
+        '               <a class="dropdown-item" href="#">Dropdown link</a>\n' +
+        '               <a class="dropdown-item" href="#">Dropdown link</a>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4btngroup_vertical = '<div class="btn-group-vertical" role="group" aria-label="Basic example">\n' +
+        '       <button type="button" class="btn btn-secondary">Link 1</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Link 2</button>\n' +
+        '       <button type="button" class="btn btn-secondary">Link 3</button>\n' +
+        '   </div>';
     
     // Cards
     // https://getbootstrap.com/docs/4.0/components/card/
-    // TODO
+    
+    snippets.bs4card = '<div class="card">\n' +
+        '   <img class="card-img-top" src="" alt="Card image">\n' +
+        '   <div class="card-body">\n' +
+        '       <h4 class="card-title">Card title</h4>\n' +
+        '           <p class="card-text">Some quick example text to build on the card title and content.</p>\n' +
+        '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardfull = '<div class="card">\n' +
+        '       <img class="card-img-top" src="" alt="Card image">\n' +
+        '       <div class="card-body">\n' +
+        '           <h4 class="card-title">Card title</h4>\n' +
+        '           <p class="card-text">Some quick example text to build on the card title and content.</p>\n' +
+        '       </div>\n' +
+        '       <ul class="list-group list-group-flush">\n' +
+        '           <li class="list-group-item">Cras justo odio</li>\n' +
+        '           <li class="list-group-item">Dapibus ac facilisis in</li>\n' +
+        '           <li class="list-group-item">Vestibulum at eros</li>\n' +
+        '       </ul>\n' +
+        '       <div class="card-body">\n' +
+        '           <a href="#" class="card-link">Card link</a>\n' +
+        '           <a href="#" class="card-link">Another link</a>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardtext = '<div class="card">\n' +
+        '       <div class="card-body">\n' +
+        '           <h4 class="card-title">Card title</h4>\n' +
+        '           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>\n' +
+        '           <p class="card-text">Some quick example text to build on the card title and content.</p>\n' +
+        '           <a href="#" class="card-link">Card link</a>\n' +
+        '           <a href="#" class="card-link">Another link</a>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardimage = '<div class="card">\n' +
+        '   <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '   <div class="card-body">\n' +
+        '       <p class="card-text">Some quick example text to build on the card title and content.</p>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardimageoverlay = '<div class="card bg-dark text-white">\n' +
+        '       <img class="card-img" src="..." alt="Card image">\n' +
+        '       <div class="card-img-overlay">\n' +
+        '           <h4 class="card-title">Card title</h4>\n' +
+        '           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '           <p class="card-text">Last updated 3 mins ago</p>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    // Card panels
+    snippets.bs4cardpanel = '<div class="card">\n' +
+        '   <div class="card-header">Featured</div>\n' +
+        '       <div class="card-body">\n' +
+        '           <h4 class="card-title">Special title treatment</h4>\n' +
+        '           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>\n' +
+        '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardquote = '<div class="card">\n' +
+        '   <div class="card-header">Quote</div>\n' +
+        '       <div class="card-body">\n' +
+        '           <blockquote class="blockquote mb-0">\n' +
+        '               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n' +
+        '               <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>\n' +
+        '           </blockquote>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardfeatured = '<div class="card text-center">\n' +
+        '   <div class="card-header">Featured</div>\n' +
+        '       <div class="card-body">\n' +
+        '           <h4 class="card-title">Special title treatment</h4>\n' +
+        '           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>\n' +
+        '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
+        '       </div>\n' +
+        '       <div class="card-footer text-muted">2 days ago</div>\n' +
+        '   </div>';
     
     // Carousel
     // https://getbootstrap.com/docs/4.0/components/carousel/

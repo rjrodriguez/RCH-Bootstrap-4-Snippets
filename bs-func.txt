@@ -141,6 +141,12 @@ bs4btnblock_link
 bs4btnblock_secondary
 bs4btnblock_success
 bs4btnblock_warning
+bs4btngroup
+bs4btngroup_bar
+bs4btngroup_nested
+bs4btngroup_vertical
+bs4btngrouplg
+bs4btngroupsm
 bs4btnlg
 bs4btnlg_danger
 bs4btnlg_dark
@@ -195,6 +201,14 @@ bs4btnsm_link
 bs4btnsm_secondary
 bs4btnsm_success
 bs4btnsm_warning
+bs4card
+bs4cardfeatured
+bs4cardfull
+bs4cardimage
+bs4cardimageoverlay
+bs4cardpanel
+bs4cardquote
+bs4cardtext
 bs4carousel
 bs4carouselfull
 bs4carouselwcaptions

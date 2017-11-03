@@ -28,7 +28,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 #### Basic html template with local assets links
 
-	bs4
+    bs4
     bs4htmllocal
 
 #### Basic html template with CDNs assets links
@@ -64,7 +64,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4alertbasic_success
     bs4alertbasic_warning
 
-#### Alert Box (with heading, paragraph and divider) |
+#### Alert Box (with heading, paragraph and divider)
 
     bs4alertbox (primary style)
     bs4alertbox_danger

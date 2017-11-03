@@ -28,21 +28,81 @@
 define(function (require, exports, module) {
     'use strict';
 
+    // Snippets!
     var snippets = {};
-    var cdncss = '    <!-- Bootstrap CSS -->\n' +
+    
+    // Variables for CDNs
+    var csscdn = '    <!-- Bootstrap CSS -->\n' +
         '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">\n';
-    var cdnjs = '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
+    var jscdn = '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
         '    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n' +
         '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
 
-    var csslocal = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';
-    
+    // Variables for local asstes
+    var csslocal = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';    
     var jslocal = '<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
         '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
         '   <script src="js/popper.min.js"></script>\n' +
         '   <script src="js/bootstrap.min.js"></script>\n';
+    
+    // variables for alerts
+    var alertlink = '<a href="#" class="alert-link">Example link</a>';
+    var alertheading = '<h4 class="alert-heading">Well done!</h4>';
+    var alertdismiss = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
+    
+    //variables for badges
+    var badge = 'badge badge-primary';
+    var badgeSecondary = 'badge badge-secondary';
+    var badgeSuccess = 'badge badge-success';
+    var badgeDanger = 'badge badge-danger';
+    var badgeWarning = 'badge badge-warning';
+    var badgeInfo = 'badge badge-info';
+    var badgeLight = 'badge badge-light';
+    var badgeDark = 'badge badge-dark';
+    var pill = ' badge-pill';
+    
+    // variables for btns styles
+    var btnPrimary = 'btn btn-primary';
+    var btnSecondary = 'btn btn-secondary';
+    var btnSuccess = 'btn btn-success';
+    var btnDanger = 'btn btn-danger';
+    var btnWarning = 'btn btn-warning';
+    var btnInfo = 'btn btn-info';
+    var btnLight = 'btn btn-light';
+    var btnDark = 'btn btn-dark';
+    var btnLink = 'btn btn-link';
+    var btnOPrimary = 'btn btn-outline-primary';
+    var btnOSecondary = 'btn btn-outline-secondary';
+    var btnOSuccess = 'btn btn-outline-success';
+    var btnODanger = 'btn btn-outline-danger';
+    var btnOWarning = 'btn btn-outline-warning';
+    var btnOInfo = 'btn btn-outline-info';
+    var btnOLight = 'btn btn-outline-light';
+    var btnODark = 'btn btn-outline-dark';
+    var btnOLink = 'btn btn-outline-link';
+    
+    // variables for sizes and displays
+    var block = ' btn-block';
+    var sm = ' btn-sm';
+    var lg = ' btn-lg';
+    
+    // Variables for carousels
+    var carouselcontrols = '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
+        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
+        '           <span class="sr-only">Previous</span>\n' +
+        '       </a>\n' +
+        '       <a class="carousel-control-next" href="#carouselFull" role="button" data-slide="next">\n' +
+        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
+        '           <span class="sr-only">Next</span>\n' +
+        '       </a>\n';
+    var carouselindicators = '       <ol class="carousel-indicators">\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="1"></li>\n' +
+        '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
+        '       </ol>\n';
+
     
     // Bootstrap 4 - HTML5 Templates and Minimum Template
 
@@ -70,7 +130,7 @@ define(function (require, exports, module) {
         '    <meta name="description" content="">\n' +
         '    <meta name="author" content="">\n\n' +
         '    <link rel="apple-touch-icon" href="">\n\n' +
-        cdncss +
+        csscdn +
         '\n' +
         '    <!-- Link to your CSS file -->\n' +
         '    <link rel="stylesheet" href="">\n' +
@@ -78,7 +138,7 @@ define(function (require, exports, module) {
         '<body>\n\n' +
         '    <!-- Start coding here -->\n\n\n' +
         '    <!-- Coding End -->\n\n' +
-        cdnjs +
+        jscdn +
         '</body>\n</html>';
 
     snippets.bs4template = snippets.bs4html;
@@ -86,11 +146,6 @@ define(function (require, exports, module) {
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
-    
-    // variables for alerts
-    var alertlink = '<a href="#" class="alert-link">Example link</a>';
-    var alertheading = '<h4 class="alert-heading">Well done!</h4>';
-    var alertdismiss = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
     
     snippets.bs4alertlink = alertlink;
     snippets.bs4alertheading = alertheading;
@@ -100,7 +155,7 @@ define(function (require, exports, module) {
         '       ' + alertdismiss + '\n' +
         '		<strong>Primary alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
-    
+
     snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Secondary alert!</strong> You should check ' + alertlink + '>.\n' +
@@ -130,93 +185,93 @@ define(function (require, exports, module) {
         '		' + alertdismiss + '\n' +
         '		<strong>Light alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
-    
+
     snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' +
         '		' + alertdismiss + '\n' +
         '		<strong>Dark alert!</strong> You should check ' + alertlink + '.\n' +
         '	</div>\n';
-    
+
     snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' +
         '       This is a primary alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' +
         '       This is a secondary alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' +
         '       This is a danger alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' +
         '       This is a info alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' +
         '       This is a success alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' +
         '       This is a warning alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' +
         '       This is a dark alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' +
         '       This is a light alert—check it out!\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
         '       <hr>\n' +
         '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
         '   </div>';
-    
+
     snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' +
         '       ' + alertheading + '\n' +
         '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
@@ -226,17 +281,6 @@ define(function (require, exports, module) {
 
     // Badge
     // https://getbootstrap.com/docs/4.0/components/badge/
-    
-    //variables for badges
-    var badge = 'badge badge-primary';
-    var badgeSecondary = 'badge badge-secondary';
-    var badgeSuccess = 'badge badge-success';
-    var badgeDanger = 'badge badge-danger';
-    var badgeWarning = 'badge badge-warning';
-    var badgeInfo = 'badge badge-info';
-    var badgeLight = 'badge badge-light';
-    var badgeDark = 'badge badge-dark';
-    var pill = ' badge-pill';
 
     snippets.bs4badge = '<span class="' + badge + '">Primary</span>';
     snippets.bs4badge_secondary = '<span class="' + badgeSecondary + '">Secondary</span>';
@@ -246,6 +290,7 @@ define(function (require, exports, module) {
     snippets.bs4badge_info = '<span class="' + badgeInfo + '">Info</span>';
     snippets.bs4badge_light = '<span class="' + badgeLight + '">Light</span>';
     snippets.bs4badge_dark = '<span class="' + badgeDark + '">Dark</span>';
+
     snippets.bs4badgepill = '<span class="' + badge + ' badge-pill">Primary</span>';
     snippets.bs4badgepill_secondary = '<span class="' + badgeSecondary + pill + '">Pill Secondary</span>';
     snippets.bs4badgepill_success = '<span class="' + badgeSuccess + pill + '">Pill Success</span>';
@@ -254,6 +299,7 @@ define(function (require, exports, module) {
     snippets.bs4badgepill_info = '<span class="' + badgeInfo + pill + '">Pill Info</span>';
     snippets.bs4badgepill_light = '<span class="' + badgeLight + pill + '">Pill Light</span>';
     snippets.bs4badgepill_dark = '<span class="' + badgeDark + pill + '">Pill Dark</span>';
+
     snippets.bs4badgelink = '<a href="#" class="' + badge + '">Badge link Primary</a>';
     snippets.bs4badgelink_secondary = '<a href="#" class="' + badgeSecondary + '">Badge link Secondary</a>';
     snippets.bs4badgelink_success = '<a href="#" class="' + badgeSuccess + '">Badge link Success</a>';
@@ -273,36 +319,10 @@ define(function (require, exports, module) {
         '           <li class="breadcrumb-item active">3rd level</li>\n' +
         '       </ol>' +
         '	</nav>';
-        
+    
     // Buttons (TODO)
     // https://getbootstrap.com/docs/4.0/components/buttons/
-    
-    // variables for btns styles
-    var btnPrimary = 'btn btn-primary';
-    var btnSecondary = 'btn btn-secondary';
-    var btnSuccess = 'btn btn-success';
-    var btnDanger = 'btn btn-danger';
-    var btnWarning = 'btn btn-warning';
-    var btnInfo = 'btn btn-info';
-    var btnLight = 'btn btn-light';
-    var btnDark = 'btn btn-dark';
-    var btnLink = 'btn btn-link';
-    
-    var btnOPrimary = 'btn btn-outline-primary';
-    var btnOSecondary = 'btn btn-outline-secondary';
-    var btnOSuccess = 'btn btn-outline-success';
-    var btnODanger = 'btn btn-outline-danger';
-    var btnOWarning = 'btn btn-outline-warning';
-    var btnOInfo = 'btn btn-outline-info';
-    var btnOLight = 'btn btn-outline-light';
-    var btnODark = 'btn btn-outline-dark';
-    var btnOLink = 'btn btn-outline-link';
-    
-    // variables for sizes and displays
-    var block = ' btn-block';
-    var sm = ' btn-sm';
-    var lg = ' btn-lg';
-    
+
     // Link buttons
     snippets.bs4abtn = '<a class="' + btnPrimary + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_secondary = '<a class="' + btnSecondary + '" href="#" role="button">Link button</a>';
@@ -315,35 +335,35 @@ define(function (require, exports, module) {
     snippets.bs4abtn_link = '<a class="' + btnLink + '" href="#" role="button">Link button</a>';
     
     snippets.bs4abtnsm = '<a class="' + btnPrimary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnsecondarysm = '<a class="' + btnSecondary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnsuccesssm = '<a class="' + btnSuccess + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtndangersm = '<a class="' + btnDanger + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnwarningsm = '<a class="' + btnWarning + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtninfosm = '<a class="' + btnInfo + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnlightsm = '<a class="' + btnLight + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtndarksm = '<a class="' + btnDark + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnlinksm = '<a class="' + btnLink + sm + '" href="#" role="button">Small link button</a>';
-    
+    snippets.bs4abtnsm_secondary = '<a class="' + btnSecondary + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_success = '<a class="' + btnSuccess + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_danger = '<a class="' + btnDanger + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_warning = '<a class="' + btnWarning + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_info = '<a class="' + btnInfo + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_light = '<a class="' + btnLight + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_dark = '<a class="' + btnDark + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_link = '<a class="' + btnLink + sm + '" href="#" role="button">Small link button</a>';
+
     snippets.bs4abtnlg = '<a class="' + btnPrimary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnsecondarylg = '<a class="' + btnSecondary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnsuccesslg = '<a class="' + btnSuccess + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtndangerlg = '<a class="' + btnDanger + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnwarninglg = '<a class="' + btnWarning + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtninfolg = '<a class="' + btnInfo + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnlightlg = '<a class="' + btnLight + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtndarklg = '<a class="' + btnDark + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnlinklg = '<a class="' + btnLink + lg + '" href="#" role="button">Large link button</a>';
-    
+    snippets.bs4abtnlg_secondary = '<a class="' + btnSecondary + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_success = '<a class="' + btnSuccess + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_danger = '<a class="' + btnDanger + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_warning = '<a class="' + btnWarning + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_info = '<a class="' + btnInfo + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_light = '<a class="' + btnLight + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_dark = '<a class="' + btnDark + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_link = '<a class="' + btnLink + lg + '" href="#" role="button">Large link button</a>';
+
     snippets.bs4abtnblock = '<a class="' + btnPrimary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnsecondaryblock = '<a class="' + btnSecondary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnsuccessblock = '<a class="' + btnSuccess + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtndangerblock = '<a class="' + btnDanger + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnwarningblock = '<a class="' + btnWarning + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtninfoblock = '<a class="' + btnInfo + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnlightblock = '<a class="' + btnLight + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtndarkblock = '<a class="' + btnDark + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnlinkblock = '<a class="' + btnLink + block + '" href="#" role="button">Block link button</a>';
-    
+    snippets.bs4abtnblock_secondary = '<a class="' + btnSecondary + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_success = '<a class="' + btnSuccess + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_danger = '<a class="' + btnDanger + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_warning = '<a class="' + btnWarning + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_info = '<a class="' + btnInfo + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_light = '<a class="' + btnLight + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_dark = '<a class="' + btnDark + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_link = '<a class="' + btnLink + block + '" href="#" role="button">Block link button</a>';
+
     // Outlined link buttons
     snippets.bs4abtnol = '<a class="' + btnOPrimary + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_secondary = '<a class="' + btnOSecondary + '" href="#" role="button">Link button</a>';
@@ -354,37 +374,37 @@ define(function (require, exports, module) {
     snippets.bs4abtnol_light = '<a class="' + btnOLight + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_dark = '<a class="' + btnODark + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_link = '<a class="' + btnOLink + '" href="#" role="button">Link button</a>';
-    
+
     snippets.bs4abtnolsm = '<a class="' + btnOPrimary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolsecondarysm = '<a class="' + btnOSecondary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolsuccesssm = '<a class="' + btnOSuccess + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnoldangersm = '<a class="' + btnODanger + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolwarningsm = '<a class="' + btnOWarning + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolinfosm = '<a class="' + btnOInfo + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnollightsm = '<a class="' + btnOLight + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnoldarksm = '<a class="' + btnODark + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnollinksm = '<a class="' + btnOLink + sm + '" href="#" role="button">Small link button</a>';
-    
+    snippets.bs4abtnolsm_secondary = '<a class="' + btnOSecondary + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_success = '<a class="' + btnOSuccess + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_danger = '<a class="' + btnODanger + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_warning = '<a class="' + btnOWarning + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_info = '<a class="' + btnOInfo + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_light = '<a class="' + btnOLight + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_dark = '<a class="' + btnODark + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_link = '<a class="' + btnOLink + sm + '" href="#" role="button">Small link button</a>';
+
     snippets.bs4abtnollg = '<a class="' + btnOPrimary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnolsecondarylg = '<a class="' + btnOSecondary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnolsuccesslg = '<a class="' + btnOSuccess + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnoldangerlg = '<a class="' + btnODanger + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnolwarninglg = '<a class="' + btnOWarning + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnolinfolg = '<a class="' + btnOInfo + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnollightlg = '<a class="' + btnOLight + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnoldarklg = '<a class="' + btnODark + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnollinklg = '<a class="' + btnOLink + lg + '" href="#" role="button">Large link button</a>';
-    
+    snippets.bs4abtnollg_secondary = '<a class="' + btnOSecondary + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_success = '<a class="' + btnOSuccess + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_danger = '<a class="' + btnODanger + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_warning = '<a class="' + btnOWarning + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_info = '<a class="' + btnOInfo + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_light = '<a class="' + btnOLight + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_dark = '<a class="' + btnODark + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_link = '<a class="' + btnOLink + lg + '" href="#" role="button">Large link button</a>';
+
     snippets.bs4abtnolblock = '<a class="' + btnOPrimary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolsecondaryblock = '<a class="' + btnOSecondary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolsuccessblock = '<a class="' + btnOSuccess + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnoldangerblock = '<a class="' + btnODanger + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolwarningblock = '<a class="' + btnOWarning + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolinfoblock = '<a class="' + btnOInfo + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnollightblock = '<a class="' + btnOLight + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnoldarkblock = '<a class="' + btnODark + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnollinkblock = '<a class="' + btnOLink + block + '" href="#" role="button">Block link button</a>';
-    
+    snippets.bs4abtnolblock_secondary = '<a class="' + btnOSecondary + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_success = '<a class="' + btnOSuccess + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_danger = '<a class="' + btnODanger + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_warning = '<a class="' + btnOWarning + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_info = '<a class="' + btnOInfo + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_light = '<a class="' + btnOLight + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_dark = '<a class="' + btnODark + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_link = '<a class="' + btnOLink + block + '" href="#" role="button">Block link button</a>';
+
     // Buttons
     snippets.bs4btn = '<button type="button" class="' + btnPrimary + '">button</button>';
     snippets.bs4btn_secondary = '<button type="button" class="' + btnSecondary + '">button</button>';
@@ -395,37 +415,37 @@ define(function (require, exports, module) {
     snippets.bs4btn_light = '<button type="button" class="' + btnLight + '">button</button>';
     snippets.bs4btn_dark = '<button type="button" class="' + btnDark + '">button</button>';
     snippets.bs4btn_link = '<button type="button" class="' + btnLink + '">button</button>';
-    
+
     snippets.bs4btnsm = '<button type="button" class="' + btnPrimary + sm + '">Small button</button>';
-    snippets.bs4btnsecondarysm = '<button type="button" class="' + btnSecondary + sm + '">Small button</button>';
-    snippets.bs4btnsuccesssm = '<button type="button" class="' + btnSuccess + sm + '">Small button</button>';
-    snippets.bs4btndangersm = '<button type="button" class="' + btnDanger + sm + '">Small button</button>';
-    snippets.bs4btnwarningsm = '<button type="button" class="' + btnWarning + sm + '">Small button</button>';
-    snippets.bs4btninfosm = '<button type="button" class="' + btnInfo + sm + '">Small button</button>';
-    snippets.bs4btnlightsm = '<button type="button" class="' + btnLight + sm + '">Small button</button>';
-    snippets.bs4btndarksm = '<button type="button" class="' + btnDark + sm + '">Small button</button>';
-    snippets.bs4btnlinksm = '<button type="button" class="' + btnLink + sm + '">Small button</button>';
-    
+    snippets.bs4btnsm_secondary = '<button type="button" class="' + btnSecondary + sm + '">Small button</button>';
+    snippets.bs4btnsm_success = '<button type="button" class="' + btnSuccess + sm + '">Small button</button>';
+    snippets.bs4btnsm_danger = '<button type="button" class="' + btnDanger + sm + '">Small button</button>';
+    snippets.bs4btnsm_warning = '<button type="button" class="' + btnWarning + sm + '">Small button</button>';
+    snippets.bs4btnsm_info = '<button type="button" class="' + btnInfo + sm + '">Small button</button>';
+    snippets.bs4btnsm_light = '<button type="button" class="' + btnLight + sm + '">Small button</button>';
+    snippets.bs4btnsm_dark = '<button type="button" class="' + btnDark + sm + '">Small button</button>';
+    snippets.bs4btnsm_link = '<button type="button" class="' + btnLink + sm + '">Small button</button>';
+
     snippets.bs4btnlg = '<button type="button" class="' + btnPrimary + lg + '">Large button</button>';
-    snippets.bs4btnsecondarylg = '<button type="button" class="' + btnSecondary + lg + '">Large button</button>';
-    snippets.bs4btnsuccesslg = '<button type="button" class="' + btnSuccess + lg + '">Large button</button>';
-    snippets.bs4btndangerlg = '<button type="button" class="' + btnDanger + lg + '">Large button</button>';
-    snippets.bs4btnwarninglg = '<button type="button" class="' + btnWarning + lg + '">Large button</button>';
-    snippets.bs4btninfolg = '<button type="button" class="' + btnInfo + lg + '">Large button</button>';
-    snippets.bs4btnlightlg = '<button type="button" class="' + btnLight + lg + '">Large button</button>';
-    snippets.bs4btndarklg = '<button type="button" class="' + btnDark + lg + '">Large button</button>';
-    snippets.bs4btnlinklg = '<button type="button" class="' + btnLink + lg + '">Large button</button>';
-    
+    snippets.bs4btnlg_secondary = '<button type="button" class="' + btnSecondary + lg + '">Large button</button>';
+    snippets.bs4btnlg_success = '<button type="button" class="' + btnSuccess + lg + '">Large button</button>';
+    snippets.bs4btnlg_danger = '<button type="button" class="' + btnDanger + lg + '">Large button</button>';
+    snippets.bs4btnlg_warning = '<button type="button" class="' + btnWarning + lg + '">Large button</button>';
+    snippets.bs4btnlg_info = '<button type="button" class="' + btnInfo + lg + '">Large button</button>';
+    snippets.bs4btnlg_light = '<button type="button" class="' + btnLight + lg + '">Large button</button>';
+    snippets.bs4btnlg_dark = '<button type="button" class="' + btnDark + lg + '">Large button</button>';
+    snippets.bs4btnlg_link = '<button type="button" class="' + btnLink + lg + '">Large button</button>';
+
     snippets.bs4btnblock = '<button type="button" class="' + btnPrimary + block + '">Block button</button>';
-    snippets.bs4btnsecondaryblock = '<button type="button" class="' + btnSecondary + block + '">Block button</button>';
-    snippets.bs4btnsuccessblock = '<button type="button" class="' + btnSuccess + block + '">Block button</button>';
-    snippets.bs4btndangerblock = '<button type="button" class="' + btnDanger + block + '">Block button</button>';
-    snippets.bs4btnwarningblock = '<button type="button" class="' + btnWarning + block + '">Block button</button>';
-    snippets.bs4btninfoblock = '<button type="button" class="' + btnInfo + block + '">Block button</button>';
-    snippets.bs4btnlightblock = '<button type="button" class="' + btnLight + block + '">Block button</button>';
-    snippets.bs4btndarkblock = '<button type="button" class="' + btnDark + block + '">Block button</button>';
-    snippets.bs4btnlinkblock = '<button type="button" class="' + btnLink + block + '">Block button</button>';
-    
+    snippets.bs4btnblock_secondary = '<button type="button" class="' + btnSecondary + block + '">Block button</button>';
+    snippets.bs4btnblock_success = '<button type="button" class="' + btnSuccess + block + '">Block button</button>';
+    snippets.bs4btnblock_danger = '<button type="button" class="' + btnDanger + block + '">Block button</button>';
+    snippets.bs4btnblock_warning = '<button type="button" class="' + btnWarning + block + '">Block button</button>';
+    snippets.bs4btnblock_info = '<button type="button" class="' + btnInfo + block + '">Block button</button>';
+    snippets.bs4btnblock_light = '<button type="button" class="' + btnLight + block + '">Block button</button>';
+    snippets.bs4btnblock_dark = '<button type="button" class="' + btnDark + block + '">Block button</button>';
+    snippets.bs4btnblock_link = '<button type="button" class="' + btnLink + block + '">Block button</button>';
+
     // Outlined buttons
     snippets.bs4btnol = '<button type="button" class="' + btnOPrimary + '">button</button>';
     snippets.bs4btnol_secondary = '<button type="button" class="' + btnOSecondary + '">button</button>';
@@ -436,37 +456,36 @@ define(function (require, exports, module) {
     snippets.bs4btnol_light = '<button type="button" class="' + btnOLight + '">button</button>';
     snippets.bs4btnol_dark = '<button type="button" class="' + btnODark + '">button</button>';
     snippets.bs4btnol_link = '<button type="button" class="' + btnOLink + '">button</button>';
-    
-    snippets.bs4btnolsm = '<button type="button" class="' + btnOPrimary + sm + '">Small button</button>';
-    snippets.bs4btnolsecondarysm = '<button type="button" class="' + btnOSecondary + sm + '">Small button</button>';
-    snippets.bs4btnolsuccesssm = '<button type="button" class="' + btnOSuccess + sm + '">Small button</button>';
-    snippets.bs4btnoldangersm = '<button type="button" class="' + btnODanger + sm + '">Small button</button>';
-    snippets.bs4btnolwarningsm = '<button type="button" class="' + btnOWarning + sm + '">Small button</button>';
-    snippets.bs4btnolinfosm = '<button type="button" class="' + btnOInfo + sm + '">Small button</button>';
-    snippets.bs4btnollightsm = '<button type="button" class="' + btnOLight + sm + '">Small button</button>';
-    snippets.bs4btnoldarksm = '<button type="button" class="' + btnODark + sm + '">Small button</button>';
-    snippets.bs4btnollinksm = '<button type="button" class="' + btnOLink + sm + '">Small button</button>';
-    
-    snippets.bs4btnollg = '<button type="button" class="' + btnOPrimary + lg + '">Large button</button>';
-    snippets.bs4btnolsecondarylg = '<button type="button" class="' + btnOSecondary + lg + '">Large button</button>';
-    snippets.bs4btnolsuccesslg = '<button type="button" class="' + btnOSuccess + lg + '">Large button</button>';
-    snippets.bs4btnoldangerlg = '<button type="button" class="' + btnODanger + lg + '">Large button</button>';
-    snippets.bs4btnolwarninglg = '<button type="button" class="' + btnOWarning + lg + '">Large button</button>';
-    snippets.bs4btnolinfolg = '<button type="button" class="' + btnOInfo + lg + '">Large button</button>';
-    snippets.bs4btnollightlg = '<button type="button" class="' + btnOLight + lg + '">Large button</button>';
-    snippets.bs4btnoldarklg = '<button type="button" class="' + btnODark + lg + '">Large button</button>';
-    snippets.bs4btnollinklg = '<button type="button" class="' + btnOLink + lg + '">Large button</button>';
-    
-    snippets.bs4btnolblock = '<button type="button" class="' + btnOPrimary + block + '">Block button</button>';
-    snippets.bs4btnolsecondaryblock = '<button type="button" class="' + btnOSecondary + block + '">Block button</button>';
-    snippets.bs4btnolsuccessblock = '<button type="button" class="' + btnOSuccess + block + '">Block button</button>';
-    snippets.bs4btnoldangerblock = '<button type="button" class="' + btnODanger + block + '">Block button</button>';
-    snippets.bs4btnolwarningblock = '<button type="button" class="' + btnOWarning + block + '">Block button</button>';
-    snippets.bs4btnolinfoblock = '<button type="button" class="' + btnOInfo + block + '">Block button</button>';
-    snippets.bs4btnollightblock = '<button type="button" class="' + btnOLight + block + '">Block button</button>';
-    snippets.bs4btnoldarkblock = '<button type="button" class="' + btnODark + block + '">Block button</button>';
-    snippets.bs4btnollinkblock = '<button type="button" class="' + btnOLink + block + '">Block button</button>';
 
+    snippets.bs4btnolsm = '<button type="button" class="' + btnOPrimary + sm + '">Small button</button>';
+    snippets.bs4btnolsm_secondary = '<button type="button" class="' + btnOSecondary + sm + '">Small button</button>';
+    snippets.bs4btnolsm_success = '<button type="button" class="' + btnOSuccess + sm + '">Small button</button>';
+    snippets.bs4btnolsm_danger = '<button type="button" class="' + btnODanger + sm + '">Small button</button>';
+    snippets.bs4btnolsm_warning = '<button type="button" class="' + btnOWarning + sm + '">Small button</button>';
+    snippets.bs4btnolsm_info = '<button type="button" class="' + btnOInfo + sm + '">Small button</button>';
+    snippets.bs4btnolsm_light = '<button type="button" class="' + btnOLight + sm + '">Small button</button>';
+    snippets.bs4btnolsm_dark = '<button type="button" class="' + btnODark + sm + '">Small button</button>';
+    snippets.bs4btnolsm_link = '<button type="button" class="' + btnOLink + sm + '">Small button</button>';
+
+    snippets.bs4btnollg = '<button type="button" class="' + btnOPrimary + lg + '">Large button</button>';
+    snippets.bs4btnollg_secondary = '<button type="button" class="' + btnOSecondary + lg + '">Large button</button>';
+    snippets.bs4btnollg_success = '<button type="button" class="' + btnOSuccess + lg + '">Large button</button>';
+    snippets.bs4btnollg_danger = '<button type="button" class="' + btnODanger + lg + '">Large button</button>';
+    snippets.bs4btnollg_warning = '<button type="button" class="' + btnOWarning + lg + '">Large button</button>';
+    snippets.bs4btnollg_info = '<button type="button" class="' + btnOInfo + lg + '">Large button</button>';
+    snippets.bs4btnollg_light = '<button type="button" class="' + btnOLight + lg + '">Large button</button>';
+    snippets.bs4btnollg_dark = '<button type="button" class="' + btnODark + lg + '">Large button</button>';
+    snippets.bs4btnollg_link = '<button type="button" class="' + btnOLink + lg + '">Large button</button>';
+
+    snippets.bs4btnolblock = '<button type="button" class="' + btnOPrimary + block + '">Block button</button>';
+    snippets.bs4btnolblock_secondary = '<button type="button" class="' + btnOSecondary + block + '">Block button</button>';
+    snippets.bs4btnolblock_success = '<button type="button" class="' + btnOSuccess + block + '">Block button</button>';
+    snippets.bs4btnolblock_danger = '<button type="button" class="' + btnODanger + block + '">Block button</button>';
+    snippets.bs4btnolblock_warning = '<button type="button" class="' + btnOWarning + block + '">Block button</button>';
+    snippets.bs4btnolblock_info = '<button type="button" class="' + btnOInfo + block + '">Block button</button>';
+    snippets.bs4btnolblock_light = '<button type="button" class="' + btnOLight + block + '">Block button</button>';
+    snippets.bs4btnolblock_dark = '<button type="button" class="' + btnODark + block + '">Block button</button>';
+    snippets.bs4btnolblock_link = '<button type="button" class="' + btnOLink + block + '">Block button</button>';
     
     // Button Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/button-group/
@@ -474,53 +493,13 @@ define(function (require, exports, module) {
     snippets.bs4buttongroupvertical = '';
     snippets.bs4buttongroup = '';
     
-    
-    snippets.bs4lgbuttondanger = '';
-    snippets.bs4lgbuttondisabled = '';
-    snippets.bs4lgbuttoninfo = '<a class="btn btn-lg btn-info" href="#" role="button">button</a>\n';
-    snippets.bs4lgbuttonprimary = '<button type="button" class="btn btn-lg btn-primary">[button]</button>\n';
-    snippets.bs4lgbuttonsuccess = '<button type="button" class="btn btn-lg btn-success">[button]</button>\n';
-    snippets.bs4lgbuttonwarning = '<a class="btn btn-lg btn-warning" href="#" role="button">button</a>\n';
-    snippets.bs4lgbutton = '<button type="button" class="btn btn-lg btn-default">[button]</button>\n';
-    snippets.bs4lgbuttondefault = '<button type="button" class="btn btn-lg btn-default">[button]</button>\n';
-    snippets.bs4minibuttondanger = '<button type="button" class="btn btn-xs btn-danger">[button]</button>\n';
-    snippets.bs4minibuttondefault = '<button type="button" class="btn btn-xs btn-default">[button]</button>\n';
-    snippets.bs4minibuttondisabled = '<button type="button" class="btn btn-xs btn-default">[button]</button>\n';
-    snippets.bs4minibuttoninfo = '<button type="button" class="btn btn-xs btn-info">[button]</button>\n';
-    snippets.bs4minibuttonprimary = '<button type="button" class="btn btn-xs btn-primary">[button]</button>\n';
-    snippets.bs4minibuttonsuccess = '<button type="button" class="btn btn-xs btn-success">[button]</button>\n';
-    snippets.bs4minibuttonwarning = '<button type="button" class="btn btn-xs btn-warning">[button]</button>\n';
-    snippets.bs4minibutton = '<button type="button" class="btn btn-xs btn-default">[button]</button>\n';
-    snippets.bs4smbuttondanger = '<button type="button" class="btn btn-sm btn-danger">[button]</button>\n';
-    snippets.bs4smbuttondefault = '<button type="button" class="btn btn-sm btn-default">[button]</button>\n';
-    snippets.bs4smbuttondisabled = '<button type="button" class="btn btn-sm btn-default disabled">[button]</button>\n';
-    snippets.bs4smbuttoninfo = '<button type="button" class="btn btn-sm btn-info">[button]</button>\n';
-    snippets.bs4smbuttonprimary = '<button type="button" class="btn btn-sm btn-primary">[button]</button>\n';
-    snippets.bs4smbuttonsuccess = '<button type="button" class="btn btn-sm btn-success">[button]</button>\n';
-    snippets.bs4smbuttonwarning = '<button type="button" class="btn btn-sm btn-warning">[button]</button>\n';
-    snippets.bs4smbutton = '<button type="button" class="btn btn-sm btn-default">[button]</button>\n';
-
     // Cards
     // https://getbootstrap.com/docs/4.0/components/card/
     // TODO
     
     // Carousel
     // https://getbootstrap.com/docs/4.0/components/carousel/
-    
-    var carouselcontrols = '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
-        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
-        '           <span class="sr-only">Previous</span>\n' +
-        '       </a>\n' +
-        '       <a class="carousel-control-next" href="#carouselFull" role="button" data-slide="next">\n' +
-        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
-        '           <span class="sr-only">Next</span>\n' +
-        '       </a>\n';
-    var carouselindicators = '       <ol class="carousel-indicators">\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="1"></li>\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
-        '       </ol>\n';
-    
+        
     snippets.bs4carousel = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '		<div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
@@ -621,8 +600,8 @@ define(function (require, exports, module) {
 
     // CDN
 
-    snippets.bs4cdnjs = cdnjs;
-    snippets.bs4cdncss = cdncss;
+    snippets.bs4cdnjs = jscdn;
+    snippets.bs4cdncss = csscdn;
     
     // Figures
     

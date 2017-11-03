@@ -130,34 +130,34 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4abtn_warning
     
     bs4abtnblock (primary)
-    bs4abtndangerblock
-    bs4abtndarkblock
-    bs4abtninfoblock
-    bs4abtnlightblock
-    bs4abtnlinkblock
-    bs4abtnsecondaryblock
-    bs4abtnsuccesblocks
-    bs4abtnwarningblock
+    bs4abtnblock_danger
+    bs4abtnblock_dark
+    bs4abtnblock_info
+    bs4abtnblock_light
+    bs4abtnblock_link
+    bs4abtnblock_secondary
+    bs4abtnblock_success
+    bs4abtnblock_warning
     
     bs4abtnlg (primary)
-    bs4abtndangerlg
-    bs4abtndarklg
-    bs4abtninfolg
-    bs4abtnlightlg
-    bs4abtnlinklg
-    bs4abtnsecondarylg
-    bs4abtnsuccesslg
-    bs4abtnwarninglg
+    bs4abtnlg_danger
+    bs4abtnlg_dark
+    bs4abtnlg_info
+    bs4abtnlg_light
+    bs4abtnlg_link
+    bs4abtnlg_secondary
+    bs4abtnlg_success
+    bs4abtnlg_warning
     
     bs4abtnsm (primary)
-    bs4abtndangersm
-    bs4abtndarksm
-    bs4abtninfosm
-    bs4abtnlightsm
-    bs4abtnlinksm
-    bs4abtnsecondarysm
-    bs4abtnsuccesssm
-    bs4abtnwarningsm
+    bs4abtnsm_danger
+    bs4abtnsm_dark
+    bs4abtnsm_info
+    bs4abtnsm_light
+    bs4abtnsm_link
+    bs4abtnsm_secondary
+    bs4abtnsm_success
+    bs4abtnsm_warning
     
 ##### Outlined links buttons
 
@@ -172,34 +172,34 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4abtnol_warning
     
     bs4abtnolblock (primary)
-    bs4abtnoldangerblock
-    bs4abtnoldarkblock
-    bs4abtnolinfoblock
-    bs4abtnollightblock
-    bs4abtnollinkblock
-    bs4abtnolsecondaryblock
-    bs4abtnolsuccessblock
-    bs4abtnolwarningblock
+    bs4abtnolblock_danger
+    bs4abtnolblock_dark
+    bs4abtnolblock_info
+    bs4abtnolblock_light
+    bs4abtnolblock_link
+    bs4abtnolblock_secondary
+    bs4abtnolblock_success
+    bs4abtnolblock_warning
     
     bs4abtnollg (primary)
-    bs4abtnoldangerlg
-    bs4abtnoldarklg
-    bs4abtnolinfolg
-    bs4abtnollightlg
-    bs4abtnollinklg
-    bs4abtnolsecondarylg
-    bs4abtnolsuccesslg
-    bs4abtnolwarninglg
+    bs4abtnollg_danger
+    bs4abtnollg_dark
+    bs4abtnollg_info
+    bs4abtnollg_light
+    bs4abtnollg_link
+    bs4abtnollg_secondary
+    bs4abtnollg_success
+    bs4abtnollg_warning
     
     bs4abtnolsm (primary)
-    bs4abtnoldangersm
-    bs4abtnoldarksm
-    bs4abtnolinfosm
-    bs4abtnollightsm
-    bs4abtnollinksm
-    bs4abtnolsecondarysm
-    bs4abtnolsuccesssm
-    bs4abtnolwarningsm
+    bs4abtnolsm_danger
+    bs4abtnolsm_dark
+    bs4abtnolsm_info
+    bs4abtnolsm_light
+    bs4abtnolsm_link
+    bs4abtnolsm_secondary
+    bs4abtnolsm_success
+    bs4abtnolsm_warning
     
 #### Buttons (button tag)
 
@@ -214,34 +214,34 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4btn_warning
     
     bs4btnblock (primary)
-    bs4btndangerblock
-    bs4btndarkblock
-    bs4btninfoblock
-    bs4btnlightblock
-    bs4btnlinkblock
-    bs4btnsecondaryblock
-    bs4btnsuccesblocks
-    bs4btnwarningblock
+    bs4btnblock_danger
+    bs4btnblock_dark
+    bs4btnblock_info
+    bs4btnblock_light
+    bs4btnblock_link
+    bs4btnblock_secondary
+    bs4btnblock_success
+    bs4btnblock_warning
     
     bs4btnlg (primary)
-    bs4btndangerlg
-    bs4btndarklg
-    bs4btninfolg
-    bs4btnlightlg
-    bs4btnlinklg
-    bs4btnsecondarylg
-    bs4btnsuccesslg
-    bs4btnwarninglg
+    bs4btnlg_danger
+    bs4btnlg_dark
+    bs4btnlg_info
+    bs4btnlg_light
+    bs4btnlg_link
+    bs4btnlg_secondary
+    bs4btnlg_success
+    bs4btnlg_warning
     
     bs4btnsm (primary)
-    bs4btndangersm
-    bs4btndarksm
-    bs4btninfosm
-    bs4btnlightsm
-    bs4btnlinksm
-    bs4btnsecondarysm
-    bs4btnsuccesssm
-    bs4btnwarningsm
+    bs4btnsm_danger
+    bs4btnsm_dark
+    bs4btnsm_info
+    bs4btnsm_light
+    bs4btnsm_link
+    bs4btnsm_secondary
+    bs4btnsm_success
+    bs4btnsm_warning
     
 ##### Outlined buttons (button tag)
 
@@ -256,34 +256,34 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4btnol_warning
     
     bs4btnolblock (primary)
-    bs4btnoldangerblock
-    bs4btnoldarkblock
-    bs4btnolinfoblock
-    bs4btnollightblock
-    bs4btnollinkblock
-    bs4btnolsecondaryblock
-    bs4btnolsuccessblock
-    bs4btnolwarningblock
+    bs4btnolblock_danger
+    bs4btnolblock_dark
+    bs4btnolblock_info
+    bs4btnolblock_light
+    bs4btnolblock_link
+    bs4btnolblock_secondary
+    bs4btnolblock_success
+    bs4btnolblock_warning
     
     bs4btnollg (primary)
-    bs4btnoldangerlg
-    bs4btnoldarklg
-    bs4btnolinfolg
-    bs4btnollightlg
-    bs4btnollinklg
-    bs4btnolsecondarylg
-    bs4btnolsuccesslg
-    bs4btnolwarninglg
+    bs4btnollg_danger
+    bs4btnollg_dark
+    bs4btnollg_info
+    bs4btnollg_light
+    bs4btnollg_link
+    bs4btnollg_secondary
+    bs4btnollg_success
+    bs4btnollg_warning
     
     bs4btnolsm (primary)
-    bs4btnoldangersm
-    bs4btnoldarksm
-    bs4btnolinfosm
-    bs4btnollightsm
-    bs4btnollinksm
-    bs4btnolsecondarysm
-    bs4btnolsuccesssm
-    bs4btnolwarningsm
+    bs4btnolsm_danger
+    bs4btnolsm_dark
+    bs4btnolsm_info
+    bs4btnolsm_light
+    bs4btnolsm_link
+    bs4btnolsm_secondary
+    bs4btnolsm_success
+    bs4btnolsm_warning
 
 ### Carousel
 

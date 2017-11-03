@@ -39,8 +39,8 @@ define(function (require, exports, module) {
         '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
 
-    // Variables for local asstes
-    var csslocal = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';    
+    // Variables for local assets
+    var csslocal = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';
     var jslocal = '<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
         '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
@@ -490,8 +490,19 @@ define(function (require, exports, module) {
     // Button Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/button-group/
     
-    snippets.bs4buttongroupvertical = '';
-    snippets.bs4buttongroup = '';
+    snippets.bs4btngroup = '';
+    snippets.bs4btngroupvertical = '';
+    snippets.bs4linkbuttongroupvertical = '<div class="btn-group-vertical">\n' +
+        '	<a class="btn btn-default" href="#" role="button">Top</a>\n' +
+        '	<a class="btn btn-default" href="#" role="button">Middle</a>\n' +
+        '	<a class="btn btn-default" href="#" role="button">Bottom</a>\n' +
+        '</div>\n';
+
+    snippets.bs4linkbuttongroup = '<div class="btn-group">\n' +
+        '	<a class="btn btn-default" href="#" role="button">Left</a>\n' +
+        '	<a class="btn btn-default" href="#" role="button">Middle</a>\n' +
+        '	<a class="btn btn-default" href="#" role="button">Right</a>\n' +
+        '</div>\n';
     
     // Cards
     // https://getbootstrap.com/docs/4.0/components/card/
@@ -883,101 +894,6 @@ define(function (require, exports, module) {
         '           </p>\n' +
         '       </div>\n' +
         '   </div>';
-
-
-    // Link Buttons (TODO)
-
-    snippets.bs4blocklinkbuttondanger = '<a class="btn btn-large btn-block btn-danger" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbuttondefault = '<a class="btn btn-large btn-block btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbuttondisabled = '<a class="btn btn-large btn-block btn-default disabled" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbuttoninfo = '<a class="btn btn-large btn-block btn-info" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbuttonprimary = '<a class="btn btn-large btn-block btn-primary" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbuttonsuccess = '<a class="btn btn-large btn-block btn-success" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbuttonwarning = '<a class="btn btn-large btn-block btn-warning" href="#" role="button">button</a>\n';
-
-    snippets.bs4blocklinkbutton = '<a class="btn btn-large btn-block btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttondanger = '<a class="btn btn-lg btn-danger" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttondefault = '<a class="btn btn-lg btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttondisabled = '<a class="btn btn-lg btn-default disabled" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttoninfo = '<a class="btn btn-lg btn-info" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttonprimary = '<a class="btn btn-lg btn-primary" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttonsuccess = '<a class="btn btn-lg btn-success" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbuttonwarning = '<a class="btn btn-lg btn-warning" href="#" role="button">button</a>\n';
-
-    snippets.bs4lglinkbutton = '<a class="btn btn-lg btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttondanger = '<a class="btn btn-danger" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttondefault = '<a class="btn btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttondisabled = '<a class="btn btn-primary disabled" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttongroupvertical = '<div class="btn-group-vertical">\n' +
-        '	<a class="btn btn-default" href="#" role="button">Top</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Middle</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Bottom</a>\n' +
-        '</div>\n';
-
-    snippets.bs4linkbuttongroup = '<div class="btn-group">\n' +
-        '	<a class="btn btn-default" href="#" role="button">Left</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Middle</a>\n' +
-        '	<a class="btn btn-default" href="#" role="button">Right</a>\n' +
-        '</div>\n';
-
-    snippets.bs4linkbuttoninfo = '<a class="btn btn-info" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttonprimary = '<a class="btn btn-primary" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttonsuccess = '<a class="btn btn-success" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbuttonwarning = '<a class="btn btn-warning" href="#" role="button">button</a>\n';
-
-    snippets.bs4linkbutton = '<a class="btn btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbuttondanger = '<a class="btn btn-xs btn-danger" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbuttondefault = '<a class="btn btn-xs btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbuttondisabled = '<a class="btn btn-xs btn-default disabled" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbuttoninfo = '<a class="btn btn-xs btn-info" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbuttonprimary = '<button type="button" class="btn btn-xs btn-primary">button</button>\n';
-
-    snippets.bs4minilinkbuttonsuccess = '<a class="btn btn-xs btn-success" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbuttonwarning = '<a class="btn btn-xs btn-warning" href="#" role="button">button</a>\n';
-
-    snippets.bs4minilinkbutton = '<a class="btn btn-xs btn-default" href="#" role="button">button</a>\n';
-
-    snippets.bs4smlinkbuttondanger = '<button type="button" class="btn btn-sm btn-danger">button</button>\n';
-
-    snippets.bs4smlinkbuttondefault = '<button type="button" class="btn btn-sm btn-default">button</button>\n';
-
-    snippets.bs4smlinkbuttondisabled = '<a class="btn btn-sm btn-default disabled" href="#" role="button">button</a>\n';
-
-    snippets.bs4smlinkbuttoninfo = '<button type="button" class="btn btn-sm btn-info">button</button>\n';
-
-    snippets.bs4smlinkbuttonprimary = '<a class="btn btn-sm btn-primary" href="#" role="button">button</a>\n';
-
-    snippets.bs4smlinkbuttonsuccess = '<a class="btn btn-sm btn-success" href="#" role="button">button</a>\n';
-
-    snippets.bs4smlinkbuttonwarning = '<a class="btn btn-sm btn-warning" href="#" role="button">button</a>\n';
-
-    snippets.bs4smlinkbutton = '<a class="btn btn-sm btn-default" href="#" role="button">button</a>\n';
 
     // List Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/list-group/

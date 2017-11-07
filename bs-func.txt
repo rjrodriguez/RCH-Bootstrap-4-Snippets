@@ -204,7 +204,12 @@ bs4btnsm_warning
 bs4card
 bs4cardfeatured
 bs4cardfull
+bs4cardgroup
+bs4cardgroupfotter
+bs4carddeck
+bs4carddeckfooter
 bs4cardimage
+bs4cardimagebottom
 bs4cardimageoverlay
 bs4cardpanel
 bs4cardquote

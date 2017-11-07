@@ -295,16 +295,26 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4btngroupsm
     
 ### Cards
-(TODO: Color styles, components and layout)
+
+#### Single cards
 
     bs4card
     bs4cardfeatured
     bs4cardfull
     bs4cardimage
+    bs4cardimagebottom
     bs4cardimageoverlay
     bs4cardpanel
     bs4cardquote
 
+#### Cards layout
+
+    bs4cardgroup
+    bs4cardgroupfooter
+    bs4carddeck
+    bs4carddeckfooter
+    bs4cardcolumns
+    
 ### Carousel
 
 	bs4carousel (basic slider)

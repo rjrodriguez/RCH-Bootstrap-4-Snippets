@@ -582,12 +582,24 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
     
-    snippets.bs4cardimage = '<div class="card">\n' +
-        '   <img class="card-img-top" src="" alt="Card image cap">\n' +
-        '   <div class="card-body">\n' +
-        '       <p class="card-text">Some quick example text to build on the card title and content.</p>\n' +
+    snippets.bs4cardimage = '<div class="card mb-3">\n' +
+        '       <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '       <div class="card-body">\n' +
+        '           <h4 class="card-title">Card title</h4>\n' +
+        '           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
         '       </div>\n' +
         '   </div>';
+    
+    snippets.bs4carimagebottom = '<div class="card">\n' +
+        '       <div class="card-body">\n' +
+        '           <h4 class="card-title">Card title</h4>\n' +
+        '           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '       </div>\n' +
+        '       <img class="card-img-bottom" src="" alt="Card image cap">\n' +
+        '   </div>';
+    
     
     snippets.bs4cardimageoverlay = '<div class="card bg-dark text-white">\n' +
         '       <img class="card-img" src="..." alt="Card image">\n' +
@@ -626,6 +638,192 @@ define(function (require, exports, module) {
         '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
         '       </div>\n' +
         '       <div class="card-footer text-muted">2 days ago</div>\n' +
+        '   </div>';
+    
+    // Cards Layouts
+    snippets.bs4cardgroup = '   <div class="card-group">\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardgroupfooter = '   <div class="card-group">\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '           <div class="card-footer">\n' +
+        '               <small class="text-muted">Last updated 3 mins ago</small>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '           <div class="card-footer">\n' +
+        '               <small class="text-muted">Last updated 3 mins ago</small>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '           <div class="card-footer">\n' +
+        '               <small class="text-muted">Last updated 3 mins ago</small>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4carddeck = '   <div class="card-deck">\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4carddeckfooter = '   <div class="card-deck">\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '           <div class="card-footer">\n' +
+        '               <small class="text-muted">Last updated 3 mins ago</small>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '           <div class="card-footer">\n' +
+        '               <small class="text-muted">Last updated 3 mins ago</small>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '           <div class="card-footer">\n' +
+        '               <small class="text-muted">Last updated 3 mins ago</small>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4cardcolumns = ' <div class="card-columns">\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title that wraps to a new line</h4>\n' +
+        '               <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card p-3">\n' +
+        '           <blockquote class="blockquote mb-0 card-body">\n' +
+        '               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n' +
+        '               <footer class="blockquote-footer">\n' +
+        '                   <small class="text-muted">Someone famous in <cite title="Source Title">Source Title</cite></small>\n' +
+        '               </footer>\n' +
+        '           </blockquote>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img-top" src="" alt="Card image cap">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card bg-primary text-white text-center p-3">\n' +
+        '           <blockquote class="blockquote mb-0">\n' +
+        '               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>\n' +
+        '               <footer class="blockquote-footer">\n' +
+        '                   <small> Someone famous in <cite title="Source Title">Source Title</cite></small>\n' +
+        '               </footer>\n' +
+        '           </blockquote>\n' +
+        '       </div>\n' +
+        '       <div class="card text-center">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <img class="card-img" src="" alt="Card image">\n' +
+        '       </div>\n' +
+        '       <div class="card p-3 text-right">\n' +
+        '           <blockquote class="blockquote mb-0">\n' +
+        '               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>\n' +
+        '               <footer class="blockquote-footer">\n' +
+        '                   <small class="text-muted">Someone famous in <cite title="Source Title">Source Title</cite></small>\n' +
+        '               </footer>\n' +
+        '           </blockquote>\n' +
+        '       </div>\n' +
+        '       <div class="card">\n' +
+        '           <div class="card-body">\n' +
+        '               <h4 class="card-title">Card title</h4>\n' +
+        '               <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>\n' +
+        '               <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
         '   </div>';
     
     // Carousel

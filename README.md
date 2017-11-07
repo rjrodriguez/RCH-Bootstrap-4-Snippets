@@ -305,6 +305,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4cardimagebottom
     bs4cardimageoverlay
     bs4cardpanel
+    bs4cardpanelminimal
     bs4cardquote
 
 #### Cards layout

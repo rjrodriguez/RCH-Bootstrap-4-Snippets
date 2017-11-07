@@ -213,6 +213,7 @@ bs4cardimage
 bs4cardimagebottom
 bs4cardimageoverlay
 bs4cardpanel
+bs4cardpanelminimal
 bs4cardquote
 bs4cardtext
 bs4carousel

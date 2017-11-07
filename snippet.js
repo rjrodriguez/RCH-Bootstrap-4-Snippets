@@ -40,8 +40,8 @@ define(function (require, exports, module) {
         '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
 
     // Variables for local assets
-    var csslocal = '<link rel="stylesheet" href="css/bootstrap.min.css">\n';
-    var jslocal = '<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
+    var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n';
+    var jslocal = ' <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
         '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
         '   <script src="js/popper.min.js"></script>\n' +
@@ -620,6 +620,10 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
     
+    snippets.bs4cardpanelminimal = '<div class="card card-body">\n' +
+        '       With supporting text below as a natural lead-in to additional content.\n' +
+        '   </div>';
+    
     snippets.bs4cardquote = '<div class="card">\n' +
         '   <div class="card-header">Quote</div>\n' +
         '       <div class="card-body">\n' +
@@ -795,7 +799,7 @@ define(function (require, exports, module) {
         '           <blockquote class="blockquote mb-0">\n' +
         '               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>\n' +
         '               <footer class="blockquote-footer">\n' +
-        '                   <small> Someone famous in <cite title="Source Title">Source Title</cite></small>\n' +
+        '                   <small class="text-white"> Someone famous in <cite title="Source Title">Source Title</cite></small>\n' +
         '               </footer>\n' +
         '           </blockquote>\n' +
         '       </div>\n' +

@@ -203,6 +203,7 @@ bs4btnsm_success
 bs4btnsm_warning
 bs4card
 bs4cardfeatured
+bscardcolumns
 bs4cardfull
 bs4cardgroup
 bs4cardgroupfotter

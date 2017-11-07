@@ -71,6 +71,8 @@ bs4abtnsm_link
 bs4abtnsm_secondary
 bs4abtnsm_success
 bs4abtnsm_warning
+bs4accordion
+bs4accordionminimal
 bs4alert
 bs4alert_danger
 bs4alert_dark
@@ -221,6 +223,8 @@ bs4carouselfull
 bs4carouselwcaptions
 bs4carouselwcontrols
 bs4carouselwindicators
+bs4collapse
+bs4collapsebtn
 bs4cdncss
 bs4cdnjs
 bs4figure

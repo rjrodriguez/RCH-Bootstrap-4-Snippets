@@ -323,6 +323,13 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4carouselwcaptions
     bs4carouselwcontrols
     bs4carouselwindicators
+    
+### Collapse and Accordions
+
+    bs4collapse
+    bs4collapsebtn
+    bs4accordion
+    bs4accordionminimal
 
 ### CDN
 

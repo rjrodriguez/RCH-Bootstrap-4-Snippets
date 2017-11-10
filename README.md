@@ -411,10 +411,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### List Groups 
 (TODO)
 
+    bs4listgroup
 	bs4listgroupbadges
 	bs4listgroupcontent
-	bs4listgrouplinked
-	bs4listgroup
+	bs4listgrouplinks
 
 ### Local
 

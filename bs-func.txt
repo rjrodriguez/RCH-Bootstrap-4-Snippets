@@ -284,7 +284,7 @@ bs4jumbotronfluid
 bs4listgroup
 bs4listgroupbadges
 bs4listgroupcontent
-bs4listgrouplinked
+bs4listgrouplinks
 bs4localcss
 bs4localjs
 bs4mediaobject

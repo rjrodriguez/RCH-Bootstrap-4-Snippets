@@ -1279,41 +1279,55 @@ define(function (require, exports, module) {
 
     // List Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/list-group/
+    
+    snippets.bs4listgroup = '<ul class="list-group">\n' +
+        '       <li class="list-group-item active">Cras justo odio</li>\n' +
+        '       <li class="list-group-item">Dapibus ac facilisis in</li>\n' +
+        '       <li class="list-group-item">Morbi leo risus</li>\n' +
+        '       <li class="list-group-item">Porta ac consectetur ac</li>\n' +
+        '       <li class="list-group-item disable">Vestibulum at eros</li>\n' +
+        '   </ul>';
 
+    snippets.bs4listgrouplinks = '<div class="list-group">\n' +
+        '       <a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>\n' +
+        '       <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>\n' +
+        '       <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>\n' +
+        '       <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>\n' +
+        '       <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>\n' +
+        '   </div>';
+    
     snippets.bs4listgroupbadges = '<ul class="list-group">\n' +
-        '	<li class="list-group-item">\n' +
-        '		<span class="badge">5</span>\n' +
-        '		Item 1\n' +
-        '	</li>\n' +
-        '	<li class="list-group-item">\n' +
-        '		<span class="badge">10</span>\n' +
-        '		Item 2\n' +
-        '	</li>\n' +
-        '	<li class="list-group-item">\n' +
-        '		<span class="badge">15</span>\n' +
-        '		Item 3\n' +
-        '	</li>\n' +
-        '</ul>\n';
+        '       <li class="list-group-item d-flex justify-content-between align-items-center">Cras justo odio<span class="badge badge-primary badge-pill">14</span></li>\n' +
+        '       <li class="list-group-item d-flex justify-content-between align-items-center">Dapibus ac facilisis in<span class="badge badge-primary badge-pill">2</span></li>\n' +
+        '       <li class="list-group-item d-flex justify-content-between align-items-center">Morbi leo risus<span class="badge badge-primary badge-pill">1</span></li>\n' +
+        '   </ul>';
 
     snippets.bs4listgroupcontent = '<div class="list-group">\n' +
-        '	<a href="#" class="list-group-item active">' +
-        '		<h4 class="list-group-item-heading">List group item heading</h4>' +
-        '		<p class="list-group-item-text">Content goes here</p>' +
-        '	</a>' +
-        '</div>\n';
-
-    snippets.bs4listgrouplinked = '<div class="list-group">\n' +
-        '	<a href="#" class="list-group-item active">Item 1</a>\n' +
-        '	<a href="#" class="list-group-item">Item 2</a>\n' +
-        '	<a href="#" class="list-group-item">Item 3</a>\n' +
-        '</div>\n';
-
-    snippets.bs4listgroup = '<ul class="list-group">\n' +
-        '	<li class="list-group-item">Item 1</li>\n' +
-        '	<li class="list-group-item">Item 2</li>\n' +
-        '	<li class="list-group-item">Item 3</li>\n' +
-        '</ul>\n';
-
+        '       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">\n' +
+        '           <div class="d-flex w-100 justify-content-between">\n' +
+        '               <h5 class="mb-1">List group item heading</h5>\n' +
+        '               <small>3 days ago</small>\n' +
+        '           </div>\n' +
+        '           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>\n' +
+        '           <small>Donec id elit non mi porta.</small>\n' +
+        '       </a>\n' +
+        '       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">\n' +
+        '           <div class="d-flex w-100 justify-content-between">\n' +
+        '               <h5 class="mb-1">List group item heading</h5>\n' +
+        '               <small class="text-muted">3 days ago</small>\n' +
+        '           </div>\n' +
+        '           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>\n' +
+        '           <small class="text-muted">Donec id elit non mi porta.</small>\n' +
+        '       </a>\n' +
+        '       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">\n' +
+        '           <div class="d-flex w-100 justify-content-between">\n' +
+        '               <h5 class="mb-1">List group item heading</h5>\n' +
+        '               <small class="text-muted">3 days ago</small>\n' +
+        '           </div>\n' +
+        '           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>\n' +
+        '           <small class="text-muted">Donec id elit non mi porta.</small>\n' +
+        '       </a>\n' +
+        '   </div>';
 
     // Local
 

@@ -943,7 +943,7 @@ define(function (require, exports, module) {
         '       <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>\n' +
         '   </div>';
     
-     snippets.bs4collapsebtn = '    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>\n' +
+    snippets.bs4collapsebtn = '    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>\n' +
         '   <div class="collapse" id="collapseExample">\n' +
         '       <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>\n' +
         '   </div>';
@@ -981,19 +981,19 @@ define(function (require, exports, module) {
         '   </div>\n' +
         '</div>';
     
-    snippets.bs4accordionminimal = '<div id="exampleAccordion" data-children=".item">
-        '   <div class="item">
-        '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">Toggle item</a>
-        '       <div id="exampleAccordion1" class="collapse show" role="tabpanel">
-        '           <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.</p>
-        '       </div>
-        '   </div>
-        '   <div class="item">
-        '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">Toggle item 2</a>
-        '       <div id="exampleAccordion2" class="collapse" role="tabpanel">
-        '           <p class="mb-3">Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-        '       </div>
-        '   </div>
+    snippets.bs4accordionminimal = '<div id="exampleAccordion" data-children=".item">\n' +
+        '   <div class="item">\n' +
+        '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">Toggle item</a>\n' +
+        '       <div id="exampleAccordion1" class="collapse show" role="tabpanel">\n' +
+        '           <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.</p>\n' +
+        '       </div>\n' +
+        '   </div>\n' +
+        '   <div class="item">\n' +
+        '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">Toggle item 2</a>\n' +
+        '       <div id="exampleAccordion2" class="collapse" role="tabpanel">\n' +
+        '           <p class="mb-3">Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\n' +
+        '       </div>\n' +
+        '   </div>\n' +
         '</div>';
     
     // Figures

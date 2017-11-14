@@ -1747,44 +1747,41 @@ define(function (require, exports, module) {
 
     // Tabs (TODO)
 
-    snippets.bs4tabs = '<div role="tabpanel">\n' +
-        '    <!-- Nav tabs -->\n' +
-        '    <ul class="nav nav-tabs" role="tablist">\n' +
-        '        <li role="presentation" class="active">\n' +
-        '            <a href="#home" aria-controls="home" role="tab" data-toggle="tab">home</a>\n' +
-        '        </li>\n' +
-        '        <li role="presentation">\n' +
-        '            <a href="#tab" aria-controls="tab" role="tab" data-toggle="tab">tab</a>\n' +
-        '        </li>\n' +
-        '    </ul>\n' +
-        '\n' +
-        '    <!-- Tab panes -->\n' +
-        '    <div class="tab-content">\n' +
-        '        <div role="tabpanel" class="tab-pane active" id="home">...</div>\n' +
-        '        <div role="tabpanel" class="tab-pane" id="tab">...</div>\n' +
-        '    </div>\n' +
-        '</div>\n';
+    snippets.bs4tabsvertical = '<div class="row">\n' +
+        '       <div class="col-4">\n' +
+        '           <div class="list-group" id="list-tab" role="tablist">\n' +
+        '               <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>\n' +
+        '               <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab" aria-controls="profile">Profile</a>\n' +
+        '               <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab" aria-controls="messages">Messages</a>\n' +
+        '               <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab" aria-controls="settings">Settings</a>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="col-8">\n' +
+        '           <div class="tab-content" id="nav-tabContent">\n' +
+        '               <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>\n' +
+        '               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>\n' +
+        '               <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>\n' +
+        '               <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
 
-    snippets.bs4tabhover = '    <!-- Nav pills -->\n' +
-        '    <ul class="nav nav-pills">\n' +
-        '        <li class="active"><a href="#tab-1" data-toggle="tab">Tab 1</a>\n' +
-        '        </li>\n' +
-        '        <li><a href="#tab-2" data-toggle="tab">Tab 2</a>\n' +
-        '        </li>\n' +
-        '        <li><a href="#tab-3" data-toggle="tab">Tab 3</a>\n' +
-        '        </li>\n' +
-        '        <li><a href="#tab-4" data-toggle="tab">Tab 4</a>\n' +
-        '        </li>\n' +
-        '    </ul>\n\n' +
-        '    <!-- Tab panes -->\n' +
-        '    <div class="tab-content well">\n' +
-        '        <div class="tab-pane active" id="tab-1">Content 1</div>\n' +
-        '        <div class="tab-pane" id="tab-2">Content 2</div>\n' +
-        '        <div class="tab-pane" id="tab-3">Content 3</div>\n' +
-        '        <div class="tab-pane" id="tab-4">Content 4</div>\n' +
-        '    </div>    \n' +
-        '    <!-- Move this line to the last line of js declaration area -->\n' +
-        '    <script src="https://cdn.rawgit.com/tonystar/bootstrap-hover-tabs/v3.1.1/bootstrap-hover-tabs.js"></script>\n';
+    snippets.bs4tabs = '<ul class="nav nav-tabs" id="myTab" role="tablist">\n' +
+        '       <li class="nav-item">\n' +
+        '           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>\n' +
+        '       </li>\n' +
+        '       <li class="nav-item">\n' +
+        '           <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>\n' +
+        '       </li>\n' +
+        '       <li class="nav-item">\n' +
+        '           <a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>\n' +
+        '       </li>\n' +
+        '   </ul>\n' +
+        '   <div class="tab-content" id="myTabContent">\n' +
+        '       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>\n' +
+        '       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>\n' +
+        '       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>\n' +
+        '   </div>';
 
 
     snippets.bs4tablesampleheader = '            <thead>\n' +

@@ -205,7 +205,7 @@ bs4btnsm_success
 bs4btnsm_warning
 bs4card
 bs4cardfeatured
-bscardcolumns
+bs4cardcolumns
 bs4cardfull
 bs4cardgroup
 bs4cardgroupfotter
@@ -308,6 +308,7 @@ bs4tableresponsive
 bs4tablesmall
 bs4tablestriped
 bs4tabs
+bs4tabsvertical
 bs4template
 bs4textarea
 bs4textareah

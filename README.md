@@ -456,10 +456,9 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4tablestriped
     
 ### Tabs 
-(TODO)
     
     bs4tabs
-    tabhover
+    bs4tabsvertical
     
 ### Credits
 ---

@@ -41,7 +41,7 @@ define(function (require, exports, module) {
 
     // Variables for local assets
     var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n';
-    var jslocal = ' <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
+    var jslocal = '    <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
         '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
         '   <script src="js/popper.min.js"></script>\n' +
@@ -1369,6 +1369,90 @@ define(function (require, exports, module) {
         '         </div>\n' +
         '      </div>\n' +
         '   </div>';
+    
+    // Navs
+    var navlinks = '       <a class="nav-link active" href="#">Active</a>\n' +
+        '       <a class="nav-link" href="#">Link</a>\n' +
+        '       <a class="nav-link" href="#">Link</a>\n' +
+        '       <a class="nav-link disabled" href="#">Disabled</a>\n';
+    
+    var navlist = '       <li class="nav-item">\n' +
+        '           <a class="nav-link active" href="#">Active</a>\n' +
+        '       </li>\n' +
+        '       <li class="nav-item">\n' +
+        '           <a class="nav-link" href="#">Link</a>\n' +
+        '       </li>\n' +
+        '       <li class="nav-item">\n' +
+        '           <a class="nav-link" href="#">Link</a>\n' +
+        '       </li>\n' +
+        '       <li class="nav-item">\n' +
+        '           <a class="nav-link disabled" href="#">Disabled</a>\n' +
+        '       </li>\n';
+    
+    snippets.bs4nav = '<nav class="nav">\n' +
+        navlinks +
+        '   </nav>';
+    
+    snippets.bs4nav_center = '<ul class="nav justify-content-center">\n' +
+        navlinks +
+        '   </ul>';
+    
+    snippets.bs4nav_right = '<ul class="nav justify-content-end">\n' +
+        navlinks +
+        '   </ul>';
+    
+    snippets.bs4nav_vertical = '<ul class="nav flex-column">\n' +
+        navlinks +
+        '   </ul>';
+    
+    snippets.bs4navlist = '<ul class="nav">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navlist_center = '<ul class="nav justify-content-center">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navlist_right = '<ul class="nav justify-content-end">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navlist_vertical = '<ul class="nav flex-column">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navpills = '<nav class="nav nav-pills">\n' +
+        navlinks +
+        '   </nav>';
+    
+    snippets.bs4navpills_center = '<ul class="nav nav-pills justify-content-center">\n' +
+        navlinks +
+        '   </ul>';
+    
+    snippets.bs4navpills_right = '<ul class="nav nav-pills justify-content-end">\n' +
+        navlinks +
+        '   </ul>';
+    
+    snippets.bs4navpills_vertical = '<ul class="nav nav-pills flex-column">\n' +
+        navlinks +
+        '   </ul>';
+    
+    snippets.bs4navpillslist = '<ul class="nav nav-pills">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navpillslist_center = '<ul class="nav nav-pills justify-content-center">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navpillslist_right = '<ul class="nav nav-pills justify-content-end">\n' +
+        navlist +
+        '   </ul>';
+    
+    snippets.bs4navpillslist_vertical = '<ul class="nav nav-pills flex-column">\n' +
+        navlist +
+        '   </ul>';
+    
 
     // Navigation (TODO)
     // https://getbootstrap.com/docs/4.0/components/navbar/

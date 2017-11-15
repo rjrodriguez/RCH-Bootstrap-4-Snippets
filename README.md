@@ -431,6 +431,25 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4modal
 	bs4modalbtn
 
+### Navs
+
+    bs4nav
+    bs4nav_center
+    bs4nav_right
+    bs4nav_vertical
+    bs4navlist
+    bs4navlist_center
+    bs4navlist_right
+    bs4navlist_vertical
+    bs4navpills
+    bs4navpills_center
+    bs4navpills_right
+    bs4navpills_vertical
+    bs4navpillslist
+    bs4navpillslist_center
+    bs4navpillslist_right
+    bs4navpillslist_vertical
+
 ### Navigation
     
     bs4navbar (full)

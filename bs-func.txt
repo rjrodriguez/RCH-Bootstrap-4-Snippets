@@ -315,14 +315,6 @@ bs4paginationicons
 bs4paginationright
 bs4select
 bs4selecth
-bs4tabhover
-bs4table
-bs4tablebordered
-bs4tablehover
-bs4tableinverse
-bs4tableresponsive
-bs4tablesmall
-bs4tablestriped
 bs4tabs
 bs4tabsvertical
 bs4template

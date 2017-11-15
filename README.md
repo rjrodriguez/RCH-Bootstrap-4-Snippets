@@ -463,17 +463,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 	bs4paginationcenterd
 	bs4paginationright
     
-### Table 
-(TODO)
-    
-    bs4table
-	bs4tablebordered
-    bs4tablehover
-    bs4tableinverse
-    bs4tableresponsive
-	bs4tablesmall
-    bs4tablestriped
-    
 ### Tabs 
     
     bs4tabs

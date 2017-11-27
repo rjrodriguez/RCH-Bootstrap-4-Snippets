@@ -2,6 +2,12 @@
 
 A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](http://brackets.io/) editor.
 
+[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/total.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
+[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/last-version.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
+[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/week.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
+[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/day.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
+[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/version.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
+
 ## Install
 
 ### Git Clone

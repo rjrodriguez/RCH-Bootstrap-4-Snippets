@@ -996,6 +996,24 @@ define(function (require, exports, module) {
         '   </div>\n' +
         '</div>';
     
+    // Embeds
+    
+    snippets.bs4embed = '<div class="embed-responsive embed-responsive-1by1">\n' +
+        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '   </div>';
+    
+    snippets.bs4embed_21x9 = '<div class="embed-responsive embed-responsive-21by9">\n' +
+        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '   </div>';
+    
+    snippets.bs4embed_16x9 = '<div class="embed-responsive embed-responsive-16by9">\n' +
+        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '   </div>';
+    
+    snippets.bs4embed_4x3 = '<div class="embed-responsive embed-responsive-4by3">\n' +
+        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '   </div>';
+    
     // Figures
     
     snippets.bs4figure = '<figure class="figure">\n' +

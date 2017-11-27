@@ -336,6 +336,13 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4cdncss
     bs4cdnjs
     
+### Embeds
+
+    bs4embed (default 1:1)
+    bs4embed_4x3
+    bs4embed_16x9
+    bs4embed-21x9
+    
 ### Figures 
 
     bs4figure

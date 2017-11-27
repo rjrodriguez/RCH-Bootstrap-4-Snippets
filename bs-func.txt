@@ -227,6 +227,10 @@ bs4collapse
 bs4collapsebtn
 bs4cdncss
 bs4cdnjs
+bs4embed
+bs4embed_4x3
+bs4embed_16x9
+bs4embed-21x9
 bs4figure
 bs4fileupload
 bs4form

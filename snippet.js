@@ -111,8 +111,12 @@ define(function (require, exports, module) {
         '<head>\n' +
         '    <!-- Required meta tags -->\n' +
         '    <meta charset="utf-8">\n' +
-        '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n' +
-        '    <title>Bootstrap 4 Minimal Template</title>\n' +
+        '    <meta name="description" content="">\n' +
+        '    <meta name="author" content="">\n' +
+        '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n\n' +
+        '    <title>Bootstrap 4 Minimal Template</title>\n\n' +
+        '    <link rel="shortcut icon" href="" type="image/x-icon">\n' +
+        '    <link rel="apple-touch-icon" href="">\n\n' +
         csslocal +
         '\n' +
         '</head>\n\n' +
@@ -129,7 +133,8 @@ define(function (require, exports, module) {
         '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n' +
         '    <meta name="description" content="">\n' +
         '    <meta name="author" content="">\n\n' +
-        '    <link rel="apple-touch-icon" href="">\n\n' +
+        '    <link rel="apple-touch-icon" href="">\n' +
+        '    <link rel="shortcut icon" href="" type="image/x-icon">\n\n' +
         csscdn +
         '\n' +
         '    <!-- Link to your CSS file -->\n' +

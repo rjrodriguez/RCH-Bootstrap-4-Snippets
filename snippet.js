@@ -33,14 +33,16 @@ define(function (require, exports, module) {
     
     // Variables for CDNs
     var csscdn = '    <!-- Bootstrap CSS -->\n' +
-        '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">\n';
+        '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">\n';
     var jscdn = '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
         '    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n' +
-        '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>\n' +
-        '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>\n';
+        '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>\n' +
+        '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>\n';
 
     // Variables for local assets
-    var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n';
+    var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n' +
+        '       <!-- Link to your css file -->' +
+        '       <link rel="stylesheet" href="">';
     var jslocal = '    <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
         '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
@@ -607,7 +609,7 @@ define(function (require, exports, module) {
     
     
     snippets.bs4cardimageoverlay = '<div class="card bg-dark text-white">\n' +
-        '       <img class="card-img" src="..." alt="Card image">\n' +
+        '       <img class="card-img" src="" alt="Card image">\n' +
         '       <div class="card-img-overlay">\n' +
         '           <h4 class="card-title">Card title</h4>\n' +
         '           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
@@ -1004,19 +1006,19 @@ define(function (require, exports, module) {
     // Embeds
     
     snippets.bs4embed = '<div class="embed-responsive embed-responsive-1by1">\n' +
-        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
     
     snippets.bs4embed_21x9 = '<div class="embed-responsive embed-responsive-21by9">\n' +
-        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
     
     snippets.bs4embed_16x9 = '<div class="embed-responsive embed-responsive-16by9">\n' +
-        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
     
     snippets.bs4embed_4x3 = '<div class="embed-responsive embed-responsive-4by3">\n' +
-        '       <iframe class="embed-responsive-item" src="..."></iframe>\n' +
+        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
     
     // Figures
@@ -1026,254 +1028,207 @@ define(function (require, exports, module) {
         '       <figcaption class="figure-caption">A caption for the above image.</figcaption>\n' +
         '   </figure>\n';
 
-    // Forms (TODO)
+    // Form controls
     // https://getbootstrap.com/docs/4.0/components/forms/
+    
+    snippets.bs4formcontrol_input = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlInput1">Name</label>\n' +
+        '       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_password = '<div class="form-group">\n' +
+        '       <label for="exampleInputPassword1">Password</label>\n' +
+        '       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_email = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlInput2">Email address</label>\n' +
+        '       <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_readonly = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlInput3">Read only</label>\n' +
+        '       <input class="form-control" type="text" id="exampleFormControlInput3" placeholder="Readonly input here…" readonly>\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_select = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlSelect1">Example select</label>\n' +
+        '       <select class="form-control" id="exampleFormControlSelect1">\n' +
+        '           <option>1</option>\n' +
+        '           <option>2</option>\n' +
+        '           <option>3</option>\n' +
+        '           <option>4</option>\n' +
+        '           <option>5</option>\n' +
+        '       </select>\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_selectmultiple = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlSelect1">Example multiple select</label>\n' +
+        '       <select multiple class="form-control" id="exampleFormControlSelect1">\n' +
+        '           <option>1</option>\n' +
+        '           <option>2</option>\n' +
+        '           <option>3</option>\n' +
+        '           <option>4</option>\n' +
+        '           <option>5</option>\n' +
+        '       </select>\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_textarea = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlTextarea1">Example textarea</label>\n' +
+        '       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_file = '<div class="form-group">\n' +
+        '       <label for="exampleFormControlFile1">Example file input</label>\n' +
+        '       <input type="file" class="form-control-file" id="exampleFormControlFile1">\n' +
+        '   </div>\n';    
+    
+    snippets.bs4formcontrol_checkbox = '<div class="form-check">\n' +
+        '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">\n' +
+        '       <label class="form-check-label" for="defaultCheck1">Default checkbox</label>\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_checkbox_group = '<div class="form-check">\n' +
+        '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">\n' +
+        '       <label class="form-check-label" for="defaultCheck1">Default checkbox</label>\n' +
+        '   </div>\n' +
+        '   <div class="form-check">\n' +
+        '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">\n' +
+        '       <label class="form-check-label" for="defaultCheck2">Default checkbox</label>\n' +
+        '   </div>\n' +
+        '   <div class="form-check">\n' +
+        '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled>\n' +
+        '       <label class="form-check-label" for="defaultCheck3">Disabled checkbox</label>\n' +
+        '</div>\n';
+    
+    snippets.bs4formcontrol_radio = '<div class="form-check">\n' +
+        '       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>\n' +
+        '       <label class="form-check-label" for="exampleRadios1">Default radio</label>\n' +
+        '   </div>\n';
+    
+    snippets.bs4formcontrol_radio_group = '<div class="form-check">\n' +
+        '       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>\n' +
+        '       <label class="form-check-label" for="exampleRadios1">Default radio</label>\n' +
+        '   </div>\n' +
+        '   <div class="form-check">\n' +
+        '       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">\n' +
+        '       <label class="form-check-label" for="exampleRadios2">Second default radio</label>\n' +
+        '   </div>\n' +
+        '   <div class="form-check disabled">\n' +
+        '       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>\n' +
+        '       <label class="form-check-label" for="exampleRadios3">Disabled radio</label>\n' +
+        '   </div>\n';
 
-    snippets.bs4formhorizontal = '<form action="" method="POST" class="form-horizontal" role="form">\n' +
-        '		<div class="form-group">\n' +
-        '			<legend>[Form title]</legend>\n' +
-        '		</div>\n\n\n\n' +
-        '		<div class="form-group">\n' +
-        '			<div class="col-sm-10 col-sm-offset-2">\n' +
-        '				<button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '			</div>\n' +
-        '		</div>\n' +
-        '</form>\n';
+    // Forms
+    
+    snippets.bs4form_contact = '<form action="" method="post" enctype="multipart/form-data">\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleFormControlInput1">Name</label>\n' +
+        '           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleInputEmail1">Email address</label>\n' +
+        '           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleFormControlTextarea1">Message</label>\n' +
+        '           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>\n' +
+        '       </div>\n'
+        '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
+        '   </form>';
+    
+    snippets.bs4form_suscribe_inline = '<form class="form-inline" action="" method="post" enctype="multipart/form-data">\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleFormControlInput1">Name</label>\n' +
+        '           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleInputEmail1">Email address</label>\n' +
+        '           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">\n' +
+        '       </div>\n' +
+        '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
+        '   </form>';
 
-    snippets.bs4forminline = '<form action="" method="POST" class="form-inline" role="form">\n\n' +
-        '	<div class="form-group">\n' +
-        '		<label class="sr-only" for="">label</label>\n' +
-        '		<input type="email" class="form-control" id="" placeholder="Input field">\n' +
-        '	</div>\n\n\n' +
-        '	<button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '</form>\n';
-
-    snippets.bs4formlabel = '<label for="input-id" class="col-sm-2">[label]</label>\n';
-
-    snippets.bs4form = '<form action="" method="POST" role="form">\n' +
-        '	<legend>Form title</legend>\n\n' +
-        '	<div class="form-group">\n' +
-        '		<label for="">label</label>\n' +
-        '		<input type="text" class="form-control" id="" placeholder="Input field">\n' +
-        '	</div>\n\n\n\n' +
-        '	<button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '</form>\n';
+    snippets.bs4form_login = '<form action="" method="post" enctype="multipart/form-data">\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleInputEmail1">Email address</label>\n' +
+        '           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">\n' +
+        '           <small id="emailHelp" class="form-text text-muted">We\'ll never share your email with anyone else.</small>\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="exampleInputPassword1">Password</label>\n' +
+        '           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">\n' +
+        '       </div>\n' +
+        '       <div class="form-check">\n' +
+        '           <input type="checkbox" class="form-check-input" id="exampleCheck1">\n' +
+        '           <label class="form-check-label" for="exampleCheck1">Check me out</label>\n' +
+        '       </div>\n' +
+        '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
+        '   </form>';
+    
+    snippets.bs4form_full = '<form action="" method="post" enctype="multipart/form-data">\n' +
+        '       <div class="form-row">\n' +
+        '           <div class="form-group col-md-6">\n' +
+        '               <label for="inputEmail4">Email</label>\n' +
+        '               <input type="email" class="form-control" id="inputEmail4" placeholder="Email">\n' +
+        '           </div>\n' +
+        '           <div class="form-group col-md-6">\n' +
+        '               <label for="inputPassword4">Password</label>\n' +
+        '               <input type="password" class="form-control" id="inputPassword4" placeholder="Password">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="inputAddress">Address</label>\n' +
+        '           <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <label for="inputAddress2">Address 2</label>\n' +
+        '           <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">\n' +
+        '       </div>\n' +
+        '       <div class="form-row">\n' +
+        '           <div class="form-group col-md-6">\n' +
+        '               <label for="inputCity">City</label>\n' +
+        '               <input type="text" class="form-control" id="inputCity">\n' +
+        '           </div>\n' +
+        '           <div class="form-group col-md-4">\n' +
+        '               <label for="inputState">State</label>\n' +
+        '               <select id="inputState" class="form-control">\n' +
+        '                   <option selected>Choose...</option>\n' +
+        '                   <option>...</option>\n' +
+        '               </select>\n' +
+        '           </div>\n' +
+        '           <div class="form-group col-md-2">\n' +
+        '               <label for="inputZip">Zip</label>\n' +
+        '               <input type="text" class="form-control" id="inputZip">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <div class="form-group">\n' +
+        '           <div class="form-check">\n' +
+        '               <input class="form-check-input" type="checkbox" id="gridCheck">\n' +
+        '               <label class="form-check-label" for="gridCheck">Check me out</label>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '       <button type="submit" class="btn btn-primary">Sign in</button>\n' +
+        '   </form>\n';
     
     // Images
 
-    snippets.bs4image = '<img src="#" class="img-fluid" alt="">\n';
-    snippets.bs4imagerounded = '<img src="" class="rounded" alt="">\n';
-    snippets.bs4imagecircle = '<img src="" class="rounded-circle" alt="">\n';
-
-    // Inputs (TODO)
+    snippets.bs4image = '<img src="" class="img-fluid" alt="">\n';
+    snippets.bs4imagerounded = '<img src="" class="img-fluid rounded" alt="">\n';
+    snippets.bs4imagecircle = '<img src="" class="img-fluid rounded-circle" alt="">\n';
     
-    snippets.bs4inputcheckbox = '<div class="checkbox">\n' +
-        '	<label>\n' +
-        '		<input type="checkbox" value="">\n' +
-        '		Checkbox\n' +
-        '	</label>\n' +
-        '</div>\n';
-
-    snippets.bs4inputcolorh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="color" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputcolor = '<input type="color" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputdateh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="date" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputdate = '<input type="date" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputemailh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="email" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputemail = '<input type="email" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputhidden = '<input type="hidden" name="" id="input" class="form-control" value="">\n';
-
-    snippets.bs4inputlabel = '<label for="input-id" class="col-sm-2"></label>\n';
-
-    snippets.bs4inputmonthh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="month" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputmonth = '<input type="month" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputnumberh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="number" name="" id="input" class="form-control" value="min="{6" min="{6"} max="" step="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputnumber = '<input type="number" name="" id="input" class="form-control" value="" min="[MIN]" max="[MAX]" step="" required="required" title="">\n';
-
-    snippets.bs4inputpasswordh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="password" name="" id="input" class="form-control" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputpassword = '<input type="password" name="" id="input" class="form-control" required="required" title="">\n';
-
-    snippets.bs4inputradio = '<div class="radio">\n' +
-        '	<label>\n' +
-        '		<input type="radio" name="" id="input" value="" checked="checked">\n' +
-        '		Radio Box\n' +
-        '	</label>\n' +
-        '</div>\n';
-
-    snippets.bs4inputrangeh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="range" name="" id="input" class="form-control" value="min="{6" min="{6"} max="" step="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputrange = '<input type="range" name="" id="input" class="form-control" value="" min="{5"} max="" step="" required="required" title="">\n';
-
-    snippets.bs4inputreseth = '<div class="form-group">\n' +
-        '	<div class="col-sm-10 col-offset-2">\n' +
-        '		<input type="reset" value="Reset" class="btn btn-default">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputreset = '<input type="reset" value="Reset" class="btn btn-default">\n';
-
-    snippets.bs4inputsearchh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="search" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputsearch = '<input type="search" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputselecth = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<select name="" id="input" class="form-control">\n' +
-        '			<option value="">-- Select One --</option>\n' +
-        '		</select>\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputselect = '<select name="" id="input" class="form-control">\n' +
-        '	    <option value="">-- Select One --</option>\n' +
-        '</select>\n';
-
-    snippets.bs4inputsubmith = '<div class="form-group">\n' +
-        '	<div class="col-sm-10 col-offset-2">\n' +
-        '		<button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputsubmit = '<button type="submit" class="btn btn-primary">Submit</button>\n';
-
-    snippets.bs4inputtelh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="tel" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputtel = '<input type="tel" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputtexth = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputtext = '<input type="text" name="" id="input" class="form-control" value="" required="required" pattern="" title="">\n';
-
-    snippets.bs4inputtimeh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="time" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputtime = '<input type="time" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputurlh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="url" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputurl = '<input type="url" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4inputweekh = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<input type="week" name="" id="input" class="form-control" value="" required="required" title="">\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4inputweek = '<input type="week" name="" id="input" class="form-control" value="" required="required" title="">\n';
-
-    snippets.bs4selecth = '<div class="form-group">\n' +
-        '	<label for="input" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-2">\n' +
-        '		<select name="" id="input" class="form-control" required="required">\n' +
-        '			<option value=""></option>\n' +
-        '		</select>\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4select = '<select name="" id="input" class="form-control" required="required">\n' +
-        '      <option value=""></option>\n' +
-        '</select>\n';
-
-    snippets.bs4textareah = '<div class="form-group">\n' +
-        '	<label for="textarea" class="col-sm-2 control-label">:</label>\n' +
-        '	<div class="col-sm-10">\n' +
-        '		<textarea name="" id="textarea" class="form-control" rows="3" required="required"></textarea>\n' +
-        '	</div>\n' +
-        '</div>\n';
-
-    snippets.bs4textarea = '<textarea name="" id="input" class="form-control" rows="3" required="required"></textarea>\n';
-
-    // Input Groups
-
-    snippets.bs4inputgroupaddontext = '<div class="input-group">\n' +
-        '	<div class="input-group-addon">$</div>\n' +
-        '	<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">\n' +
-        '</div>\n';
-
-    snippets.bs4inputgroupaddon = '<div class="input-group-addon">[CHANGE HERE]</div>\n';
-
-    snippets.bs4inputgroupbtn = '<span class="input-group-btn">\n' +
-        '	<button type="button" class="btn btn-default">Go!</button>\n' +
-        '</span>\n';
-
-    snippets.bs4inputgrouptextbtn = '\n';
-
-    snippets.bs4inputgroup = '<div class="input-group">\n' +
-        '	<input type="text" class="form-control" id="exampleInputAmount" placeholder="Search">\n' +
-        '	<span class="input-group-btn">\n' +
-        '		<button type="button" class="btn btn-default">Go!</button>\n' +
-        '	</span>\n' +
-        '</div>\n';
+    snippets.bs4image_picture = '<picture>\n' +
+        '       <!-- Extra Large Desktops -->\n' +
+        '       <source media="(min-width: 1200px)" srcset="extralarge.jpg">\n' +
+        '       <!-- Desktops -->\n' +
+        '       <source media="(min-width: 992px)" srcset="large.jpg">\n' +
+        '       <!-- Tablets -->\n' +
+        '       <source media="(min-width: 768px)" srcset="medium.jpg">\n' +
+        '       <!-- Landscape Phones -->\n' +
+        '       <source media="(min-width: 576px)" srcset="small.jpg">\n' +
+        '       <!-- Portrait Phones -->\n' +
+        '       <img src="picture-tiny.jpg" class="img-fluid">\n' +
+        '   </picture>\n';
 
     // Jumbotron
     // https://getbootstrap.com/docs/4.0/components/jumbotron/
@@ -1366,7 +1321,7 @@ define(function (require, exports, module) {
         '	</a>\n' +
         '	<div class="media-body">\n' +
         '		<h4 class="media-heading">Media heading</h4>\n' +
-        '		<p>Text goes here...</p>\n' +
+        '		<p>Text goes here</p>\n' +
         '	</div>\n' +
         '</div>\n';
 
@@ -1383,7 +1338,7 @@ define(function (require, exports, module) {
         '               <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>\n' +
         '            </div>\n' +
         '            <div class="modal-body">\n' +
-        '               ...\n' +
+        '               <!-- Insert content here -->\n' +
         '            </div>\n' +
         '            <div class="modal-footer">\n' +
         '               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>\n' +
@@ -1618,8 +1573,6 @@ define(function (require, exports, module) {
         '           <li class="page-item"><a class="page-link" href="#">Next</a></li>\n' +
         '       </ul>\n' +
         '   </nav>';
-
-   
 
     // Table (TODO)
 
@@ -1865,10 +1818,18 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '       <div class="col-8">\n' +
         '           <div class="tab-content" id="nav-tabContent">\n' +
-        '               <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">...</div>\n' +
-        '               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">...</div>\n' +
-        '               <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">...</div>\n' +
-        '               <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">...</div>\n' +
+        '               <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">' +
+        '                   <!-- Inser content here -->' +
+        '               </div>\n' +
+        '               <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">' +
+        '                   <!-- Inser content here -->' +
+        '               </div>\n' +
+        '               <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">' +
+        '                   <!-- Inser content here -->' +
+        '               </div>\n' +
+        '               <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">' +
+        '                   <!-- Inser content here -->' +
+        '               </div>\n' +
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
@@ -1885,9 +1846,15 @@ define(function (require, exports, module) {
         '       </li>\n' +
         '   </ul>\n' +
         '   <div class="tab-content" id="myTabContent">\n' +
-        '       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">...</div>\n' +
-        '       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">...</div>\n' +
-        '       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>\n' +
+        '       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">' +
+        '           <!-- Inser content here -->' +
+        '       </div>\n' +
+        '       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">' +
+        '           <!-- Inser content here -->' +
+        '       </div>\n' +
+        '       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">' +
+        '           <!-- Inser content here -->' +
+        '       </div>\n' +
         '   </div>';
     
     // Tables

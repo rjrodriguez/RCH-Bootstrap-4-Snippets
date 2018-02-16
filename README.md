@@ -356,67 +356,35 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4figure
 	
 ### Forms
-(TODO)
 
-	bs4formhorizontal
-	bs4forminline
-	bs4formlabel
-	bs4form
-	bs4inputcheckbox
-	bs4inputcolorh
-	bs4inputcolor
-	bs4inputdateh
-	bs4inputdate
-	bs4inputemailh
-	bs4inputemail
-	bs4inputhidden
-	bs4inputlabel
-	bs4inputmonthh
-	bs4inputmonth
-	bs4inputnumberh
-	bs4inputnumber
-	bs4inputpasswordh
-	bs4inputpassword
-	bs4inputradio
-	bs4inputrangeh
-	bs4inputrange
-	bs4inputreseth
-	bs4inputreset
-	bs4inputsearchh
-	bs4inputsearch
-	bs4inputselecth
-	bs4inputselect
-	bs4inputsubmith
-	bs4inputsubmit
-	bs4inputtelh
-	bs4inputtel
-	bs4inputtexth
-	bs4inputtext
-	bs4inputtimeh
-	bs4inputtime
-	bs4inputurlh
-	bs4inputurl
-	bs4inputweekh
-	bs4inputweek
-	bs4selecth
-	bs4select
-	bs4textareah
-	bs4textarea
-		
+#### Form Controls
+    
+    bs4formcontrol_input
+    bs4formcontrol_password
+    bs4formcontrol_email
+    bs4formcontrol_readonly
+    bs4formcontrol_select
+    bs4formcontrol_selectmultiple
+    bs4formcontrol_textarea
+    bs4formcontrol_file
+    bs4formcontrol_checkbox
+    bs4formcontrol_checkbox_group
+    bs4formcontrol_radio
+    bs4formcontrol_radio_group
+
+#### Basic Forms
+
+    bs4form_contact
+    bs4form_login
+    bs4form_full 
+    bs4form_suscribe_inline
+
 ### Images
 
 	bs4image
 	bs4imagerounded
 	bs4imagecircle
-
-### Input Groups 
-(TODO)
-
-	bs4inputgroupaddontext
-	bs4inputgroupaddon
-	bs4inputgroupbtn
-	bs4inputgrouptextbtn
-	bs4inputgroup
+    bs4image_picture
 
 ### Jumbotron
 
@@ -424,7 +392,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4jumbotronfluid
 
 ### List Groups 
-(TODO)
 
     bs4listgroup
 	bs4listgroupbadges
@@ -436,8 +403,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4localcss
     bs4localjs
     
-### Media 
-(TODO)
+### Media
 
 	bs4mediaobject
 

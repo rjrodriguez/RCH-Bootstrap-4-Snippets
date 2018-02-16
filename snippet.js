@@ -1133,9 +1133,9 @@ define(function (require, exports, module) {
         '       <div class="form-group">\n' +
         '           <label for="exampleFormControlTextarea1">Message</label>\n' +
         '           <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>\n' +
-        '       </div>\n'
+        '       </div>\n' +
         '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '   </form>';
+        '   </form>\n';
     
     snippets.bs4form_suscribe_inline = '<form class="form-inline" action="" method="post" enctype="multipart/form-data">\n' +
         '       <div class="form-group">\n' +
@@ -1147,7 +1147,7 @@ define(function (require, exports, module) {
         '           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">\n' +
         '       </div>\n' +
         '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '   </form>';
+        '   </form>\n';
 
     snippets.bs4form_login = '<form action="" method="post" enctype="multipart/form-data">\n' +
         '       <div class="form-group">\n' +
@@ -1164,7 +1164,7 @@ define(function (require, exports, module) {
         '           <label class="form-check-label" for="exampleCheck1">Check me out</label>\n' +
         '       </div>\n' +
         '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
-        '   </form>';
+        '   </form>\n';
     
     snippets.bs4form_full = '<form action="" method="post" enctype="multipart/form-data">\n' +
         '       <div class="form-row">\n' +

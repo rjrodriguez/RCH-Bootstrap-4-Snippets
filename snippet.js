@@ -41,8 +41,8 @@ define(function (require, exports, module) {
 
     // Variables for local assets
     var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n' +
-        '       <!-- Link to your css file -->' +
-        '       <link rel="stylesheet" href="">';
+        '       <!-- Link to your css file -->\n' +
+        '       <link rel="stylesheet" href="">\n';
     var jslocal = '    <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
         '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +

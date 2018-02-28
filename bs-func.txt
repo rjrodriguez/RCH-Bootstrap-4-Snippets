@@ -208,7 +208,7 @@ bs4cardfeatured
 bs4cardcolumns
 bs4cardfull
 bs4cardgroup
-bs4cardgroupfotter
+bs4cardgroupfooter
 bs4carddeck
 bs4carddeckfooter
 bs4cardimage

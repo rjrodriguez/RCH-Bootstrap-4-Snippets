@@ -7,7 +7,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 [![Downloads](https://badges.ml/rch-bootstrap-4-snippets/week.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
 [![Downloads](https://badges.ml/rch-bootstrap-4-snippets/day.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
 [![Downloads](https://badges.ml/rch-bootstrap-4-snippets/version.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/5)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/3)
 
 
 ## Install
@@ -382,22 +382,22 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Images
 
-	bs4image
-	bs4imagerounded
-	bs4imagecircle
+    bs4image
+    bs4imagerounded
+    bs4imagecircle
     bs4image_picture
 
 ### Jumbotron
 
-	bs4jumbotron
+    bs4jumbotron
     bs4jumbotronfluid
 
 ### List Groups 
 
     bs4listgroup
-	bs4listgroupbadges
-	bs4listgroupcontent
-	bs4listgrouplinks
+    bs4listgroupbadges
+    bs4listgroupcontent
+    bs4listgrouplinks
 
 ### Local
 
@@ -406,12 +406,12 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
 ### Media
 
-	bs4mediaobject
+    bs4mediaobject
 
 ### Modal
 
-	bs4modal
-	bs4modalbtn
+    bs4modal
+    bs4modalbtn
 
 ### Navs
 
@@ -440,10 +440,10 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 
 ### Pagination
     
-	bs4pagination (basic, left aligned)
-	bs4paginationicons
-	bs4paginationcenterd
-	bs4paginationright
+    bs4pagination (basic, left aligned)
+    bs4paginationicons
+    bs4paginationcenterd
+    bs4paginationright
     
 ### Tabs 
     
@@ -463,7 +463,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ---
 
 - Bootstrap Framework - https://getbootstrap.com
-- jQuery JavaScript Library v3.2.1 - jQuery Foundation, Inc. and other contributors
+- jQuery JavaScript Library v3.3.1 - jQuery Foundation, Inc. and other contributors
 - Snippets based on Bootstrap 3 Sublime Plugin - Thanks Jason Morton - Twitter @JasonMortonNZ 
 - Snippets based on ACB Bootstrap Snippets Plugin - Thanks Antonio Carlos Barbosa
 - Source-code editor used in this project - Brackets - https://www.brackets.io
@@ -475,7 +475,7 @@ Thank you all!
 
 If this project helps you to develop faster and nicer, maybe you can invite me a cup of coffee :)
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/5)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/3)
 
 ---
 

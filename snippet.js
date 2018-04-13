@@ -30,7 +30,7 @@ define(function (require, exports, module) {
 
     // Snippets!
     var snippets = {};
-    
+
     // Variables for CDNs
     var csscdn = '    <!-- Bootstrap CSS -->\n' +
         '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">\n';
@@ -48,12 +48,12 @@ define(function (require, exports, module) {
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
         '   <script src="js/popper.min.js"></script>\n' +
         '   <script src="js/bootstrap.min.js"></script>\n';
-    
+
     // variables for alerts
     var alertlink = '<a href="#" class="alert-link">Example link</a>';
     var alertheading = '<h4 class="alert-heading">Well done!</h4>';
     var alertdismiss = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-    
+
     //variables for badges
     var badge = 'badge badge-primary';
     var badgeSecondary = 'badge badge-secondary';
@@ -64,7 +64,7 @@ define(function (require, exports, module) {
     var badgeLight = 'badge badge-light';
     var badgeDark = 'badge badge-dark';
     var pill = ' badge-pill';
-    
+
     // variables for btns styles
     var btnPrimary = 'btn btn-primary';
     var btnSecondary = 'btn btn-secondary';
@@ -84,12 +84,12 @@ define(function (require, exports, module) {
     var btnOLight = 'btn btn-outline-light';
     var btnODark = 'btn btn-outline-dark';
     var btnOLink = 'btn btn-outline-link';
-    
+
     // variables for sizes and displays
     var block = ' btn-block';
     var sm = ' btn-sm';
     var lg = ' btn-lg';
-    
+
     // Variables for carousels
     var carouselcontrols = '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
         '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
@@ -105,7 +105,7 @@ define(function (require, exports, module) {
         '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
         '       </ol>\n';
 
-    
+
     // Bootstrap 4 - HTML5 Templates and Minimum Template
 
     snippets.bs4 = '<!DOCTYPE html>\n' +
@@ -153,11 +153,11 @@ define(function (require, exports, module) {
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
-    
+
     snippets.bs4alertlink = alertlink;
     snippets.bs4alertheading = alertheading;
     snippets.bs4alertdismiss = alertdismiss;
-    
+
     snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' +
         '       ' + alertdismiss + '\n' +
         '		<strong>Primary alert!</strong> You should check ' + alertlink + '.\n' +
@@ -326,7 +326,7 @@ define(function (require, exports, module) {
         '           <li class="breadcrumb-item active">3rd level</li>\n' +
         '       </ol>' +
         '	</nav>';
-    
+
     // Buttons (TODO)
     // https://getbootstrap.com/docs/4.0/components/buttons/
 
@@ -340,7 +340,7 @@ define(function (require, exports, module) {
     snippets.bs4abtn_light = '<a class="' + btnLight + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_dark = '<a class="' + btnDark + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_link = '<a class="' + btnLink + '" href="#" role="button">Link button</a>';
-    
+
     snippets.bs4abtnsm = '<a class="' + btnPrimary + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnsm_secondary = '<a class="' + btnSecondary + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnsm_success = '<a class="' + btnSuccess + sm + '" href="#" role="button">Small link button</a>';
@@ -493,28 +493,28 @@ define(function (require, exports, module) {
     snippets.bs4btnolblock_light = '<button type="button" class="' + btnOLight + block + '">Block button</button>';
     snippets.bs4btnolblock_dark = '<button type="button" class="' + btnODark + block + '">Block button</button>';
     snippets.bs4btnolblock_link = '<button type="button" class="' + btnOLink + block + '">Block button</button>';
-    
+
     // Button Groups (TODO)
     // https://getbootstrap.com/docs/4.0/components/button-group/
-    
+
     snippets.bs4btngroup = '<div class="btn-group" role="group" aria-label="Basic example">\n' +
         '       <button type="button" class="btn btn-secondary">Left</button>\n' +
         '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
         '       <button type="button" class="btn btn-secondary">Right</button>\n' +
         '   </div>';
-    
+
     snippets.bs4btngrouplg = '<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">\n' +
         '       <button type="button" class="btn btn-secondary">Left</button>\n' +
         '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
         '       <button type="button" class="btn btn-secondary">Right</button>\n' +
         '   </div>';
-    
+
     snippets.bs4btngroupsm = '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">\n' +
         '       <button type="button" class="btn btn-secondary">Left</button>\n' +
         '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
         '       <button type="button" class="btn btn-secondary">Right</button>\n' +
         '   </div>';
-    
+
     snippets.bs4btngroup_bar = '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">\n' +
         '       <div class="btn-group mr-2" role="group" aria-label="First group">\n' +
         '           <button type="button" class="btn btn-secondary">1</button>\n' +
@@ -531,7 +531,7 @@ define(function (require, exports, module) {
         '           <button type="button" class="btn btn-secondary">8</button>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4btngroup_nested = '<div class="btn-group" role="group" aria-label="Button group with nested dropdown">\n' +
         '       <button type="button" class="btn btn-secondary">1</button>\n' +
         '       <button type="button" class="btn btn-secondary">2</button>\n' +
@@ -543,16 +543,16 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4btngroup_vertical = '<div class="btn-group-vertical" role="group" aria-label="Basic example">\n' +
         '       <button type="button" class="btn btn-secondary">Link 1</button>\n' +
         '       <button type="button" class="btn btn-secondary">Link 2</button>\n' +
         '       <button type="button" class="btn btn-secondary">Link 3</button>\n' +
         '   </div>';
-    
+
     // Cards
     // https://getbootstrap.com/docs/4.0/components/card/
-    
+
     snippets.bs4card = '<div class="card">\n' +
         '   <img class="card-img-top" src="" alt="Card image">\n' +
         '   <div class="card-body">\n' +
@@ -561,7 +561,7 @@ define(function (require, exports, module) {
         '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardfull = '<div class="card">\n' +
         '       <img class="card-img-top" src="" alt="Card image">\n' +
         '       <div class="card-body">\n' +
@@ -578,7 +578,7 @@ define(function (require, exports, module) {
         '           <a href="#" class="card-link">Another link</a>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardtext = '<div class="card">\n' +
         '       <div class="card-body">\n' +
         '           <h4 class="card-title">Card title</h4>\n' +
@@ -588,7 +588,7 @@ define(function (require, exports, module) {
         '           <a href="#" class="card-link">Another link</a>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardimage = '<div class="card mb-3">\n' +
         '       <img class="card-img-top" src="" alt="Card image cap">\n' +
         '       <div class="card-body">\n' +
@@ -597,7 +597,7 @@ define(function (require, exports, module) {
         '           <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardimagebottom = '<div class="card">\n' +
         '       <div class="card-body">\n' +
         '           <h4 class="card-title">Card title</h4>\n' +
@@ -606,8 +606,8 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '       <img class="card-img-bottom" src="" alt="Card image cap">\n' +
         '   </div>';
-    
-    
+
+
     snippets.bs4cardimageoverlay = '<div class="card bg-dark text-white">\n' +
         '       <img class="card-img" src="" alt="Card image">\n' +
         '       <div class="card-img-overlay">\n' +
@@ -616,7 +616,7 @@ define(function (require, exports, module) {
         '           <p class="card-text">Last updated 3 mins ago</p>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     // Card panels
     snippets.bs4cardpanel = '<div class="card">\n' +
         '   <div class="card-header">Featured</div>\n' +
@@ -626,11 +626,11 @@ define(function (require, exports, module) {
         '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardpanelminimal = '<div class="card card-body">\n' +
         '       With supporting text below as a natural lead-in to additional content.\n' +
         '   </div>';
-    
+
     snippets.bs4cardquote = '<div class="card">\n' +
         '   <div class="card-header">Quote</div>\n' +
         '       <div class="card-body">\n' +
@@ -640,7 +640,7 @@ define(function (require, exports, module) {
         '           </blockquote>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardfeatured = '<div class="card text-center">\n' +
         '   <div class="card-header">Featured</div>\n' +
         '       <div class="card-body">\n' +
@@ -650,7 +650,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '       <div class="card-footer text-muted">2 days ago</div>\n' +
         '   </div>';
-    
+
     // Cards Layouts
     snippets.bs4cardgroup = '   <div class="card-group">\n' +
         '       <div class="card">\n' +
@@ -678,7 +678,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardgroupfooter = '   <div class="card-group">\n' +
         '       <div class="card">\n' +
         '           <img class="card-img-top" src="" alt="Card image cap">\n' +
@@ -714,7 +714,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4carddeck = '   <div class="card-deck">\n' +
         '       <div class="card">\n' +
         '           <img class="card-img-top" src="" alt="Card image cap">\n' +
@@ -741,7 +741,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4carddeckfooter = '   <div class="card-deck">\n' +
         '       <div class="card">\n' +
         '           <img class="card-img-top" src="" alt="Card image cap">\n' +
@@ -777,7 +777,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4cardcolumns = ' <div class="card-columns">\n' +
         '       <div class="card">\n' +
         '           <img class="card-img-top" src="" alt="Card image cap">\n' +
@@ -836,10 +836,10 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     // Carousel
     // https://getbootstrap.com/docs/4.0/components/carousel/
-        
+
     snippets.bs4carousel = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '		<div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
@@ -853,7 +853,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4carouselwcontrols = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
@@ -868,7 +868,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         carouselcontrols +
         '   </div>';
-    
+
     snippets.bs4carouselwindicators = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         carouselindicators +
         '       <div class="carousel-inner">\n' +
@@ -883,7 +883,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4carouselwcaptions = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
@@ -909,7 +909,7 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-    
+
     snippets.bs4carouselfull = '<div id="carouselFull" class="carousel slide" data-ride="carousel">\n' +
         carouselindicators +
         '       <div class="carousel-inner">\n' +
@@ -942,19 +942,19 @@ define(function (require, exports, module) {
 
     snippets.bs4cdnjs = jscdn;
     snippets.bs4cdncss = csscdn;
-    
+
     // Collapse and accordions
-    
+
     snippets.bs4collapse = '    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Link with href</a>\n' +
         '   <div class="collapse" id="collapseExample">\n' +
         '       <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>\n' +
         '   </div>';
-    
+
     snippets.bs4collapsebtn = '    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>\n' +
         '   <div class="collapse" id="collapseExample">\n' +
         '       <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>\n' +
         '   </div>';
-    
+
     snippets.bs4accordion = '<div id="accordion" role="tablist">\n' +
         '   <div class="card">\n' +
         '       <div class="card-header" role="tab" id="headingOne">\n' +
@@ -987,7 +987,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>\n' +
         '</div>';
-    
+
     snippets.bs4accordionminimal = '<div id="exampleAccordion" data-children=".item">\n' +
         '   <div class="item">\n' +
         '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">Toggle item</a>\n' +
@@ -1002,27 +1002,27 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>\n' +
         '</div>';
-    
+
     // Embeds
-    
+
     snippets.bs4embed = '<div class="embed-responsive embed-responsive-1by1">\n' +
         '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
-    
+
     snippets.bs4embed_21x9 = '<div class="embed-responsive embed-responsive-21by9">\n' +
         '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
-    
+
     snippets.bs4embed_16x9 = '<div class="embed-responsive embed-responsive-16by9">\n' +
         '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
-    
+
     snippets.bs4embed_4x3 = '<div class="embed-responsive embed-responsive-4by3">\n' +
         '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
         '   </div>';
-    
+
     // Figures
-    
+
     snippets.bs4figure = '<figure class="figure">\n' +
         '       <img src="" class="figure-img img-fluid rounded" alt="A generic image.">\n' +
         '       <figcaption class="figure-caption">A caption for the above image.</figcaption>\n' +
@@ -1030,27 +1030,27 @@ define(function (require, exports, module) {
 
     // Form controls
     // https://getbootstrap.com/docs/4.0/components/forms/
-    
+
     snippets.bs4formcontrol_input = '<div class="form-group">\n' +
         '       <label for="exampleFormControlInput1">Name</label>\n' +
         '       <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="John Doe">\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_password = '<div class="form-group">\n' +
         '       <label for="exampleInputPassword1">Password</label>\n' +
         '       <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_email = '<div class="form-group">\n' +
         '       <label for="exampleFormControlInput2">Email address</label>\n' +
         '       <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_readonly = '<div class="form-group">\n' +
         '       <label for="exampleFormControlInput3">Read only</label>\n' +
         '       <input class="form-control" type="text" id="exampleFormControlInput3" placeholder="Readonly input here…" readonly>\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_select = '<div class="form-group">\n' +
         '       <label for="exampleFormControlSelect1">Example select</label>\n' +
         '       <select class="form-control" id="exampleFormControlSelect1">\n' +
@@ -1061,7 +1061,7 @@ define(function (require, exports, module) {
         '           <option>5</option>\n' +
         '       </select>\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_selectmultiple = '<div class="form-group">\n' +
         '       <label for="exampleFormControlSelect1">Example multiple select</label>\n' +
         '       <select multiple class="form-control" id="exampleFormControlSelect1">\n' +
@@ -1072,22 +1072,22 @@ define(function (require, exports, module) {
         '           <option>5</option>\n' +
         '       </select>\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_textarea = '<div class="form-group">\n' +
         '       <label for="exampleFormControlTextarea1">Example textarea</label>\n' +
         '       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_file = '<div class="form-group">\n' +
         '       <label for="exampleFormControlFile1">Example file input</label>\n' +
         '       <input type="file" class="form-control-file" id="exampleFormControlFile1">\n' +
-        '   </div>\n';    
-    
+        '   </div>\n';
+
     snippets.bs4formcontrol_checkbox = '<div class="form-check">\n' +
         '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">\n' +
         '       <label class="form-check-label" for="defaultCheck1">Default checkbox</label>\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_checkbox_group = '<div class="form-check">\n' +
         '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">\n' +
         '       <label class="form-check-label" for="defaultCheck1">Default checkbox</label>\n' +
@@ -1100,12 +1100,12 @@ define(function (require, exports, module) {
         '       <input class="form-check-input" type="checkbox" value="" id="defaultCheck3" disabled>\n' +
         '       <label class="form-check-label" for="defaultCheck3">Disabled checkbox</label>\n' +
         '</div>\n';
-    
+
     snippets.bs4formcontrol_radio = '<div class="form-check">\n' +
         '       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>\n' +
         '       <label class="form-check-label" for="exampleRadios1">Default radio</label>\n' +
         '   </div>\n';
-    
+
     snippets.bs4formcontrol_radio_group = '<div class="form-check">\n' +
         '       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>\n' +
         '       <label class="form-check-label" for="exampleRadios1">Default radio</label>\n' +
@@ -1120,7 +1120,7 @@ define(function (require, exports, module) {
         '   </div>\n';
 
     // Forms
-    
+
     snippets.bs4form_contact = '<form action="" method="post" enctype="multipart/form-data">\n' +
         '       <div class="form-group">\n' +
         '           <label for="exampleFormControlInput1">Name</label>\n' +
@@ -1136,7 +1136,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
         '   </form>\n';
-    
+
     snippets.bs4form_suscribe_inline = '<form class="form-inline" action="" method="post" enctype="multipart/form-data">\n' +
         '       <div class="form-group">\n' +
         '           <label for="exampleFormControlInput1">Name</label>\n' +
@@ -1165,7 +1165,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '       <button type="submit" class="btn btn-primary">Submit</button>\n' +
         '   </form>\n';
-    
+
     snippets.bs4form_full = '<form action="" method="post" enctype="multipart/form-data">\n' +
         '       <div class="form-row">\n' +
         '           <div class="form-group col-md-6">\n' +
@@ -1210,13 +1210,13 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '       <button type="submit" class="btn btn-primary">Sign in</button>\n' +
         '   </form>\n';
-    
+
     // Images
 
     snippets.bs4image = '<img src="" class="img-fluid" alt="">\n';
     snippets.bs4imagerounded = '<img src="" class="img-fluid rounded" alt="">\n';
     snippets.bs4imagecircle = '<img src="" class="img-fluid rounded-circle" alt="">\n';
-    
+
     snippets.bs4image_picture = '<picture>\n' +
         '       <!-- Extra Large Desktops -->\n' +
         '       <source media="(min-width: 1200px)" srcset="extralarge.jpg">\n' +
@@ -1242,7 +1242,7 @@ define(function (require, exports, module) {
         '           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n' +
         '       </p>\n' +
         '   </div>';
-    
+
     snippets.bs4jumbotronfluid = '<div class="jumbotron jumbotron-fluid">\n' +
         '       <div class="container">\n' +
         '           <h1 class="display-3">Hello, world!</h1>\n' +
@@ -1257,7 +1257,7 @@ define(function (require, exports, module) {
 
     // List Groups
     // https://getbootstrap.com/docs/4.0/components/list-group/
-    
+
     snippets.bs4listgroup = '<ul class="list-group">\n' +
         '       <li class="list-group-item active">Cras justo odio</li>\n' +
         '       <li class="list-group-item">Dapibus ac facilisis in</li>\n' +
@@ -1273,7 +1273,7 @@ define(function (require, exports, module) {
         '       <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>\n' +
         '       <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>\n' +
         '   </div>';
-    
+
     snippets.bs4listgroupbadges = '<ul class="list-group">\n' +
         '       <li class="list-group-item d-flex justify-content-between align-items-center">Cras justo odio<span class="badge badge-primary badge-pill">14</span></li>\n' +
         '       <li class="list-group-item d-flex justify-content-between align-items-center">Dapibus ac facilisis in<span class="badge badge-primary badge-pill">2</span></li>\n' +
@@ -1314,7 +1314,7 @@ define(function (require, exports, module) {
 
     // Media (TODO)
     // https://getbootstrap.com/docs/4.0/layout/media-object/
-    
+
     snippets.bs4mediaobject = '<div class="media">\n' +
         '	<a class="pull-left" href="#">\n' +
         '		<img class="media-object" src="#" alt="Image">\n' +
@@ -1347,13 +1347,13 @@ define(function (require, exports, module) {
         '         </div>\n' +
         '      </div>\n' +
         '   </div>';
-    
+
     // Navs
     var navlinks = '       <a class="nav-link active" href="#">Active</a>\n' +
         '       <a class="nav-link" href="#">Link</a>\n' +
         '       <a class="nav-link" href="#">Link</a>\n' +
         '       <a class="nav-link disabled" href="#">Disabled</a>\n';
-    
+
     var navlist = '       <li class="nav-item">\n' +
         '           <a class="nav-link active" href="#">Active</a>\n' +
         '       </li>\n' +
@@ -1366,71 +1366,71 @@ define(function (require, exports, module) {
         '       <li class="nav-item">\n' +
         '           <a class="nav-link disabled" href="#">Disabled</a>\n' +
         '       </li>\n';
-    
+
     snippets.bs4nav = '<nav class="nav">\n' +
         navlinks +
         '   </nav>';
-    
+
     snippets.bs4nav_center = '<ul class="nav justify-content-center">\n' +
         navlinks +
         '   </ul>';
-    
+
     snippets.bs4nav_right = '<ul class="nav justify-content-end">\n' +
         navlinks +
         '   </ul>';
-    
+
     snippets.bs4nav_vertical = '<ul class="nav flex-column">\n' +
         navlinks +
         '   </ul>';
-    
+
     snippets.bs4navlist = '<ul class="nav">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navlist_center = '<ul class="nav justify-content-center">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navlist_right = '<ul class="nav justify-content-end">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navlist_vertical = '<ul class="nav flex-column">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navpills = '<nav class="nav nav-pills">\n' +
         navlinks +
         '   </nav>';
-    
+
     snippets.bs4navpills_center = '<ul class="nav nav-pills justify-content-center">\n' +
         navlinks +
         '   </ul>';
-    
+
     snippets.bs4navpills_right = '<ul class="nav nav-pills justify-content-end">\n' +
         navlinks +
         '   </ul>';
-    
+
     snippets.bs4navpills_vertical = '<ul class="nav nav-pills flex-column">\n' +
         navlinks +
         '   </ul>';
-    
+
     snippets.bs4navpillslist = '<ul class="nav nav-pills">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navpillslist_center = '<ul class="nav nav-pills justify-content-center">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navpillslist_right = '<ul class="nav nav-pills justify-content-end">\n' +
         navlist +
         '   </ul>';
-    
+
     snippets.bs4navpillslist_vertical = '<ul class="nav nav-pills flex-column">\n' +
         navlist +
         '   </ul>';
-    
+
 
     // Navigation (TODO)
     // https://getbootstrap.com/docs/4.0/components/navbar/
@@ -1465,7 +1465,7 @@ define(function (require, exports, module) {
         '           </form>\n' +
         '       </div>\n' +
         '   </nav>';
-    
+
     snippets.bs4navbarbasic = '<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">\n' +
         '      <div class="container">\n' +
         '         <a class="navbar-brand" href="#">Basic</a>\n' +
@@ -1493,7 +1493,7 @@ define(function (require, exports, module) {
         '         </div>\n' +
         '      </div>\n' +
         '   </nav>';
-    
+
     snippets.bs4navbarcentered = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
         '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
         '           <span class="navbar-toggler-icon"></span>\n' +
@@ -1520,7 +1520,7 @@ define(function (require, exports, module) {
         '           </ul>\n' +
         '       </div>\n' +
         '   </nav>';
-    
+
 
     // Pagination (TODO)
 
@@ -1533,7 +1533,7 @@ define(function (require, exports, module) {
         '           <li class="page-item"><a class="page-link" href="#">Next</a></li>\n' +
         '       </ul>\n' +
         '   </nav>';
-    
+
     snippets.bs4paginationicons = '<nav aria-label="Page navigation example">\n' +
         '       <ul class="pagination">\n' +
         '           <li class="page-item">\n' +
@@ -1553,7 +1553,7 @@ define(function (require, exports, module) {
         '           </li>\n' +
         '       </ul>\n' +
         '   </nav>';
-    
+
     snippets.bs4paginationcentered = '<nav aria-label="Page navigation example">\n' +
         '       <ul class="pagination  justify-content-center">\n' +
         '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
@@ -1563,7 +1563,7 @@ define(function (require, exports, module) {
         '           <li class="page-item"><a class="page-link" href="#">Next</a></li>\n' +
         '       </ul>\n' +
         '   </nav>';
-    
+
     snippets.bs4paginationright = '<nav aria-label="Page navigation example">\n' +
         '       <ul class="pagination  justify-content-end">\n' +
         '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
@@ -1579,10 +1579,10 @@ define(function (require, exports, module) {
     snippets.bs4table = '<table class="table">\n' +
         '       <thead>\n' +
         '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>First Name</th>\n' +
-        '               <th>Last Name</th>\n' +
-        '               <th>Username</th>\n' +
+        '               <th scope="col">#</th>\n' +
+        '               <th scope="col">First</th>\n' +
+        '               <th scope="col">Last</th>\n' +
+        '               <th scope="col">Handle</th>\n' +
         '           </tr>\n' +
         '       </thead>\n' +
         '       <tbody>\n' +
@@ -1603,207 +1603,166 @@ define(function (require, exports, module) {
         '               <td>Larry</td>\n' +
         '               <td>the Bird</td>\n' +
         '               <td>@twitter</td>\n' +
-        '           </tr>\n' +
-        '       </tbody>\n' +
-        '   </table>';
-
-    snippets.bs4tableinverse = '<table class="table table-inverse">\n' +
-        '       <thead>\n' +
-        '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>First Name</th>\n' +
-        '               <th>Last Name</th>\n' +
-        '               <th>Username</th>\n' +
-        '           </tr>\n' +
-        '       </thead>\n' +
-        '       <tbody>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">1</th>\n' +
-        '               <td>Mark</td>\n' +
-        '               <td>Otto</td>\n' +
-        '               <td>@mdo</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">2</th>\n' +
-        '               <td>Jacob</td>\n' +
-        '               <td>Thornton</td>\n' +
-        '               <td>@fat</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">3</th>\n' +
-        '               <td>Larry</td>\n' +
-        '               <td>the Bird</td>\n' +
-        '               <td>@twitter</td>\n' +
-        '           </tr>\n' +
-        '       </tbody>\n' +
-        '   </table>';
-    
-    snippets.bs4tablestriped = '<table class="table table-striped">\n' +
-        '       <thead>\n' +
-        '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>First Name</th>\n' +
-        '               <th>Last Name</th>\n' +
-        '               <th>Username</th>\n' +
-        '           </tr>\n' +
-        '       </thead>\n' +
-        '       <tbody>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">1</th>\n' +
-        '               <td>Mark</td>\n' +
-        '               <td>Otto</td>\n' +
-        '               <td>@mdo</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">2</th>\n' +
-        '               <td>Jacob</td>\n' +
-        '               <td>Thornton</td>\n' +
-        '               <td>@fat</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">3</th>\n' +
-        '               <td>Larry</td>\n' +
-        '               <td>the Bird</td>\n' +
-        '               <td>@twitter</td>\n' +
-        '           </tr>\n' +
-        '       </tbody>\n' +
-        '   </table>';
-    
-    snippets.bs4tablebordered = '<table class="table table-bordered">\n' +
-        '       <thead>\n' +
-        '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>First Name</th>\n' +
-        '               <th>Last Name</th>\n' +
-        '               <th>Username</th>\n' +
-        '           </tr>\n' +
-        '       </thead>\n' +
-        '       <tbody>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">1</th>\n' +
-        '               <td>Mark</td>\n' +
-        '               <td>Otto</td>\n' +
-        '               <td>@mdo</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">2</th>\n' +
-        '               <td>Jacob</td>\n' +
-        '               <td>Thornton</td>\n' +
-        '               <td>@fat</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">3</th>\n' +
-        '               <td>Larry</td>\n' +
-        '               <td>the Bird</td>\n' +
-        '               <td>@twitter</td>\n' +
-        '           </tr>\n' +
-        '       </tbody>\n' +
-        '   </table>';
-
-    snippets.bs4tablehover = '<table class="table table-hover">\n' +
-        '       <thead>\n' +
-        '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>First Name</th>\n' +
-        '               <th>Last Name</th>\n' +
-        '               <th>Username</th>\n' +
-        '           </tr>\n' +
-        '       </thead>\n' +
-        '       <tbody>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">1</th>\n' +
-        '               <td>Mark</td>\n' +
-        '               <td>Otto</td>\n' +
-        '               <td>@mdo</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">2</th>\n' +
-        '               <td>Jacob</td>\n' +
-        '               <td>Thornton</td>\n' +
-        '               <td>@fat</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">3</th>\n' +
-        '               <td>Larry</td>\n' +
-        '               <td>the Bird</td>\n' +
-        '               <td>@twitter</td>\n' +
-        '           </tr>\n' +
-        '       </tbody>\n' +
-        '   </table>';
-    
-    snippets.bs4tablesmall = '<table class="table table-sm">\n' +
-        '       <thead>\n' +
-        '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>First Name</th>\n' +
-        '               <th>Last Name</th>\n' +
-        '               <th>Username</th>\n' +
-        '           </tr>\n' +
-        '       </thead>\n' +
-        '       <tbody>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">1</th>\n' +
-        '               <td>Mark</td>\n' +
-        '               <td>Otto</td>\n' +
-        '               <td>@mdo</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">2</th>\n' +
-        '               <td>Jacob</td>\n' +
-        '               <td>Thornton</td>\n' +
-        '               <td>@fat</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">3</th>\n' +
-        '               <td>Larry</td>\n' +
-        '               <td>the Bird</td>\n' +
-        '               <td>@twitter</td>\n' +
-        '           </tr>\n' +
-        '       </tbody>\n' +
-        '   </table>';
-
-    snippets.tableresponsive = '<table class="table table-responsive">\n' +
-        '       <thead>\n' +
-        '           <tr>\n' +
-        '               <th>#</th>\n' +
-        '               <th>Table heading</th>\n' +
-        '               <th>Table heading</th>\n' +
-        '               <th>Table heading</th>\n' +
-        '               <th>Table heading</th>\n' +
-        '               <th>Table heading</th>\n' +
-        '               <th>Table heading</th>\n' +
-        '           </tr>\n' +
-        '       </thead>\n' +
-        '       <tbody>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">1</th>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">2</th>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '           </tr>\n' +
-        '           <tr>\n' +
-        '               <th scope="row">3</th>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
-        '               <td>Table cell</td>\n' +
         '           </tr>\n' +
         '       </tbody>\n' +
         '   </table>\n';
+
+    snippets.bs4table_dark = '<table class="table table-dark">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th scope="col">#</th>\n' +
+        '               <th scope="col">First</th>\n' +
+        '               <th scope="col">Last</th>\n' +
+        '               <th scope="col">Handle</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>\n';
+
+    snippets.bs4table_striped = '<table class="table table-striped">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th scope="col">#</th>\n' +
+        '               <th scope="col">First</th>\n' +
+        '               <th scope="col">Last</th>\n' +
+        '               <th scope="col">Handle</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>\n';
+
+    snippets.bs4table_bordered = '<table class="table table-bordered">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th scope="col">#</th>\n' +
+        '               <th scope="col">First</th>\n' +
+        '               <th scope="col">Last</th>\n' +
+        '               <th scope="col">Handle</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>\n';
+    
+    snippets.bs4table_borderless = '<table class="table table-borderless">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th scope="col">#</th>\n' +
+        '               <th scope="col">First</th>\n' +
+        '               <th scope="col">Last</th>\n' +
+        '               <th scope="col">Handle</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>\n';
+
+    snippets.bs4table_responsive = '<div class="table-responsive">' +
+        '<table class="table">\n' +
+        '       <thead>\n' +
+        '           <tr>\n' +
+        '               <th scope="col">#</th>\n' +
+        '               <th scope="col">First</th>\n' +
+        '               <th scope="col">Last</th>\n' +
+        '               <th scope="col">Handle</th>\n' +
+        '           </tr>\n' +
+        '       </thead>\n' +
+        '       <tbody>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">1</th>\n' +
+        '               <td>Mark</td>\n' +
+        '               <td>Otto</td>\n' +
+        '               <td>@mdo</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">2</th>\n' +
+        '               <td>Jacob</td>\n' +
+        '               <td>Thornton</td>\n' +
+        '               <td>@fat</td>\n' +
+        '           </tr>\n' +
+        '           <tr>\n' +
+        '               <th scope="row">3</th>\n' +
+        '               <td>Larry</td>\n' +
+        '               <td>the Bird</td>\n' +
+        '               <td>@twitter</td>\n' +
+        '           </tr>\n' +
+        '       </tbody>\n' +
+        '   </table>\n' + 
+        '</div>\n';
 
     // Tabs (TODO)
 
@@ -1856,7 +1815,7 @@ define(function (require, exports, module) {
         '           <!-- Inser content here -->' +
         '       </div>\n' +
         '   </div>';
-    
+
     // Tables
 
     module.exports = snippets;

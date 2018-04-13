@@ -7,7 +7,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 [![Downloads](https://badges.ml/rch-bootstrap-4-snippets/week.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
 [![Downloads](https://badges.ml/rch-bootstrap-4-snippets/day.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
 [![Downloads](https://badges.ml/rch-bootstrap-4-snippets/version.svg)](https://brackets-extension-badges.github.io#rch-bootstrap-4-snippets)
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/3)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/5)
 
 
 ## Install
@@ -45,10 +45,6 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4template 
     
 ### Alerts
-
-    bs4alertlink
-    bs4alertheading
-    bs4alertdismiss
 
 #### Dismissible Alert
 
@@ -453,7 +449,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ---
 
 - Bootstrap Framework - https://getbootstrap.com
-- jQuery JavaScript Library v3.3.1 - jQuery Foundation, Inc. and other contributors
+- jQuery JavaScript Library v3.2.1 - jQuery Foundation, Inc. and other contributors
 - Snippets based on Bootstrap 3 Sublime Plugin - Thanks Jason Morton - Twitter @JasonMortonNZ 
 - Snippets based on ACB Bootstrap Snippets Plugin - Thanks Antonio Carlos Barbosa
 - Source-code editor used in this project - Brackets - https://www.brackets.io
@@ -465,7 +461,7 @@ Thank you all!
 
 If this project help you to develope faster and nicer, maybe you can invite me a cup of coffee :)
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/3)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/5)
 
 ---
 

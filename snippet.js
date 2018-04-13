@@ -33,18 +33,18 @@ define(function (require, exports, module) {
 
     // Variables for CDNs
     var csscdn = '    <!-- Bootstrap CSS -->\n' +
-        '    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">\n';
+        '    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">\n';
     var jscdn = '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
-        '    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>\n' +
-        '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>\n' +
-        '    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>\n';
+        '    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>\n' +
+        '   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>\n' +
+        '   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>\n';
 
     // Variables for local assets
     var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n' +
         '       <!-- Link to your css file -->\n' +
         '       <link rel="stylesheet" href="">\n';
     var jslocal = '    <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
-        '   <script src="js/jquery-3.2.1.min.js"></script>\n' +
+        '   <script src="js/jquery-3.3.1.min.js"></script>\n' +
         '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
         '   <script src="js/popper.min.js"></script>\n' +
         '   <script src="js/bootstrap.min.js"></script>\n';
@@ -853,6 +853,20 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
+    
+    snippets.bs4carousel_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
+        '		<div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
 
     snippets.bs4carouselwcontrols = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
         '       <div class="carousel-inner">\n' +
@@ -868,8 +882,38 @@ define(function (require, exports, module) {
         '       </div>\n' +
         carouselcontrols +
         '   </div>';
+    
+    snippets.bs4carouselwcontrols_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        carouselcontrols +
+        '   </div>';
 
     snippets.bs4carouselwindicators = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
+        carouselindicators +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
+    
+    snippets.bs4carouselwindicators_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
         carouselindicators +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +
@@ -909,8 +953,62 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
+    
+    snippets.bs4carouselwcaptions_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>First slide</h3>\n' +
+        '                   <p>First caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Second slide</h3>\n' +
+        '                   <p>Second caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Third slide</h3>\n' +
+        '                   <p>Third caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        '   </div>';
 
     snippets.bs4carouselfull = '<div id="carouselFull" class="carousel slide" data-ride="carousel">\n' +
+        carouselindicators +
+        '       <div class="carousel-inner">\n' +
+        '           <div class="carousel-item active">\n' +
+        '               <img class="d-block w-100" src="" alt="First slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>First slide</h3>\n' +
+        '                   <p>First caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Second slide</h3>\n' +
+        '                   <p>Second caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '           <div class="carousel-item">\n' +
+        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
+        '               <div class="carousel-caption d-none d-md-block">\n' +
+        '                   <h3>Third slide</h3>\n' +
+        '                   <p>Third caption</p>\n' +
+        '               </div>\n' +
+        '           </div>\n' +
+        '       </div>\n' +
+        carouselcontrols +
+        '   </div>';
+    
+    snippets.bs4carouselfull_fade = '<div id="carouselFull" class="carousel slide carousel-fade" data-ride="carousel">\n' +
         carouselindicators +
         '       <div class="carousel-inner">\n' +
         '           <div class="carousel-item active">\n' +

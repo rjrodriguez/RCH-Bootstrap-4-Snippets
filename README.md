@@ -327,6 +327,11 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4carouselwcaptions
     bs4carouselwcontrols
     bs4carouselwindicators
+    bs4carousel_fade
+    bs4carouselfull_fade
+    bs4carouselwcaptions_fade
+    bs4carouselwcontrols_fade
+    bs4carouselwindicators_fade
     
 ### Collapse and Accordions
 

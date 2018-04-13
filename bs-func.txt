@@ -216,10 +216,15 @@ bs4cardpanelminimal
 bs4cardquote
 bs4cardtext
 bs4carousel
+bs4carousel_fade
 bs4carouselfull
+bs4carouselfull_fade
 bs4carouselwcaptions
+bs4carouselwcaptions_fade
 bs4carouselwcontrols
+bs4carouselwcontrols_fade
 bs4carouselwindicators
+bs4carouselwindicators_fade
 bs4collapse
 bs4collapsebtn
 bs4cdncss

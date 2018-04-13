@@ -284,11 +284,9 @@ bs4pagination
 bs4paginationcentered
 bs4paginationicons
 bs4paginationright
-bs4select
-bs4selecth
 bs4tabs
 bs4tabsvertical
-
+bs4table
 bs4table_bordered
 bs4table_borderless
 bs4table_dark

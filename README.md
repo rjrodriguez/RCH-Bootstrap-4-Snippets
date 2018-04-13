@@ -445,6 +445,15 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4tabs
     bs4tabsvertical
     
+### Tables
+
+    bs4table (basic)
+    bs4table_bordered
+    bs4table_borderless
+    bs4table_dark
+    bs4table_responsive
+    bs4table_striped
+    
 ### Credits
 ---
 

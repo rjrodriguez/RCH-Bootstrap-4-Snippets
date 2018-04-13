@@ -306,18 +306,18 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4cardfeatured
     bs4cardfull
     bs4cardimage
-    bs4cardimagebottom
-    bs4cardimageoverlay
+    bs4cardimage_bottom
+    bs4cardimage_overlay
     bs4cardpanel
-    bs4cardpanelminimal
+    bs4cardpanel_minimal
     bs4cardquote
 
 #### Cards layout
 
     bs4cardgroup
-    bs4cardgroupfooter
+    bs4cardgroup_footer
     bs4carddeck
-    bs4carddeckfooter
+    bs4carddeck_footer
     bs4cardcolumns
     
 ### Carousel
@@ -338,7 +338,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4collapse
     bs4collapsebtn
     bs4accordion
-    bs4accordionminimal
+    bs4accordion_minimal
 
 ### CDN
 
@@ -383,21 +383,21 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Images
 
     bs4image
-    bs4imagerounded
-    bs4imagecircle
+    bs4image_rounded
+    bs4image_circle
     bs4image_picture
 
 ### Jumbotron
 
     bs4jumbotron
-    bs4jumbotronfluid
+    bs4jumbotron_fluid
 
 ### List Groups 
 
     bs4listgroup
-    bs4listgroupbadges
-    bs4listgroupcontent
-    bs4listgrouplinks
+    bs4listgroup_badges
+    bs4listgroup_content
+    bs4listgroup_links
 
 ### Local
 
@@ -435,20 +435,20 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 ### Navigation
     
     bs4navbar (full)
-    bs4navbarbasic
-    bs4navbarcentered
+    bs4navbar_basic
+    bs4navbar_centered
 
 ### Pagination
     
     bs4pagination (basic, left aligned)
-    bs4paginationicons
-    bs4paginationcenterd
-    bs4paginationright
+    bs4pagination_icons
+    bs4pagination_centered
+    bs4pagination_right
     
 ### Tabs 
     
     bs4tabs
-    bs4tabsvertical
+    bs4tabs_vertical
     
 ### Tables
 

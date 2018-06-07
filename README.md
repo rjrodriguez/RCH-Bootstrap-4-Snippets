@@ -37,7 +37,7 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
 #### Basic html template with local assets links
 
     bs4
-    bs4htmllocal
+    bs4html_local
 
 #### Basic html template with CDNs assets links
 

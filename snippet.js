@@ -149,7 +149,7 @@ define(function (require, exports, module) {
         '</body>\n</html>';
 
     snippets.bs4template = snippets.bs4html;
-    snippets.bs4htmllocal = snippets.bs4;
+    snippets.bs4html_local = snippets.bs4;
 
     // Alerts
     // https://getbootstrap.com/docs/4.0/components/alerts/
@@ -598,7 +598,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
 
-    snippets.bs4cardimagebottom = '<div class="card">\n' +
+    snippets.bs4cardimage_bottom = '<div class="card">\n' +
         '       <div class="card-body">\n' +
         '           <h4 class="card-title">Card title</h4>\n' +
         '           <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>\n' +
@@ -608,7 +608,7 @@ define(function (require, exports, module) {
         '   </div>';
 
 
-    snippets.bs4cardimageoverlay = '<div class="card bg-dark text-white">\n' +
+    snippets.bs4cardimage_overlay = '<div class="card bg-dark text-white">\n' +
         '       <img class="card-img" src="" alt="Card image">\n' +
         '       <div class="card-img-overlay">\n' +
         '           <h4 class="card-title">Card title</h4>\n' +
@@ -627,7 +627,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
 
-    snippets.bs4cardpanelminimal = '<div class="card card-body">\n' +
+    snippets.bs4cardpanel_minimal = '<div class="card card-body">\n' +
         '       With supporting text below as a natural lead-in to additional content.\n' +
         '   </div>';
 
@@ -679,7 +679,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
 
-    snippets.bs4cardgroupfooter = '   <div class="card-group">\n' +
+    snippets.bs4cardgroup_footer = '   <div class="card-group">\n' +
         '       <div class="card">\n' +
         '           <img class="card-img-top" src="" alt="Card image cap">\n' +
         '           <div class="card-body">\n' +
@@ -742,7 +742,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </div>';
 
-    snippets.bs4carddeckfooter = '   <div class="card-deck">\n' +
+    snippets.bs4carddeck_footer = '   <div class="card-deck">\n' +
         '       <div class="card">\n' +
         '           <img class="card-img-top" src="" alt="Card image cap">\n' +
         '           <div class="card-body">\n' +
@@ -1312,8 +1312,8 @@ define(function (require, exports, module) {
     // Images
 
     snippets.bs4image = '<img src="" class="img-fluid" alt="">\n';
-    snippets.bs4imagerounded = '<img src="" class="img-fluid rounded" alt="">\n';
-    snippets.bs4imagecircle = '<img src="" class="img-fluid rounded-circle" alt="">\n';
+    snippets.bs4image_rounded = '<img src="" class="img-fluid rounded" alt="">\n';
+    snippets.bs4image_circle = '<img src="" class="img-fluid rounded-circle" alt="">\n';
 
     snippets.bs4image_picture = '<picture>\n' +
         '       <!-- Extra Large Desktops -->\n' +
@@ -1341,7 +1341,7 @@ define(function (require, exports, module) {
         '       </p>\n' +
         '   </div>';
 
-    snippets.bs4jumbotronfluid = '<div class="jumbotron jumbotron-fluid">\n' +
+    snippets.bs4jumbotron_fluid = '<div class="jumbotron jumbotron-fluid">\n' +
         '       <div class="container">\n' +
         '           <h1 class="display-3">Hello, world!</h1>\n' +
         '           <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n' +
@@ -1364,7 +1364,7 @@ define(function (require, exports, module) {
         '       <li class="list-group-item disable">Vestibulum at eros</li>\n' +
         '   </ul>';
 
-    snippets.bs4listgrouplinks = '<div class="list-group">\n' +
+    snippets.bs4listgroup_links = '<div class="list-group">\n' +
         '       <a href="#" class="list-group-item list-group-item-action active">Cras justo odio</a>\n' +
         '       <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>\n' +
         '       <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>\n' +
@@ -1372,13 +1372,13 @@ define(function (require, exports, module) {
         '       <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>\n' +
         '   </div>';
 
-    snippets.bs4listgroupbadges = '<ul class="list-group">\n' +
+    snippets.bs4listgroup_badges = '<ul class="list-group">\n' +
         '       <li class="list-group-item d-flex justify-content-between align-items-center">Cras justo odio<span class="badge badge-primary badge-pill">14</span></li>\n' +
         '       <li class="list-group-item d-flex justify-content-between align-items-center">Dapibus ac facilisis in<span class="badge badge-primary badge-pill">2</span></li>\n' +
         '       <li class="list-group-item d-flex justify-content-between align-items-center">Morbi leo risus<span class="badge badge-primary badge-pill">1</span></li>\n' +
         '   </ul>';
 
-    snippets.bs4listgroupcontent = '<div class="list-group">\n' +
+    snippets.bs4listgroup_content = '<div class="list-group">\n' +
         '       <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">\n' +
         '           <div class="d-flex w-100 justify-content-between">\n' +
         '               <h5 class="mb-1">List group item heading</h5>\n' +
@@ -1564,7 +1564,7 @@ define(function (require, exports, module) {
         '       </div>\n' +
         '   </nav>';
 
-    snippets.bs4navbarbasic = '<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">\n' +
+    snippets.bs4navbar_basic = '<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">\n' +
         '      <div class="container">\n' +
         '         <a class="navbar-brand" href="#">Basic</a>\n' +
         '         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">\n' +
@@ -1592,7 +1592,7 @@ define(function (require, exports, module) {
         '      </div>\n' +
         '   </nav>';
 
-    snippets.bs4navbarcentered = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
+    snippets.bs4navbar_centered = '<nav class="navbar navbar-expand-md navbar-dark bg-dark">\n' +
         '       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">\n' +
         '           <span class="navbar-toggler-icon"></span>\n' +
         '       </button>\n' +
@@ -1632,7 +1632,7 @@ define(function (require, exports, module) {
         '       </ul>\n' +
         '   </nav>';
 
-    snippets.bs4paginationicons = '<nav aria-label="Page navigation example">\n' +
+    snippets.bs4pagination_icons = '<nav aria-label="Page navigation example">\n' +
         '       <ul class="pagination">\n' +
         '           <li class="page-item">\n' +
         '               <a class="page-link" href="#" aria-label="Previous">\n' +
@@ -1652,7 +1652,7 @@ define(function (require, exports, module) {
         '       </ul>\n' +
         '   </nav>';
 
-    snippets.bs4paginationcentered = '<nav aria-label="Page navigation example">\n' +
+    snippets.bs4pagination_centered = '<nav aria-label="Page navigation example">\n' +
         '       <ul class="pagination  justify-content-center">\n' +
         '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
         '           <li class="page-item"><a class="page-link" href="#">1</a></li>\n' +
@@ -1662,7 +1662,7 @@ define(function (require, exports, module) {
         '       </ul>\n' +
         '   </nav>';
 
-    snippets.bs4paginationright = '<nav aria-label="Page navigation example">\n' +
+    snippets.bs4pagination_right = '<nav aria-label="Page navigation example">\n' +
         '       <ul class="pagination  justify-content-end">\n' +
         '           <li class="page-item"><a class="page-link" href="#">Previous</a></li>\n' +
         '           <li class="page-item"><a class="page-link" href="#">1</a></li>\n' +

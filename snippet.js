@@ -30,387 +30,285 @@ define(function (require, exports, module) {
 
     // Snippets!
     var snippets = {};
+    
+    //-------------------------
+    // Utilities for templating
+    //-------------------------
+    
+    var imgLand = 'https://via.placeholder.com/800x500';
+    var imgSquare = 'https://via.placeholder.com/150';
+    //var imgPort = 'https://via.placeholder.com/500x800';
+    
+    var dummy = 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.';
+    
+    var dummyLong = 'Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably havent heard of them accusamus labore sustainable VHS';
 
+    
+    //---------------------------------------------------
+    // Bootstrap 4 - HTML5 Templates and Minimum Template
+    //---------------------------------------------------
+    
     // Variables for CDNs
-    var csscdn = '    <!-- Bootstrap CSS -->\n' +
-        '    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">\n';
-    var jscdn = '    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
-        '    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>\n' +
-        '   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>\n' +
-        '   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>\n';
+    var csscdn = '\t<!-- Bootstrap CSS -->\n' +
+        '\t<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">\n' +
+        '\t<!-- Link to your css file -->\n' +
+        '\t<link rel="stylesheet" href="">\n';
+    var jscdn = '\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
+        '\t<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>\n' +
+        '\t<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>\n' +
+        '\t<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>\n';
 
     // Variables for local assets
-    var csslocal = '    <link rel="stylesheet" href="css/bootstrap.min.css">\n' +
-        '       <!-- Link to your css file -->\n' +
-        '       <link rel="stylesheet" href="">\n';
-    var jslocal = '    <!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
-        '   <script src="js/jquery-3.3.1.min.js"></script>\n' +
-        '   <!-- do not forget download popper.js (https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js) -->\n' +
-        '   <script src="js/popper.min.js"></script>\n' +
-        '   <script src="js/bootstrap.min.js"></script>\n';
-
-    // variables for alerts
-    var alertlink = '<a href="#" class="alert-link">Example link</a>';
-    var alertheading = '<h4 class="alert-heading">Well done!</h4>';
-    var alertdismiss = '<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>';
-
-    //variables for badges
-    var badge = 'badge badge-primary';
-    var badgeSecondary = 'badge badge-secondary';
-    var badgeSuccess = 'badge badge-success';
-    var badgeDanger = 'badge badge-danger';
-    var badgeWarning = 'badge badge-warning';
-    var badgeInfo = 'badge badge-info';
-    var badgeLight = 'badge badge-light';
-    var badgeDark = 'badge badge-dark';
-    var pill = ' badge-pill';
-
-    // variables for btns styles
-    var btnPrimary = 'btn btn-primary';
-    var btnSecondary = 'btn btn-secondary';
-    var btnSuccess = 'btn btn-success';
-    var btnDanger = 'btn btn-danger';
-    var btnWarning = 'btn btn-warning';
-    var btnInfo = 'btn btn-info';
-    var btnLight = 'btn btn-light';
-    var btnDark = 'btn btn-dark';
-    var btnLink = 'btn btn-link';
-    var btnOPrimary = 'btn btn-outline-primary';
-    var btnOSecondary = 'btn btn-outline-secondary';
-    var btnOSuccess = 'btn btn-outline-success';
-    var btnODanger = 'btn btn-outline-danger';
-    var btnOWarning = 'btn btn-outline-warning';
-    var btnOInfo = 'btn btn-outline-info';
-    var btnOLight = 'btn btn-outline-light';
-    var btnODark = 'btn btn-outline-dark';
-    var btnOLink = 'btn btn-outline-link';
-
-    // variables for sizes and displays
-    var block = ' btn-block';
-    var sm = ' btn-sm';
-    var lg = ' btn-lg';
-
-    // Variables for carousels
-    var carouselcontrols = '       <a class="carousel-control-prev" href="#carouselFull" role="button" data-slide="prev">\n' +
-        '           <span class="carousel-control-prev-icon" aria-hidden="true"></span>\n' +
-        '           <span class="sr-only">Previous</span>\n' +
-        '       </a>\n' +
-        '       <a class="carousel-control-next" href="#carouselFull" role="button" data-slide="next">\n' +
-        '           <span class="carousel-control-next-icon" aria-hidden="true"></span>\n' +
-        '           <span class="sr-only">Next</span>\n' +
-        '       </a>\n';
-    var carouselindicators = '       <ol class="carousel-indicators">\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="0" class="active"></li>\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="1"></li>\n' +
-        '           <li data-target="#carouselIndicators" data-slide-to="2"></li>\n' +
-        '       </ol>\n';
-
-
-    // Bootstrap 4 - HTML5 Templates and Minimum Template
+    var csslocal = '\t<link rel="stylesheet" href="css/bootstrap.min.css">\n' +
+        '\t<!-- Link to your css file -->\n' +
+        '\t<link rel="stylesheet" href="">\n';
+    var jslocal = '\t<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
+        '\t<script src="js/jquery-3.3.1.min.js"></script>\n' +
+        '\t<!-- Bootstrap bundle for full components support -->\n' +
+        '\t<script src="js/bootstrap.bundle.min.js"></script>\n';
 
     snippets.bs4 = '<!DOCTYPE html>\n' +
         '<html lang="en">\n' +
         '<head>\n' +
-        '    <!-- Required meta tags -->\n' +
-        '    <meta charset="utf-8">\n' +
-        '    <meta name="description" content="">\n' +
-        '    <meta name="author" content="">\n' +
-        '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n\n' +
-        '    <title>Bootstrap 4 Minimal Template</title>\n\n' +
-        '    <link rel="shortcut icon" href="" type="image/x-icon">\n' +
-        '    <link rel="apple-touch-icon" href="">\n\n' +
+        '\t<!-- Required meta tags -->\n' +
+        '\t<meta charset="utf-8">\n' +
+        '\t<meta name="description" content="">\n' +
+        '\t<meta name="author" content="">\n' +
+        '\t<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n\n' +
+        '\t<title>Bootstrap 4 Minimal Template</title>\n\n' +
+        '\t<link rel="shortcut icon" href="" type="image/x-icon">\n' +
+        '\t<link rel="apple-touch-icon" href="">\n\n' +
         csslocal +
         '\n' +
         '</head>\n\n' +
         '<body>\n' +
-        '    <h1>Hello, world!</h1>\n\n' +
+        '\t<!-- Start coding here -->\n\n' +
+        '\t<h1>Hello, world!</h1>\n\n' +
+        '\t<!-- Coding End -->\n\n' +
         jslocal +
         '</body>\n</html>';
 
     snippets.bs4html = '<!DOCTYPE html>\n' +
-        '<html lang="">\n' +
+        '<html lang="en">\n' +
         '<head>\n' +
-        '    <meta charset="utf-8">\n' +
-        '    <title>Bootstrap 4 Template</title>\n' +
-        '    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n' +
-        '    <meta name="description" content="">\n' +
-        '    <meta name="author" content="">\n\n' +
-        '    <link rel="apple-touch-icon" href="">\n' +
-        '    <link rel="shortcut icon" href="" type="image/x-icon">\n\n' +
+        '\t<!-- Required meta tags -->\n' +
+        '\t<meta charset="utf-8">\n' +
+        '\t<meta name="description" content="">\n' +
+        '\t<meta name="author" content="">\n' +
+        '\t<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">\n\n' +
+        '\t<title>Bootstrap 4 Minimal Template</title>\n\n' +
+        '\t<link rel="shortcut icon" href="" type="image/x-icon">\n' +
+        '\t<link rel="apple-touch-icon" href="">\n\n' +
         csscdn +
         '\n' +
-        '    <!-- Link to your CSS file -->\n' +
-        '    <link rel="stylesheet" href="">\n' +
         '</head>\n\n' +
-        '<body>\n\n' +
-        '    <!-- Start coding here -->\n\n\n' +
-        '    <!-- Coding End -->\n\n' +
+        '<body>\n' +
+        '\t<!-- Start coding here -->\n\n' +
+        '\t<h1>Hello, world!</h1>\n\n' +
+        '\t<!-- Coding End -->\n\n' +
         jscdn +
         '</body>\n</html>';
 
     snippets.bs4template = snippets.bs4html;
     snippets.bs4html_local = snippets.bs4;
+    
+    //--------------------------------------------------------------
+    // Alerts (https://getbootstrap.com/docs/4.1/components/alerts/)
+    //--------------------------------------------------------------
+    
+    var alertbasiccontent = '\t\tA simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.\n\t</div>';
+    
+    var alertdismissiblecontent = '\t\t<strong>Holy guacamole!</strong> You should check in on some of those fields below.\n\t\t\t<button type="button" class="close" data-dismiss="alert" aria-label="Close">\n\t\t\t<span aria-hidden="true">&times;</span>\n\t\t</button>\n</div>';
+    
+    var alertboxcontent = '\t\t<h4 class="alert-heading">Well done!</h4>\n\t\t<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n\t\t<hr>\n\t\t<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n\t</div>';
+    
+    snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' + alertbasiccontent;
+    
+    snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_danger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_info = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_light = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_success = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_warning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
 
-    // Alerts
-    // https://getbootstrap.com/docs/4.0/components/alerts/
+    snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' + alertboxcontent;
+    
+    //-------------------------------------------------------------
+    // Badges (https://getbootstrap.com/docs/4.1/components/badge/)
+    //-------------------------------------------------------------
 
-    snippets.bs4alertlink = alertlink;
-    snippets.bs4alertheading = alertheading;
-    snippets.bs4alertdismiss = alertdismiss;
-
-    snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' +
-        '       ' + alertdismiss + '\n' +
-        '		<strong>Primary alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Secondary alert!</strong> You should check ' + alertlink + '>.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_danger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Danger alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_info = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Info alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_success = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Success alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_warning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Warning alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_light = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Light alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' +
-        '		' + alertdismiss + '\n' +
-        '		<strong>Dark alert!</strong> You should check ' + alertlink + '.\n' +
-        '	</div>\n';
-
-    snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' +
-        '       This is a primary alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' +
-        '       This is a secondary alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' +
-        '       This is a danger alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' +
-        '       This is a info alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' +
-        '       This is a success alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' +
-        '       This is a warning alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' +
-        '       This is a dark alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' +
-        '       This is a light alert—check it out!\n' +
-        '   </div>';
-
-    snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' +
-        '       ' + alertheading + '\n' +
-        '       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n' +
-        '       <hr>\n' +
-        '       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n' +
-        '   </div>';
-
-    // Badge
-    // https://getbootstrap.com/docs/4.0/components/badge/
+    var badge = 'badge badge-primary';
+    var badgeDanger = 'badge badge-danger';
+    var badgeDark = 'badge badge-dark';
+    var badgeInfo = 'badge badge-info';
+    var badgeLight = 'badge badge-light';
+    var badgeSecondary = 'badge badge-secondary';
+    var badgeSuccess = 'badge badge-success';
+    var badgeWarning = 'badge badge-warning';
+    var pill = ' badge-pill';
 
     snippets.bs4badge = '<span class="' + badge + '">Primary</span>';
-    snippets.bs4badge_secondary = '<span class="' + badgeSecondary + '">Secondary</span>';
-    snippets.bs4badge_success = '<span class="' + badgeSuccess + '">Success</span>';
     snippets.bs4badge_danger = '<span class="' + badgeDanger + '">Danger</span>';
-    snippets.bs4badge_warning = '<span class="' + badgeWarning + '">Warning</span>';
+    snippets.bs4badge_dark = '<span class="' + badgeDark + '">Dark</span>';
     snippets.bs4badge_info = '<span class="' + badgeInfo + '">Info</span>';
     snippets.bs4badge_light = '<span class="' + badgeLight + '">Light</span>';
-    snippets.bs4badge_dark = '<span class="' + badgeDark + '">Dark</span>';
+    snippets.bs4badge_secondary = '<span class="' + badgeSecondary + '">Secondary</span>';
+    snippets.bs4badge_success = '<span class="' + badgeSuccess + '">Success</span>';
+    snippets.bs4badge_warning = '<span class="' + badgeWarning + '">Warning</span>';
 
-    snippets.bs4badgepill = '<span class="' + badge + ' badge-pill">Primary</span>';
-    snippets.bs4badgepill_secondary = '<span class="' + badgeSecondary + pill + '">Pill Secondary</span>';
-    snippets.bs4badgepill_success = '<span class="' + badgeSuccess + pill + '">Pill Success</span>';
+    snippets.bs4badgepill = '<span class="' + badge + pill + '">Pill Primary</span>';
     snippets.bs4badgepill_danger = '<span class="' + badgeDanger + pill + '">Pill Danger</span>';
-    snippets.bs4badgepill_warning = '<span class="' + badgeWarning + pill + '">Pill Warning</span>';
+    snippets.bs4badgepill_dark = '<span class="' + badgeDark + pill + '">Pill Dark</span>';
     snippets.bs4badgepill_info = '<span class="' + badgeInfo + pill + '">Pill Info</span>';
     snippets.bs4badgepill_light = '<span class="' + badgeLight + pill + '">Pill Light</span>';
-    snippets.bs4badgepill_dark = '<span class="' + badgeDark + pill + '">Pill Dark</span>';
+    snippets.bs4badgepill_secondary = '<span class="' + badgeSecondary + pill + '">Pill Secondary</span>';
+    snippets.bs4badgepill_success = '<span class="' + badgeSuccess + pill + '">Pill Success</span>';
+    snippets.bs4badgepill_warning = '<span class="' + badgeWarning + pill + '">Pill Warning</span>';
 
     snippets.bs4badgelink = '<a href="#" class="' + badge + '">Badge link Primary</a>';
-    snippets.bs4badgelink_secondary = '<a href="#" class="' + badgeSecondary + '">Badge link Secondary</a>';
-    snippets.bs4badgelink_success = '<a href="#" class="' + badgeSuccess + '">Badge link Success</a>';
     snippets.bs4badgelink_danger = '<a href="#" class="' + badgeDanger + '">Badge link Danger</a>';
-    snippets.bs4badgelink_warning = '<a href="#" class="' + badgeWarning + '">Badge link Warning</a>';
+    snippets.bs4badgelink_dark = '<a href="#" class="' + badgeDark + '">Badge link Dark</a>';
     snippets.bs4badgelink_info = '<a href="#" class="' + badgeInfo + '">Badge link Info</a>';
     snippets.bs4badgelink_light = '<a href="#" class="' + badgeLight + '">Badge link Light</a>';
-    snippets.bs4badgelink_dark = '<a href="#" class="' + badgeDark + '">Badge link Dark</a>';
+    snippets.bs4badgelink_secondary = '<a href="#" class="' + badgeSecondary + '">Badge link Secondary</a>';
+    snippets.bs4badgelink_success = '<a href="#" class="' + badgeSuccess + '">Badge link Success</a>';
+    snippets.bs4badgelink_warning = '<a href="#" class="' + badgeWarning + '">Badge link Warning</a>';
+    
+    //-----------------------------------------------------------------------
+    // Breadcrumbs (https://getbootstrap.com/docs/4.1/components/breadcrumb/)
+    //-----------------------------------------------------------------------
 
-    // Breadcrumbs
-    // https://getbootstrap.com/docs/4.0/components/breadcrumb/
+    snippets.bs4breadcrumbs = '<nav aria-label="breadcrumb" role="navigation">\n\t\t<ol class="breadcrumb">\n\t\t\t<li class="breadcrumb-item"><a href="#">1st level</a></li>\n\t\t\t<li class="breadcrumb-item"><a href="#">2nd level</a></li>\n\t\t\t<li class="breadcrumb-item active">3rd level</li>\n\t\t</ol>\n\t</nav>';
+    
+    //----------------------------------------------------------------
+    // Buttons (https://getbootstrap.com/docs/4.1/components/buttons/)
+    //----------------------------------------------------------------
 
-    snippets.bs4breadcrumbs = '<nav aria-label="breadcrumb" role="navigation">\n' +
-        '       <ol class="breadcrumb">\n' +
-        '           <li class="breadcrumb-item"><a href="#">1st level</a></li>\n' +
-        '           <li class="breadcrumb-item"><a href="#">2nd level</a></li>\n' +
-        '           <li class="breadcrumb-item active">3rd level</li>\n' +
-        '       </ol>' +
-        '	</nav>';
-
-    // Buttons (TODO)
-    // https://getbootstrap.com/docs/4.0/components/buttons/
-
+    // variables for btns styles
+    var btnPrimary = 'btn btn-primary';
+    var btnDanger = 'btn btn-danger';
+    var btnDark = 'btn btn-dark';
+    var btnInfo = 'btn btn-info';
+    var btnLight = 'btn btn-light';
+    var btnLink = 'btn btn-link';
+    var btnSecondary = 'btn btn-secondary';
+    var btnSuccess = 'btn btn-success';
+    var btnWarning = 'btn btn-warning';
+    var btnOPrimary = 'btn btn-outline-primary';
+    var btnODanger = 'btn btn-outline-danger';
+    var btnODark = 'btn btn-outline-dark';
+    var btnOInfo = 'btn btn-outline-info';
+    var btnOLight = 'btn btn-outline-light';
+    var btnOLink = 'btn btn-outline-link';
+    var btnOSecondary = 'btn btn-outline-secondary';
+    var btnOSuccess = 'btn btn-outline-success';
+    var btnOWarning = 'btn btn-outline-warning';
+    
+    // variables for sizes and displays
+    var block = ' btn-block';
+    var sm = ' btn-sm';
+    var lg = ' btn-lg';
+    
     // Link buttons
     snippets.bs4abtn = '<a class="' + btnPrimary + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtn_secondary = '<a class="' + btnSecondary + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtn_success = '<a class="' + btnSuccess + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_danger = '<a class="' + btnDanger + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtn_warning = '<a class="' + btnWarning + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtn_dark = '<a class="' + btnDark + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_info = '<a class="' + btnInfo + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_light = '<a class="' + btnLight + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtn_dark = '<a class="' + btnDark + '" href="#" role="button">Link button</a>';
     snippets.bs4abtn_link = '<a class="' + btnLink + '" href="#" role="button">Link button</a>';
-
+    snippets.bs4abtn_secondary = '<a class="' + btnSecondary + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtn_success = '<a class="' + btnSuccess + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtn_warning = '<a class="' + btnWarning + '" href="#" role="button">Link button</a>';
+    
+    // Small link buttons
     snippets.bs4abtnsm = '<a class="' + btnPrimary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnsm_secondary = '<a class="' + btnSecondary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnsm_success = '<a class="' + btnSuccess + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnsm_danger = '<a class="' + btnDanger + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnsm_warning = '<a class="' + btnWarning + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_dark = '<a class="' + btnDark + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnsm_info = '<a class="' + btnInfo + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnsm_light = '<a class="' + btnLight + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnsm_dark = '<a class="' + btnDark + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnsm_link = '<a class="' + btnLink + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_secondary = '<a class="' + btnSecondary + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_success = '<a class="' + btnSuccess + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnsm_warning = '<a class="' + btnWarning + sm + '" href="#" role="button">Small link button</a>';
 
+    // Large link buttons
     snippets.bs4abtnlg = '<a class="' + btnPrimary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnlg_secondary = '<a class="' + btnSecondary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnlg_success = '<a class="' + btnSuccess + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnlg_danger = '<a class="' + btnDanger + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnlg_warning = '<a class="' + btnWarning + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_dark = '<a class="' + btnDark + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnlg_info = '<a class="' + btnInfo + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnlg_light = '<a class="' + btnLight + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnlg_dark = '<a class="' + btnDark + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnlg_link = '<a class="' + btnLink + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_secondary = '<a class="' + btnSecondary + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_success = '<a class="' + btnSuccess + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnlg_warning = '<a class="' + btnWarning + lg + '" href="#" role="button">Large link button</a>';
 
+    // Block link buttons
     snippets.bs4abtnblock = '<a class="' + btnPrimary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnblock_secondary = '<a class="' + btnSecondary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnblock_success = '<a class="' + btnSuccess + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnblock_danger = '<a class="' + btnDanger + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnblock_warning = '<a class="' + btnWarning + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_dark = '<a class="' + btnDark + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnblock_info = '<a class="' + btnInfo + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnblock_light = '<a class="' + btnLight + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnblock_dark = '<a class="' + btnDark + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnblock_link = '<a class="' + btnLink + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_secondary = '<a class="' + btnSecondary + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_success = '<a class="' + btnSuccess + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnblock_warning = '<a class="' + btnWarning + block + '" href="#" role="button">Block link button</a>';
 
     // Outlined link buttons
     snippets.bs4abtnol = '<a class="' + btnOPrimary + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtnol_secondary = '<a class="' + btnOSecondary + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtnol_success = '<a class="' + btnOSuccess + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_danger = '<a class="' + btnODanger + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtnol_warning = '<a class="' + btnOWarning + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtnol_dark = '<a class="' + btnODark + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_info = '<a class="' + btnOInfo + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_light = '<a class="' + btnOLight + '" href="#" role="button">Link button</a>';
-    snippets.bs4abtnol_dark = '<a class="' + btnODark + '" href="#" role="button">Link button</a>';
     snippets.bs4abtnol_link = '<a class="' + btnOLink + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtnol_secondary = '<a class="' + btnOSecondary + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtnol_success = '<a class="' + btnOSuccess + '" href="#" role="button">Link button</a>';
+    snippets.bs4abtnol_warning = '<a class="' + btnOWarning + '" href="#" role="button">Link button</a>';
 
     snippets.bs4abtnolsm = '<a class="' + btnOPrimary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolsm_secondary = '<a class="' + btnOSecondary + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolsm_success = '<a class="' + btnOSuccess + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnolsm_danger = '<a class="' + btnODanger + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolsm_warning = '<a class="' + btnOWarning + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_dark = '<a class="' + btnODark + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnolsm_info = '<a class="' + btnOInfo + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnolsm_light = '<a class="' + btnOLight + sm + '" href="#" role="button">Small link button</a>';
-    snippets.bs4abtnolsm_dark = '<a class="' + btnODark + sm + '" href="#" role="button">Small link button</a>';
     snippets.bs4abtnolsm_link = '<a class="' + btnOLink + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_secondary = '<a class="' + btnOSecondary + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_success = '<a class="' + btnOSuccess + sm + '" href="#" role="button">Small link button</a>';
+    snippets.bs4abtnolsm_warning = '<a class="' + btnOWarning + sm + '" href="#" role="button">Small link button</a>';
 
     snippets.bs4abtnollg = '<a class="' + btnOPrimary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnollg_secondary = '<a class="' + btnOSecondary + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnollg_success = '<a class="' + btnOSuccess + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnollg_danger = '<a class="' + btnODanger + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnollg_warning = '<a class="' + btnOWarning + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_dark = '<a class="' + btnODark + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnollg_info = '<a class="' + btnOInfo + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnollg_light = '<a class="' + btnOLight + lg + '" href="#" role="button">Large link button</a>';
-    snippets.bs4abtnollg_dark = '<a class="' + btnODark + lg + '" href="#" role="button">Large link button</a>';
     snippets.bs4abtnollg_link = '<a class="' + btnOLink + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_secondary = '<a class="' + btnOSecondary + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_success = '<a class="' + btnOSuccess + lg + '" href="#" role="button">Large link button</a>';
+    snippets.bs4abtnollg_warning = '<a class="' + btnOWarning + lg + '" href="#" role="button">Large link button</a>';
 
     snippets.bs4abtnolblock = '<a class="' + btnOPrimary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolblock_secondary = '<a class="' + btnOSecondary + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolblock_success = '<a class="' + btnOSuccess + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnolblock_danger = '<a class="' + btnODanger + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolblock_warning = '<a class="' + btnOWarning + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_dark = '<a class="' + btnODark + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnolblock_info = '<a class="' + btnOInfo + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnolblock_light = '<a class="' + btnOLight + block + '" href="#" role="button">Block link button</a>';
-    snippets.bs4abtnolblock_dark = '<a class="' + btnODark + block + '" href="#" role="button">Block link button</a>';
     snippets.bs4abtnolblock_link = '<a class="' + btnOLink + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_secondary = '<a class="' + btnOSecondary + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_success = '<a class="' + btnOSuccess + block + '" href="#" role="button">Block link button</a>';
+    snippets.bs4abtnolblock_warning = '<a class="' + btnOWarning + block + '" href="#" role="button">Block link button</a>';
 
     // Buttons
     snippets.bs4btn = '<button type="button" class="' + btnPrimary + '">button</button>';
@@ -494,73 +392,26 @@ define(function (require, exports, module) {
     snippets.bs4btnolblock_dark = '<button type="button" class="' + btnODark + block + '">Block button</button>';
     snippets.bs4btnolblock_link = '<button type="button" class="' + btnOLink + block + '">Block button</button>';
 
-    // Button Groups (TODO)
-    // https://getbootstrap.com/docs/4.0/components/button-group/
+    //--------------------------------------------------------------------------
+    // Button Group (https://getbootstrap.com/docs/4.1/components/button-group/)
+    //--------------------------------------------------------------------------
 
-    snippets.bs4btngroup = '<div class="btn-group" role="group" aria-label="Basic example">\n' +
-        '       <button type="button" class="btn btn-secondary">Left</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Right</button>\n' +
-        '   </div>';
+    var btnsimplegroupcontent = '\t\t<button type="button" class="btn btn-secondary">Left</button>\n\t\t<button type="button" class="btn btn-secondary">Middle</button>\n\t\t<button type="button" class="btn btn-secondary">Right</button>\n\t</div>';
+    
+    snippets.bs4btngroup = '<div class="btn-group" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent;
+    snippets.bs4btngrouplg = '<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent;
+    snippets.bs4btngroupsm = '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent;
 
-    snippets.bs4btngrouplg = '<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">\n' +
-        '       <button type="button" class="btn btn-secondary">Left</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Right</button>\n' +
-        '   </div>';
+    snippets.bs4btngroup_bar = '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">\n\t\t<div class="btn-group mr-2" role="group" aria-label="First group">\n\t\t\t<button type="button" class="btn btn-secondary">1</button>\n\t\t\t<button type="button" class="btn btn-secondary">2</button>\n\t\t\t<button type="button" class="btn btn-secondary">3</button>\n\t\t\t<button type="button" class="btn btn-secondary">4</button>\n\t\t</div>\n\t\t<div class="btn-group mr-2" role="group" aria-label="Second group">\n\t\t\t<button type="button" class="btn btn-secondary">5</button>\n\t\t\t<button type="button" class="btn btn-secondary">6</button>\n\t\t\t<button type="button" class="btn btn-secondary">7</button>\n\t\t</div>\n\t\t<div class="btn-group" role="group" aria-label="Third group">\n\t\t\t<button type="button" class="btn btn-secondary">8</button>\n\t\t</div>\n\t</div>';
 
-    snippets.bs4btngroupsm = '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">\n' +
-        '       <button type="button" class="btn btn-secondary">Left</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Middle</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Right</button>\n' +
-        '   </div>';
+    snippets.bs4btngroup_nested = '<div class="btn-group" role="group" aria-label="Button group with nested dropdown">\n\t\t<button type="button" class="btn btn-secondary">1</button>\n\t\t<button type="button" class="btn btn-secondary">2</button>\n\t\t<div class="btn-group" role="group">\n\t\t\t<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>\n\t\t\t<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">\n\t\t\t\t<a class="dropdown-item" href="#">Dropdown link</a>\n\t\t\t\t<a class="dropdown-item" href="#">Dropdown link</a>\n\t\t\t</div>\n\t\t</div>\n\t</div>';
 
-    snippets.bs4btngroup_bar = '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">\n' +
-        '       <div class="btn-group mr-2" role="group" aria-label="First group">\n' +
-        '           <button type="button" class="btn btn-secondary">1</button>\n' +
-        '           <button type="button" class="btn btn-secondary">2</button>\n' +
-        '           <button type="button" class="btn btn-secondary">3</button>\n' +
-        '           <button type="button" class="btn btn-secondary">4</button>\n' +
-        '       </div>\n' +
-        '       <div class="btn-group mr-2" role="group" aria-label="Second group">\n' +
-        '           <button type="button" class="btn btn-secondary">5</button>\n' +
-        '           <button type="button" class="btn btn-secondary">6</button>\n' +
-        '           <button type="button" class="btn btn-secondary">7</button>\n' +
-        '       </div>\n' +
-        '       <div class="btn-group" role="group" aria-label="Third group">\n' +
-        '           <button type="button" class="btn btn-secondary">8</button>\n' +
-        '       </div>\n' +
-        '   </div>';
-
-    snippets.bs4btngroup_nested = '<div class="btn-group" role="group" aria-label="Button group with nested dropdown">\n' +
-        '       <button type="button" class="btn btn-secondary">1</button>\n' +
-        '       <button type="button" class="btn btn-secondary">2</button>\n' +
-        '       <div class="btn-group" role="group">\n' +
-        '           <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</button>\n' +
-        '           <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">\n' +
-        '               <a class="dropdown-item" href="#">Dropdown link</a>\n' +
-        '               <a class="dropdown-item" href="#">Dropdown link</a>\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
-
-    snippets.bs4btngroup_vertical = '<div class="btn-group-vertical" role="group" aria-label="Basic example">\n' +
-        '       <button type="button" class="btn btn-secondary">Link 1</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Link 2</button>\n' +
-        '       <button type="button" class="btn btn-secondary">Link 3</button>\n' +
-        '   </div>';
-
+    snippets.bs4btngroup_vertical = '<div class="btn-group-vertical" role="group" aria-label="Basic example">\n\t\t<button type="button" class="btn btn-secondary">Link 1</button>\n\t\t<button type="button" class="btn btn-secondary">Link 2</button>\n\t\t<button type="button" class="btn btn-secondary">Link 3</button>\n\t</div>';
+    
     // Cards
     // https://getbootstrap.com/docs/4.0/components/card/
 
-    snippets.bs4card = '<div class="card">\n' +
-        '   <img class="card-img-top" src="" alt="Card image">\n' +
-        '   <div class="card-body">\n' +
-        '       <h4 class="card-title">Card title</h4>\n' +
-        '           <p class="card-text">Some quick example text to build on the card title and content.</p>\n' +
-        '           <a href="#" class="btn btn-primary">Go somewhere</a>\n' +
-        '       </div>\n' +
-        '   </div>';
+    snippets.bs4card = '<div class="card">\n\t\t<img class="card-img-top" src="' + imgLand + '" alt="Card image">\n\t\t<div class="card-body">\n\t\t\t<h4 class="card-title">Card title</h4>\n\t\t\t<p class="card-text">Some quick example text to build on the card title and content.</p>\n\t\t\t' + snippets.bs4abtn + '\n\t\t</div>\n\t</div>';
 
     snippets.bs4cardfull = '<div class="card">\n' +
         '       <img class="card-img-top" src="" alt="Card image">\n' +
@@ -836,298 +687,94 @@ define(function (require, exports, module) {
         '           </div>\n' +
         '       </div>\n' +
         '   </div>';
-
-    // Carousel
-    // https://getbootstrap.com/docs/4.0/components/carousel/
-
-    snippets.bs4carousel = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
-        '		<div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
     
-    snippets.bs4carousel_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
-        '		<div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
-
-    snippets.bs4carouselwcontrols = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        carouselcontrols +
-        '   </div>';
+    //------------------------------------------------------------------
+    // Carousel (https://getbootstrap.com/docs/4.1/components/carousel/)
+    //------------------------------------------------------------------
     
-    snippets.bs4carouselwcontrols_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        carouselcontrols +
-        '   </div>';
-
-    snippets.bs4carouselwindicators = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
-        carouselindicators +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
+    var carouselcaption = '<div class="carousel-caption d-none d-md-block">\n\t\t\t\t\t<h5>Caption Title</h5>\n\t\t\t\t\t<p>Caption text</p>\n\t\t\t\t</div>';
     
-    snippets.bs4carouselwindicators_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
-        carouselindicators +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
-
-    snippets.bs4carouselwcaptions = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>First slide</h3>\n' +
-        '                   <p>First caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Second slide</h3>\n' +
-        '                   <p>Second caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Third slide</h3>\n' +
-        '                   <p>Third caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
+    var carousel3slides = '\t\t<div class="carousel-inner">\n\t\t\t<div class="carousel-item active">\n\t\t\t\t<img class="d-block w-100" src="' + imgLand + '" alt="First slide">\n\t\t\t</div>\n\t\t\t<div class="carousel-item">\n\t\t\t\t<img class="d-block w-100" src="' + imgLand + '" alt="Second slide">\n\t\t\t</div>\n\t\t\t<div class="carousel-item">\n\t\t\t\t<img class="d-block w-100" src="' + imgLand + '" alt="Third slide">\n\t\t\t</div>\n\t\t</div>\n';
     
-    snippets.bs4carouselwcaptions_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>First slide</h3>\n' +
-        '                   <p>First caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Second slide</h3>\n' +
-        '                   <p>Second caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Third slide</h3>\n' +
-        '                   <p>Third caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        '   </div>';
+    var carousel3slidescaptioned = '\t\t<div class="carousel-inner">\n\t\t\t<div class="carousel-item active">\n\t\t\t\t<img class="d-block w-100" src="' + imgLand + '" alt="First slide">\n\t\t\t\t' + carouselcaption + '\n\t\t\t</div>\n\t\t\t<div class="carousel-item">\n\t\t\t\t<img class="d-block w-100" src="' + imgLand + '" alt="Second slide">\n\t\t\t\t' + carouselcaption + '\n\t\t\t</div>\n\t\t\t<div class="carousel-item">\n\t\t\t\t<img class="d-block w-100" src="' + imgLand + '" alt="Third slide">\n\t\t\t\t' + carouselcaption + '\n\t\t\t</div>\n\t\t</div>\n';
 
-    snippets.bs4carouselfull = '<div id="carouselFull" class="carousel slide" data-ride="carousel">\n' +
-        carouselindicators +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>First slide</h3>\n' +
-        '                   <p>First caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Second slide</h3>\n' +
-        '                   <p>Second caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Third slide</h3>\n' +
-        '                   <p>Third caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        carouselcontrols +
-        '   </div>';
+    var carouselcontrols = '<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">\n\t\t\t<span class="carousel-control-prev-icon" aria-hidden="true"></span>\n\t\t\t<span class="sr-only">Previous</span>\n\t\t</a>\n\t\t<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">\n\t\t\t<span class="carousel-control-next-icon" aria-hidden="true"></span>\n\t\t\t<span class="sr-only">Next</span>\n\t\t</a>\n';
     
-    snippets.bs4carouselfull_fade = '<div id="carouselFull" class="carousel slide carousel-fade" data-ride="carousel">\n' +
-        carouselindicators +
-        '       <div class="carousel-inner">\n' +
-        '           <div class="carousel-item active">\n' +
-        '               <img class="d-block w-100" src="" alt="First slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>First slide</h3>\n' +
-        '                   <p>First caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Second slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Second slide</h3>\n' +
-        '                   <p>Second caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '           <div class="carousel-item">\n' +
-        '               <img class="d-block w-100" src="" alt="Third slide">\n' +
-        '               <div class="carousel-caption d-none d-md-block">\n' +
-        '                   <h3>Third slide</h3>\n' +
-        '                   <p>Third caption</p>\n' +
-        '               </div>\n' +
-        '           </div>\n' +
-        '       </div>\n' +
-        carouselcontrols +
-        '   </div>';
+    var carouselindicators = '<ol class="carousel-indicators">\n\t\t\t<li data-target="#carousel" data-slide-to="0" class="active"></li>\n\t\t\t<li data-target="#carousel" data-slide-to="1"></li>\n\t\t\t<li data-target="#carousel" data-slide-to="2"></li>\n\t\t</ol>\n';
 
-    // CDN
+    snippets.bs4carousel = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' + carousel3slides + '\t</div>';
+    
+    snippets.bs4carousel_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' + carousel3slides + '\t</div>';
+    
+    snippets.bs4carouselwcaptions = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' + carousel3slidescaptioned + '\t</div>';
+    
+    snippets.bs4carouselwcaptions_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' + carousel3slidescaptioned + '\t</div>';
+
+    snippets.bs4carouselwcontrols = '<div id="carousel" class="carousel slide" data-ride="carousel">\n' + carousel3slides + '\t\t' + carouselcontrols + '\t</div>';
+    
+    snippets.bs4carouselwcontrols_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n' + carousel3slides + '\t\t' + carouselcontrols + '\t</div>';
+    
+    snippets.bs4carouselwindicators = '<div id="carousel" class="carousel slide" data-ride="carousel">\n\t\t'  + carouselindicators + carousel3slides + '\t</div>';
+    
+    snippets.bs4carouselwindicators_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n\t\t'  + carouselindicators + carousel3slides + '\t</div>';
+    
+    snippets.bs4carouselfull = '<div id="carousel" class="carousel slide" data-ride="carousel">\n\t\t' + carouselindicators + carousel3slidescaptioned + '\t\t' + carouselcontrols + '\t</div>';
+     
+    snippets.bs4carouselfull_fade = '<div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">\n\t\t' + carouselindicators + carousel3slidescaptioned + '\t\t' + carouselcontrols + '\t</div>';
+
+    //-------------------------------------------------------------------------------
+    // CDN (https://getbootstrap.com/docs/4.1/getting-started/download/#bootstrapcdn)
+    //-------------------------------------------------------------------------------
 
     snippets.bs4cdnjs = jscdn;
     snippets.bs4cdncss = csscdn;
 
-    // Collapse and accordions
+    //---------------------------------------------------------------------------------
+    // Collapse and accordions (https://getbootstrap.com/docs/4.1/components/collapse/)
+    //---------------------------------------------------------------------------------
+    
+    var collapsecontent = '\t<div class="collapse" id="collapseExample">\n\t\t<div class="card card-body">' + dummy + '</div>\n\t</div>';
+    
+    snippets.bs4collapse_link = '<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Link with href</a>\n' + collapsecontent;
 
-    snippets.bs4collapse = '    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Link with href</a>\n' +
-        '   <div class="collapse" id="collapseExample">\n' +
-        '       <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>\n' +
-        '   </div>';
+    snippets.bs4collapse_btn = '<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>\n' + collapsecontent;
+    
+    snippets.bs4collapse_panel = '<div class="card">\n\t\t<div class="card-header">\n\t\t\t<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapsePanel">Collapsible Panel</button>\n\t\t</div>\n\t\t<div id="collapsePanel" class="collapse">\n\t\t\t<div class="card-body">' + dummyLong + '.</div>\n\t\t</div>\n\t</div>';
 
-    snippets.bs4collapsebtn = '    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Button with data-target</button>\n' +
-        '   <div class="collapse" id="collapseExample">\n' +
-        '       <div class="card card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.</div>\n' +
-        '   </div>';
+    snippets.bs4accordion = '<div id="accordion" role="tablist">\n\t\t<div class="card">\n\t\t\t<div class="card-header" role="tab" id="headingOne">\n\t\t\t\t<a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>\n\t\t\t</div>\n\t\t\t<!-- Add .show class to this item to make it visible on page load -->\n\t\t\t<div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">\n\t\t\t\t<div class="card-body">' + dummyLong + '</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="card">\n\t\t\t<div class="card-header" role="tab" id="headingTwo">\n\t\t\t\t<a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</a>\n\t\t\t</div>\n\t\t\t<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">\n\t\t\t\t<div class="card-body">' + dummyLong + '</div>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class="card">\n\t\t\t<div class="card-header" role="tab" id="headingThree">\n\t\t\t\t<a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</a>\n\t\t\t</div>\n\t\t\t<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">\n\t\t\t\t<div class="card-body">' + dummyLong + '</div>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n';
+    
+    snippets.bs4accordion_minimal = '<div id="accordion" role="tablist">\n\t\t<a class="d-block border" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>\n\t\t<!-- Add .show class to this item to make it visible on page load -->\n\t\t<div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">\n\t\t\t' + dummyLong + '\n\t\t</div>\n\t\t<a class="collapsed d-block border" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</a>\n\t\t<div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">\n\t\t\t' + dummyLong + '\n\t\t</div>\n\t\t<a class="collapsed d-block border" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</a>\n\t\t<div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">\n\t\t\t' + dummyLong + '\n\t\t</div>\n\t</div>\n';
 
-    snippets.bs4accordion = '<div id="accordion" role="tablist">\n' +
-        '   <div class="card">\n' +
-        '       <div class="card-header" role="tab" id="headingOne">\n' +
-        '           <h5 class="mb-0">\n' +
-        '               <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Collapsible Group Item #1</a>\n' +
-        '           </h5>\n' +
-        '       </div>\n' +
-        '       <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">\n' +
-        '           <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably heard of them accusamus labore sustainable VHS.</div>\n' +
-        '       </div>\n' +
-        '   </div>\n' +
-        '   <div class="card">\n' +
-        '       <div class="card-header" role="tab" id="headingTwo">\n' +
-        '           <h5 class="mb-0">\n' +
-        '               <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Collapsible Group Item #2</a>\n' +
-        '           </h5>\n' +
-        '       </div>\n' +
-        '       <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">\n' +
-        '           <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably heard of them accusamus labore sustainable VHS.</div>\n' +
-        '       </div>\n' +
-        '   </div>\n' +
-        '   <div class="card">\n' +
-        '       <div class="card-header" role="tab" id="headingThree">\n' +
-        '           <h5 class="mb-0">\n' +
-        '               <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Collapsible Group Item #3</a>\n' +
-        '           </h5>\n' +
-        '       </div>\n' +
-        '       <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">\n' +
-        '           <div class="card-body">Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably heard of them accusamus labore sustainable VHS.</div>\n' +
-        '       </div>\n' +
-        '   </div>\n' +
-        '</div>';
+    //------------------------------------------------------------
+    // Embeds (https://getbootstrap.com/docs/4.1/utilities/embed/)
+    //------------------------------------------------------------
 
-    snippets.bs4accordionminimal = '<div id="exampleAccordion" data-children=".item">\n' +
-        '   <div class="item">\n' +
-        '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion1" aria-expanded="true" aria-controls="exampleAccordion1">Toggle item</a>\n' +
-        '       <div id="exampleAccordion1" class="collapse show" role="tabpanel">\n' +
-        '           <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium lorem non vestibulum scelerisque. Proin a vestibulum sem, eget tristique massa. Aliquam lacinia rhoncus nibh quis ornare.</p>\n' +
-        '       </div>\n' +
-        '   </div>\n' +
-        '   <div class="item">\n' +
-        '       <a data-toggle="collapse" data-parent="#exampleAccordion" href="#exampleAccordion2" aria-expanded="false" aria-controls="exampleAccordion2">Toggle item 2</a>\n' +
-        '       <div id="exampleAccordion2" class="collapse" role="tabpanel">\n' +
-        '           <p class="mb-3">Donec at ipsum dignissim, rutrum turpis scelerisque, tristique lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus nec dui turpis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>\n' +
-        '       </div>\n' +
-        '   </div>\n' +
-        '</div>';
+    snippets.bs4embed = '<div class="embed-responsive embed-responsive-1by1">\n\t\t<iframe class="embed-responsive-item" src=""></iframe>\n\t</div>';
+    snippets.bs4embed_4x3 = '<div class="embed-responsive embed-responsive-4by3">\n\t\t<iframe class="embed-responsive-item" src=""></iframe>\n\t</div>';
+    snippets.bs4embed_16x9 = '<div class="embed-responsive embed-responsive-16by9">\n\t\t<iframe class="embed-responsive-item" src=""></iframe>\n\t</div>';
+    snippets.bs4embed_21x9 = '<div class="embed-responsive embed-responsive-21by9">\n\t\t<iframe class="embed-responsive-item" src=""></iframe>\n\t</div>';
+    
+    //------------------------------------------------------------------------
+    // Images and Pictures (https://getbootstrap.com/docs/4.1/content/images/)
+    //------------------------------------------------------------------------
 
-    // Embeds
-
-    snippets.bs4embed = '<div class="embed-responsive embed-responsive-1by1">\n' +
-        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
-        '   </div>';
-
-    snippets.bs4embed_21x9 = '<div class="embed-responsive embed-responsive-21by9">\n' +
-        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
-        '   </div>';
-
-    snippets.bs4embed_16x9 = '<div class="embed-responsive embed-responsive-16by9">\n' +
-        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
-        '   </div>';
-
-    snippets.bs4embed_4x3 = '<div class="embed-responsive embed-responsive-4by3">\n' +
-        '       <iframe class="embed-responsive-item" src=""></iframe>\n' +
-        '   </div>';
-
-    // Figures
-
-    snippets.bs4figure = '<figure class="figure">\n' +
-        '       <img src="" class="figure-img img-fluid rounded" alt="A generic image.">\n' +
-        '       <figcaption class="figure-caption">A caption for the above image.</figcaption>\n' +
-        '   </figure>\n';
-
-    // Form controls
-    // https://getbootstrap.com/docs/4.0/components/forms/
+    snippets.bs4image = '<img class="img-fluid" src="' + imgLand + '" alt="image">';
+    snippets.bs4image_rounded = '<img class="img-fluid rounded" src="' + imgLand + '" alt="image">';
+    snippets.bs4image_circle = '<img class="img-fluid rounded-circle" src="' + imgSquare + '" alt="image">';
+    snippets.bs4imagethumbnail = '<img class="img-fluid img-thumbnail" src="' + imgLand + '" alt="image">';
+    snippets.bs4imagethumbnail_rounded = '<img class="img-fluid rounded img-thumbnail" src="' + imgLand + '" alt="image">';
+    snippets.bs4imagethumbnail_circle = '<img class="img-fluid rounded-circle img-thumbnail" src="' + imgSquare + '" alt="image">';
+    snippets.bs4image_picture = '<picture>\n\t\t<!-- Extra Large Desktops -->\n\t\t<source media="(min-width: 1200px)" srcset="' + imgLand + '">\n\t\t<!-- Desktops -->\n\t\t<source media="(min-width: 992px)" srcset="' + imgLand + '">\n\t\t<!-- Tablets -->\n\t\t<source media="(min-width: 768px)" srcset="' + imgLand + '">\n\t\t<!-- Landscape Phones -->\n\t\t<source media="(min-width: 576px)" srcset="' + imgLand + '">\n\t\t<!-- Portrait Phones -->\n\t\t<img src="' + imgLand + '" class="img-fluid">\n\t</picture>\n';
+    
+    //-------------------------------------------------------------
+    // Figures (https://getbootstrap.com/docs/4.1/content/figures/)
+    //-------------------------------------------------------------
+    
+    snippets.bs4figure = '<figure class="figure">\n\t\t' + snippets.bs4image_rounded  + '\n\t\t<figcaption class="figure-caption">A caption for the above image.</figcaption>\n\t</figure>\n';
+    
+    //--------------------------------------------------------------------
+    // Form controls (https://getbootstrap.com/docs/4.0/components/forms/)
+    //--------------------------------------------------------------------
 
     snippets.bs4formcontrol_input = '<div class="form-group">\n' +
         '       <label for="exampleFormControlInput1">Name</label>\n' +
@@ -1309,25 +956,6 @@ define(function (require, exports, module) {
         '       <button type="submit" class="btn btn-primary">Sign in</button>\n' +
         '   </form>\n';
 
-    // Images
-
-    snippets.bs4image = '<img src="" class="img-fluid" alt="">\n';
-    snippets.bs4image_rounded = '<img src="" class="img-fluid rounded" alt="">\n';
-    snippets.bs4image_circle = '<img src="" class="img-fluid rounded-circle" alt="">\n';
-
-    snippets.bs4image_picture = '<picture>\n' +
-        '       <!-- Extra Large Desktops -->\n' +
-        '       <source media="(min-width: 1200px)" srcset="extralarge.jpg">\n' +
-        '       <!-- Desktops -->\n' +
-        '       <source media="(min-width: 992px)" srcset="large.jpg">\n' +
-        '       <!-- Tablets -->\n' +
-        '       <source media="(min-width: 768px)" srcset="medium.jpg">\n' +
-        '       <!-- Landscape Phones -->\n' +
-        '       <source media="(min-width: 576px)" srcset="small.jpg">\n' +
-        '       <!-- Portrait Phones -->\n' +
-        '       <img src="picture-tiny.jpg" class="img-fluid">\n' +
-        '   </picture>\n';
-
     // Jumbotron
     // https://getbootstrap.com/docs/4.0/components/jumbotron/
 
@@ -1405,23 +1033,18 @@ define(function (require, exports, module) {
         '       </a>\n' +
         '   </div>';
 
+    //------
     // Local
+    //------
 
     snippets.bs4localcss = csslocal;
     snippets.bs4localjs = jslocal;
 
-    // Media (TODO)
-    // https://getbootstrap.com/docs/4.0/layout/media-object/
-
-    snippets.bs4mediaobject = '<div class="media">\n' +
-        '	<a class="pull-left" href="#">\n' +
-        '		<img class="media-object" src="#" alt="Image">\n' +
-        '	</a>\n' +
-        '	<div class="media-body">\n' +
-        '		<h4 class="media-heading">Media heading</h4>\n' +
-        '		<p>Text goes here</p>\n' +
-        '	</div>\n' +
-        '</div>\n';
+    //---------------------------------------------------------------
+    // Media (https://getbootstrap.com/docs/4.1/layout/media-object/)
+    //---------------------------------------------------------------
+    
+    snippets.bs4mediaobject = '<div class="media">\n\t\t<img class="mr-3" src="' + imgSquare + '" alt="Generic placeholder image">\n\t\t<div class="media-body">\n\t\t\t<h5 class="mt-0">Media heading</h5>\n\t\t\t' + dummy + '\n\t\t</div>\n\t</div>\n';
 
     // Modal
     // https://getbootstrap.com/docs/4.0/components/modal/
@@ -1859,7 +1482,7 @@ define(function (require, exports, module) {
         '               <td>@twitter</td>\n' +
         '           </tr>\n' +
         '       </tbody>\n' +
-        '   </table>\n' + 
+        '   </table>\n' +
         '</div>\n';
 
     // Tabs (TODO)

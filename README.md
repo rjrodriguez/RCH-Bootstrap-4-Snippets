@@ -335,8 +335,9 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     
 ### Collapse and Accordions
 
-    bs4collapse
-    bs4collapsebtn
+    bs4collapse_btn
+    bs4collapse_link
+    bs4collapse_panel
     bs4accordion
     bs4accordion_minimal
 
@@ -380,13 +381,16 @@ A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](ht
     bs4form_full 
     bs4form_suscribe_inline
 
-### Images
+### Images (simple, thumbnail and picture)
 
     bs4image
     bs4image_rounded
     bs4image_circle
+    bs4imagethumbnail
+    bs4imagethumbnail_rounded
+    bs4imagethumbnail_circle
     bs4image_picture
-
+    
 ### Jumbotron
 
     bs4jumbotron

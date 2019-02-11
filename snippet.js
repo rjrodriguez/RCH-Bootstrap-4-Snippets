@@ -50,13 +50,13 @@ define(function (require, exports, module) {
     
     // Variables for CDNs
     var csscdn = '\t<!-- Bootstrap CSS -->\n' +
-        '\t<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">\n' +
+        '\t<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">\n' +
         '\t<!-- Link to your css file -->\n' +
         '\t<link rel="stylesheet" href="">\n';
     var jscdn = '\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
         '\t<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>\n' +
-        '\t<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>\n' +
-        '\t<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>\n';
+        '\t<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>\n' +
+        '\t<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>\n';
 
     // Variables for local assets
     var csslocal = '\t<link rel="stylesheet" href="css/bootstrap.min.css">\n' +
@@ -122,41 +122,32 @@ define(function (require, exports, module) {
     
     var alertboxcontent = '\t\t<h4 class="alert-heading">Well done!</h4>\n\t\t<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n\t\t<hr>\n\t\t<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n\t</div>';
     
-    var alertPrimary = 'alert alert-primary';
-    var alertDanger = 'alert alert-danger';
-    var alertDark = 'alert alert-dark';
-    var alertInfo = 'alert alert-info';
-    var alertLight = 'alert alert-light';
-    var alertSecondary = 'alert alert-secondary';
-    var alertSuccess = 'alert alert-success';
-    var alertWarning = 'alert alert-warning';
+    snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' + alertbasiccontent;
     
-    snippets.bs4alertbasic = '<div class="' + alertPrimary + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_danger = '<div class="' + alertDanger + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_dark = '<div class="' + alertDark + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_info = '<div class="' + alertInfo + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_light = '<div class="' + alertLight + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_secondary = '<div class="' + alertSecondary + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_success = '<div class="' + alertSuccess + '" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_warning = '<div class="' + alertWarning + '" role="alert">\n' + alertbasiccontent;
-    
-    snippets.bs4alert = '<div class="' + alertPrimary + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_danger = '<div class="' + alertDanger + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_dark = '<div class="' + alertDark + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_info = '<div class="' + alertInfo + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_light = '<div class="' + alertLight + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_secondary = '<div class="' + alertSecondary + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_success = '<div class="' + alertSuccess + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_warning = '<div class="' + alertWarning + ' alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_danger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_info = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_light = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_success = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert_warning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
 
-    snippets.bs4alertbox = '<div class="' + alertPrimary + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_danger = '<div class="' + alertDanger + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_dark = '<div class="' + alertDark + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_info = '<div class="' + alertInfo + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_light = '<div class="' + alertLight + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_secondary = '<div class="' + alertSecondary + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_success = '<div class="' + alertSuccess + '" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_warning = '<div class="' + alertWarning + '" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' + alertboxcontent;
     
     //-------------------------------------------------------------
     // Badges (https://getbootstrap.com/docs/4.1/components/badge/)

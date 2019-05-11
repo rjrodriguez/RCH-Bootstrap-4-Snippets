@@ -50,20 +50,20 @@ define(function (require, exports, module) {
     
     // Variables for CDNs
     var csscdn = '\t<!-- Bootstrap CSS -->\n' +
-        '\t<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">\n' +
+        '\t<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">\n' +
         '\t<!-- Link to your css file -->\n' +
         '\t<link rel="stylesheet" href="">\n';
     var jscdn = '\t<!-- jQuery first, then Popper.js, then Bootstrap JS -->\n' +
         '\t<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>\n' +
-        '\t<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>\n' +
-        '\t<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>\n';
+        '\t<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>\n' +
+        '\t<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>\n';
 
     // Variables for local assets
     var csslocal = '\t<link rel="stylesheet" href="css/bootstrap.min.css">\n' +
         '\t<!-- Link to your css file -->\n' +
         '\t<link rel="stylesheet" href="">\n';
     var jslocal = '\t<!-- do not forget download jquery (http://jquery.com/download/)-->\n' +
-        '\t<script src="js/jquery-3.3.1.min.js"></script>\n' +
+        '\t<script src="js/jquery-3.4.1.min.js"></script>\n' +
         '\t<!-- Bootstrap bundle for full components support -->\n' +
         '\t<script src="js/bootstrap.bundle.min.js"></script>\n';
 
@@ -116,38 +116,38 @@ define(function (require, exports, module) {
     // Alerts (https://getbootstrap.com/docs/4.1/components/alerts/)
     //--------------------------------------------------------------
     
-    var alertbasiccontent = '\t\tA simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.\n\t</div>';
+    var alertbasiccontent = '\t\tA simple primary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.\n\t';
     
-    var alertdismissiblecontent = '\t\t<strong>Holy guacamole!</strong> You should check in on some of those fields below.\n\t\t\t<button type="button" class="close" data-dismiss="alert" aria-label="Close">\n\t\t\t<span aria-hidden="true">&times;</span>\n\t\t</button>\n</div>';
+    var alertdismissiblecontent = '\t\t<strong>Holy guacamole!</strong> You should check in on some of those fields below.\n\t\t\t<button type="button" class="close" data-dismiss="alert" aria-label="Close">\n\t\t\t<span aria-hidden="true">&times;</span>\n\t\t</button>\n';
     
-    var alertboxcontent = '\t\t<h4 class="alert-heading">Well done!</h4>\n\t\t<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n\t\t<hr>\n\t\t<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n\t</div>';
+    var alertboxcontent = '\t\t<h4 class="alert-heading">Well done!</h4>\n\t\t<p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>\n\t\t<hr>\n\t\t<p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>\n\t';
     
-    snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' + alertbasiccontent;
-    snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' + alertbasiccontent;
+    snippets.bs4alertbasic = '<div class="alert alert-primary" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_danger = '<div class="alert alert-danger" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_dark = '<div class="alert alert-dark" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_info = '<div class="alert alert-info" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_light = '<div class="alert alert-light" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_success = '<div class="alert alert-success" role="alert">\n' + alertbasiccontent + '</div>';
+    snippets.bs4alertbasic_warning = '<div class="alert alert-warning" role="alert">\n' + alertbasiccontent + '</div>';
     
-    snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_danger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_info = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_light = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_success = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
-    snippets.bs4alert_warning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent;
+    snippets.bs4alert = '<div class="alert alert-primary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_danger = '<div class="alert alert-danger alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_dark = '<div class="alert alert-dark alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_info = '<div class="alert alert-info alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_light = '<div class="alert alert-light alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_secondary = '<div class="alert alert-secondary alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_success = '<div class="alert alert-success alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
+    snippets.bs4alert_warning = '<div class="alert alert-warning alert-dismissible fade show" role="alert">\n' + alertdismissiblecontent + '</div>';
 
-    snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' + alertboxcontent;
-    snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' + alertboxcontent;
+    snippets.bs4alertbox = '<div class="alert alert-primary" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_danger = '<div class="alert alert-danger" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_dark = '<div class="alert alert-dark" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_info = '<div class="alert alert-info" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_light = '<div class="alert alert-light" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_secondary = '<div class="alert alert-secondary" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_success = '<div class="alert alert-success" role="alert">\n' + alertboxcontent + '</div>';
+    snippets.bs4alertbox_warning = '<div class="alert alert-warning" role="alert">\n' + alertboxcontent + '</div>';
     
     //-------------------------------------------------------------
     // Badges (https://getbootstrap.com/docs/4.1/components/badge/)
@@ -396,11 +396,11 @@ define(function (require, exports, module) {
     // Button Group (https://getbootstrap.com/docs/4.1/components/button-group/)
     //--------------------------------------------------------------------------
 
-    var btnsimplegroupcontent = '\t\t<button type="button" class="btn btn-secondary">Left</button>\n\t\t<button type="button" class="btn btn-secondary">Middle</button>\n\t\t<button type="button" class="btn btn-secondary">Right</button>\n\t</div>';
+    var btnsimplegroupcontent = '\t\t<button type="button" class="btn btn-secondary">Left</button>\n\t\t<button type="button" class="btn btn-secondary">Middle</button>\n\t\t<button type="button" class="btn btn-secondary">Right</button>\n\t';
     
-    snippets.bs4btngroup = '<div class="btn-group" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent;
-    snippets.bs4btngrouplg = '<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent;
-    snippets.bs4btngroupsm = '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent;
+    snippets.bs4btngroup = '<div class="btn-group" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent + '</div>';
+    snippets.bs4btngrouplg = '<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent + '</div>';
+    snippets.bs4btngroupsm = '<div class="btn-group btn-group-sm" role="group" aria-label="Basic example">\n' + btnsimplegroupcontent + '</div>';
 
     snippets.bs4btngroup_bar = '<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">\n\t\t<div class="btn-group mr-2" role="group" aria-label="First group">\n\t\t\t<button type="button" class="btn btn-secondary">1</button>\n\t\t\t<button type="button" class="btn btn-secondary">2</button>\n\t\t\t<button type="button" class="btn btn-secondary">3</button>\n\t\t\t<button type="button" class="btn btn-secondary">4</button>\n\t\t</div>\n\t\t<div class="btn-group mr-2" role="group" aria-label="Second group">\n\t\t\t<button type="button" class="btn btn-secondary">5</button>\n\t\t\t<button type="button" class="btn btn-secondary">6</button>\n\t\t\t<button type="button" class="btn btn-secondary">7</button>\n\t\t</div>\n\t\t<div class="btn-group" role="group" aria-label="Third group">\n\t\t\t<button type="button" class="btn btn-secondary">8</button>\n\t\t</div>\n\t</div>';
 
@@ -959,27 +959,9 @@ define(function (require, exports, module) {
     // Jumbotron
     // https://getbootstrap.com/docs/4.0/components/jumbotron/
 
-    snippets.bs4jumbotron = '<div class="jumbotron">\n' +
-        '       <h1 class="display-3">Hello, world!</h1>\n' +
-        '       <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n' +
-        '       <hr class="my-4">\n' +
-        '       <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\n' +
-        '       <p class="lead">\n' +
-        '           <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n' +
-        '       </p>\n' +
-        '   </div>';
+    snippets.bs4jumbotron = '<div class="container">\n\t\t<div class="jumbotron">\n\t\t\t<h1 class="display-3">Hello, world!</h1>\n\t\t\t<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n\t\t\t<hr class="my-4">\n\t\t\t<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\t\t\t<p class="lead">\n\t\t\t\t<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n\t\t\t</p>\n\t\t</div>\n\t</div>';
 
-    snippets.bs4jumbotron_fluid = '<div class="jumbotron jumbotron-fluid">\n' +
-        '       <div class="container">\n' +
-        '           <h1 class="display-3">Hello, world!</h1>\n' +
-        '           <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n' +
-        '           <hr class="my-4">\n' +
-        '           <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\n' +
-        '           <p class="lead">\n' +
-        '               <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n' +
-        '           </p>\n' +
-        '       </div>\n' +
-        '   </div>';
+    snippets.bs4jumbotron_fluid = '<div class="jumbotron jumbotron-fluid">\n\t\t<div class="container">\n\t\t\t<h1 class="display-3">Hello, world!</h1>\n\t\t\t<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>\n\t\t\t<hr class="my-4">\n\t\t\t<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>\n\t\t\t<p class="lead">\n\t\t\t\t<a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>\n\t\t\t</p>\n\t\t</div>\n\t</div>';
 
     // List Groups
     // https://getbootstrap.com/docs/4.0/components/list-group/

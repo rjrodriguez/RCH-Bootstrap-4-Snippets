@@ -1469,7 +1469,7 @@ define(function (require, exports, module) {
 
     // Tabs (TODO)
 
-    snippets.bs4tabsvertical = '<div class="row">\n' +
+    snippets.bs4tabs_vertical = '<div class="row">\n' +
         '       <div class="col-4">\n' +
         '           <div class="list-group" id="list-tab" role="tablist">\n' +
         '               <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab" aria-controls="home">Home</a>\n' +
@@ -1509,13 +1509,13 @@ define(function (require, exports, module) {
         '   </ul>\n' +
         '   <div class="tab-content" id="myTabContent">\n' +
         '       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">' +
-        '           <!-- Inser content here -->' +
+        '           <!-- Insert content here -->' +
         '       </div>\n' +
         '       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">' +
-        '           <!-- Inser content here -->' +
+        '           <!-- Insert content here -->' +
         '       </div>\n' +
         '       <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">' +
-        '           <!-- Inser content here -->' +
+        '           <!-- Insert content here -->' +
         '       </div>\n' +
         '   </div>';
 

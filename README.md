@@ -2,11 +2,6 @@
 
 A collection of [Bootstrap](http://getbootstrap.com/) snippets for [Brackets](http://brackets.io/) editor.
 
-[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/total.svg)](https://badges.ml/dt/rch-bootstrap-4-snippets)
-[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/last-version.svg)](https://badges.ml/dl/rch-bootstrap-4-snippets)
-[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/week.svg)](https://badges.ml/dw/rch-bootstrap-4-snippets)
-[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/day.svg)](https://badges.ml/dd/rch-bootstrap-4-snippets)
-[![Downloads](https://badges.ml/rch-bootstrap-4-snippets/version.svg)](https://badges.ml/v/rch-bootstrap-4-snippets)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/rchrodriguez/3)
 
 
